@@ -1,0 +1,859 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model E_Commerce.Models.Product
+@{
+    var maxStock = Model.ProductColors?.Sum(c => c.Stock) ?? 0;
+}
+<link rel="stylesheet" href="~/user/detail/detail.css" asp-append-version="true">
+<!-- Modal CSS -->
+<link rel="stylesheet" href="~/user/modal.css" asp-append-version="true" />
+
+<!-- Product Detail Page -->
+<div class="product-detail-container"
+     data-product-id="@Model.Id"
+     data-product-name="@Model.Name"
+     data-original-price="@Model.Price"
+     data-discount-type="@(Model.Discount != null ? (int)Model.Discount.DiscountType : 0)"
+     data-discount-value="@(Model.Discount?.DiscountValue ?? 0)">
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/collections">Collections</a>
+        <span class="separator">/</span>
+        <a asp-controller="Home" asp-action="Collections" asp-route-id="@Model.Category?.Id">@Model.Category?.Name</a>
+        <span class="separator">/</span>
+        <span>@Model.Name</span>
+    </div>
+
+    <!-- Product Layout -->
+    <div class="product-layout">
+        <!-- Product Media (Images + Videos) -->
+        <div class="product-media">
+            <!-- Main Media Display -->
+            <div class="main-media-container">
+                @{
+                    var primaryImage = Model.ProductColors
+                    .SelectMany(x => x.Images)
+                    .FirstOrDefault(x => x.IsPrimary);
+                    var firstVideo = Model.Videos?.FirstOrDefault();
+                }
+
+                <!-- Default: Show Image -->
+                <div id="mainImageDisplay" class="main-media active">
+                    <img id="mainImage" class="main-image"
+                         src="/ProductImages/@(primaryImage?.ImagePath ?? Model.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault())"
+                         alt="@Model.Name">
+                </div>
+
+                <!-- Video Display (hidden by default) -->
+                <div id="mainVideoDisplay" class="main-media">
+                    <div class="video-container">
+                        <video id="mainVideo" class="product-video" controls preload="metadata">
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-controls">
+                            <button class="video-control-btn play-pause">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="video-progress">
+                                <input type="range" class="video-progress-bar" value="0" min="0" max="100">
+                                <div class="video-time">
+                                    <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+                                </div>
+                            </div>
+                            <button class="video-control-btn volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <input type="range" class="volume-slider" value="100" min="0" max="100">
+                            <button class="video-control-btn fullscreen-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media Thumbnails (Images + Videos) -->
+            <div class="media-thumbnails" id="mediaThumbnails">
+                <!-- Image Thumbnails -->
+                @if (primaryImage != null)
+                {
+                    <div class="media-thumbnail active" data-media-type="image" data-media="/ProductImages/@primaryImage.ImagePath">
+                        <img src="/ProductImages/@primaryImage.ImagePath" alt="Thumbnail">
+                        <div class="media-type-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                }
+
+                @foreach (var image in Model.ProductColors.SelectMany(x => x.Images).Where(x => !x.IsPrimary).Take(4))
+                {
+                    <div class="media-thumbnail" data-media-type="image" data-media="/ProductImages/@image.ImagePath">
+                        <img src="/ProductImages/@image.ImagePath" alt="Thumbnail">
+                        <div class="media-type-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                }
+
+                <!-- Video Thumbnails -->
+                @if (Model.Videos != null && Model.Videos.Any())
+                {
+                    @foreach (var video in Model.Videos.Take(3))
+                    {
+                        <div class="media-thumbnail" data-media-type="video" data-video-src="/ProductVideos/@video.VideoPath">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="media-type-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="video-duration">2:30</div> <!-- You can calculate actual duration -->
+                        </div>
+                    }
+                }
+
+                <!-- Show More Button if more than 8 thumbnails -->
+                @{
+                    var totalThumbnails = Model.ProductColors.SelectMany(x => x.Images).Count() +
+                    (Model.Videos?.Count() ?? 0);
+                    if (totalThumbnails > 8)
+                    {
+                        <div class="media-thumbnail more-thumbnails" id="showMoreThumbnails">
+                            <div class="more-count">+@(totalThumbnails - 8)</div>
+                            <div class="more-text">More</div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <!-- Media Type Tabs (Optional - Alternative to mixed thumbnails) -->
+            <div class="media-type-tabs">
+                <button class="media-tab-btn active" data-media-type="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="media-tab-btn" data-media-type="image">
+                    <i class="fas fa-images"></i> Photos (@Model.ProductColors.SelectMany(x => x.Images).Count())
+                </button>
+                @if (Model.Videos != null && Model.Videos.Any())
+                {
+                    <button class="media-tab-btn" data-media-type="video">
+                        <i class="fas fa-video"></i> Videos (@Model.Videos.Count())
+                    </button>
+                }
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <div class="product-title">
+                <h1>@Model.Name</h1>
+                <div class="product-sku">SKU: @Model.SKU</div>
+            </div>
+
+            <div class="product-rating">
+                <div class="stars">
+                    @{
+                        var avgRating1 = ViewData["AverageRating"] as double? ?? 4.5;
+                        var fullStars1 = (int)Math.Floor(avgRating1);
+                        var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
+                    }
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        if (i <= fullStars1)
+                        {
+                            <i class="fas fa-star"></i>
+                        }
+                        else if (i == fullStars1 + 1 && hasHalfStar1)
+                        {
+                            <i class="fas fa-star-half-alt"></i>
+                        }
+                        else
+                        {
+                            <i class="far fa-star"></i>
+                        }
+                    }
+                </div>
+                <div class="rating-count">(@Model.AverageRating • @Model.TotalReviews Reviews)</div>
+            </div>
+
+            <div class="product-price">
+                <span class="current-price">₹@Model.Price.ToString("0")</span>
+                @if (Model.Discount != null)
+                {
+                    <span class="original-price">
+                        ₹@((Model.Price + Model.Discount.DiscountValue).ToString("0"))
+                    </span>
+
+
+                    <span class="discount-badge">
+                        @(Model.Discount.DiscountType == Discount._Type.Percentage ?
+                            $"{Model.Discount.DiscountValue}% OFF" :
+                            $"₹{Model.Discount.DiscountValue} OFF")
+                    </span>
+                }
+            </div>
+
+            <div class="product-short-desc">
+                @Model.ShortDescription
+            </div>
+
+            <!-- Color Selection -->
+            <div class="color-selection">
+                <h3>Select Color</h3>
+                <div class="color-options" id="colorOptions">
+                    @foreach (var color in Model.ProductColors)
+                    {
+                        <div class="color-option @(color == Model.ProductColors.First() ? "selected" : "")"
+                             style="background-color: @color.ColorCode"
+                             data-color-id="@color.Id"
+                             data-color-name="@color.ColorName"
+                             data-color-price="@color.ExtraPrice"
+                             data-sizes="@color.Sizes"
+                             data-stock="@color.Stock">
+                            <div class="color-name-tooltip">@color.ColorName</div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="size-selection">
+                <h3>Select Size</h3>
+                <div class="size-options" id="sizeOptions">
+                    @{
+                        var firstColor = Model.ProductColors.FirstOrDefault();
+                        var sizes = firstColor?.Sizes?.Split(',') ?? new string[0];
+                    }
+                    @foreach (var size in sizes)
+                    {
+                        <div class="size-option @(size == sizes.First() ? "selected" : "")" data-size="@size.Trim()">
+                            @size.Trim()
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Quantity Selection -->
+            <div class="quantity-selection">
+                <h3>Quantity</h3>
+                <div class="quantity-control">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <div class="stock-status">
+                    @{
+                        var totalStock = Model.ProductColors.Sum(c => c.Stock);
+                        var stockStatus = totalStock > 10 ? "in-stock" : "low-stock";
+                        var stockText = totalStock > 10 ? $"{totalStock} items in stock" : $"Only {totalStock} items left";
+                    }
+                    <span class="@stockStatus">@stockText</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-add-to-cart cart-btn" data-product-id="@Model.Id" id="addToCartBtn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <a href="/Cart/Index" class="view-cart" data-product-id="@Model.Id" style="text-decoration:none; display:none;">
+                    <div class="btn-add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> View Cart
+                    </div>
+                </a>
+
+                <button class="btn-buy-now" id="buyNowBtn">
+                    <i class="fas fa-bolt"></i> Buy Now
+                </button>
+                <button class="btn-wishlist" id="wishlistBtn">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+
+            <!-- Product Meta Info -->
+            <div class="product-meta">
+                <div class="meta-item">
+                    <div class="meta-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="meta-text">
+                        <h4>Free Shipping</h4>
+                        <p>On orders above ₹1999</p>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <div class="meta-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <div class="meta-text">
+                        <h4>Easy Returns</h4>
+                        <p>15 Days Return Policy</p>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <div class="meta-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="meta-text">
+                        <h4>Secure Payment</h4>
+                        <p>100% Secure & Safe</p>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <div class="meta-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="meta-text">
+                        <h4>Customer Support</h4>
+                        <p>24/7 Dedicated Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Tabs -->
+    <div class="product-tabs">
+        <div class="tab-headers">
+            <div class="tab-header active" data-tab="description">Description</div>
+            <div class="tab-header" data-tab="details">Product Details</div>
+            <div class="tab-header" data-tab="videos">Videos (@(Model.Videos?.Count() ?? 0))</div>
+            <div class="tab-header" data-tab="reviews">Reviews @Model.TotalReviews</div>
+            <div class="tab-header" data-tab="shipping">Shipping & Returns</div>
+        </div>
+
+        <!-- Description Tab -->
+        <div class="tab-content active" id="description">
+            <div class="description-content">
+                @Html.Raw(Model.FullDescription)
+
+                <h3>Fabric & Care</h3>
+                <p><strong>Fabric:</strong> @Model.Fabric</p>
+                <p><strong>Care Instructions:</strong> @Model.CareInstruction</p>
+
+                <h3>Perfect For</h3>
+                <p>@Model.Occasion</p>
+
+                <h3>Product Specifications</h3>
+                <ul>
+                    <li><strong>Weight:</strong> @Model.Weight grams</li>
+                    <li><strong>Brand:</strong> @Model.Brand</li>
+                    <li><strong>Category:</strong> @Model.Category?.Name</li>
+                    <li><strong>Availability:</strong> @Model.Availability</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Details Tab -->
+        <div class="tab-content" id="details">
+            <div class="details-list">
+                <div class="detail-item">
+                    <h4>Material & Fabric</h4>
+                    <p>@Model.Fabric</p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>Care Instructions</h4>
+                    <p>@Model.CareInstruction</p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>Occasion</h4>
+                    <p>@Model.Occasion</p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>Brand</h4>
+                    <p>@Model.Brand</p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>Weight</h4>
+                    <p>@Model.Weight grams</p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>SKU</h4>
+                    <p>@Model.SKU</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Videos Tab -->
+        <div class="tab-content" id="videos">
+            <div class="videos-gallery">
+                <h3>Product Videos</h3>
+                <p>Watch our product videos to see it in action</p>
+
+                @if (Model.Videos != null && Model.Videos.Any())
+                {
+                    <div class="videos-container">
+                        @foreach (var video in Model.Videos)
+                        {
+                            <div class="video-card">
+                                <div class="video-thumb">
+                                    <div class="video-thumb-placeholder">
+                                        <i class="fas fa-play-circle"></i>
+                                    </div>
+                                    <div class="play-overlay" data-video-src="/ProductVideos/@video.VideoPath">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <h4>@Model.Name - Video @(Model.Videos.ToList().IndexOf(video) + 1)</h4>
+                                    <div class="video-meta">
+                                        <span class="video-type">
+                                            <i class="fas fa-video"></i> Product Video
+                                        </span>
+                                        <span class="video-duration">
+                                            <i class="far fa-clock"></i> 2:30
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="no-videos">
+                        <i class="fas fa-video-slash"></i>
+                        <h4>No Videos Available</h4>
+                        <p>Videos for this product will be added soon.</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div class="tab-content" id="reviews">
+            <div class="reviews-container">
+                <!-- Reviews Summary -->
+                <div class="reviews-summary">
+                    <div class="overall-rating">
+                        <div class="rating-number">@Math.Round(ViewData["AverageRating"] as double? ?? 4.5, 1)</div>
+                        <div class="rating-stars">
+                            @{
+                                var avgRating = ViewData["AverageRating"] as double? ?? 4.5;
+                                var fullStars = (int)Math.Floor(avgRating);
+                                var hasHalfStar = avgRating - fullStars >= 0.5;
+                            }
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (i <= fullStars)
+                                {
+                                    <i class="fas fa-star"></i>
+                                }
+                                else if (i == fullStars + 1 && hasHalfStar)
+                                {
+                                    <i class="fas fa-star-half-alt"></i>
+                                }
+                                else
+                                {
+                                    <i class="far fa-star"></i>
+                                }
+                            }
+                        </div>
+                        <div class="rating-count">Based on @(ViewData["TotalReviews"] ?? 128) reviews</div>
+                    </div>
+
+                    <div class="rating-bars" id="ratingBars">
+                        <!-- Rating bars will be loaded dynamically -->
+                        <div class="loading-ratings">Loading rating statistics...</div>
+                    </div>
+                </div>
+
+                <!-- Write Review Button -->
+                <div class="write-review-section">
+                    <button class="btn-write-review" id="writeReviewBtn">
+                        <i class="fas fa-pen"></i> Write a Review
+                    </button>
+                </div>
+
+                <!-- Reviews List -->
+                <div class="reviews-list-header">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-sort">
+                        <select id="sortReviews">
+                            <option value="newest">Newest First</option>
+                            <option value="highest">Highest Rated</option>
+                            <option value="lowest">Lowest Rated</option>
+                            <option value="helpful">Most Helpful</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="review-list" id="reviewList">
+                    <!-- Reviews will be loaded dynamically -->
+                    <div class="loading-reviews">
+                        <div class="spinner"></div>
+                        <p>Loading reviews...</p>
+                    </div>
+                </div>
+
+                <!-- View More Reviews Button -->
+                <div class="view-more-reviews" id="viewMoreContainer">
+                    <button class="btn-view-more" id="viewMoreReviews">
+                        <span>View All Reviews</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shipping Tab -->
+        <div class="tab-content" id="shipping">
+            <div class="description-content">
+                <h3>Shipping Information</h3>
+                <ul>
+                    <li>Free standard shipping on orders above ₹1999</li>
+                    <li>Express shipping available at extra charge</li>
+                    <li>Orders are processed within 24-48 hours</li>
+                    <li>Estimated delivery time: 3-7 business days</li>
+                    <li>We ship to all major cities in India</li>
+                </ul>
+
+                <h3>Return Policy</h3>
+                <ul>
+                    <li>15-day return policy from the date of delivery</li>
+                    <li>Items must be unused, unwashed, and with original tags</li>
+                    <li>Return shipping is free for defective or wrong items</li>
+                    <li>Refunds are processed within 5-7 business days</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="related-products">
+        <div class="section-title">
+            <h2>You May Also Like</h2>
+            <p>Discover more beautiful suits from our collection</p>
+        </div>
+
+        <div class="products-grid">
+            <!-- Related products would be populated dynamically -->
+            @foreach (Product relatedProducts in ViewData["relatedProducts"] as List<Product>)
+            {
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('/ProductImages/@relatedProducts.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');">
+                        @* <div class="product-badge">Bestseller</div> *@
+                    </div>
+                    <div class="product-content">
+                        <h3>@relatedProducts.Name</h3>
+                        <div class="product-price">₹@relatedProducts.Price</div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+<!-- Add To Cart Modal -->
+<div id="addToCartModal" class="cart-modal">
+    <!-- Same modal as before -->
+</div>
+
+<!-- Video Lightbox Modal -->
+<div id="videoLightbox" class="video-lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+        <button class="close-lightbox">&times;</button>
+        <div class="lightbox-video-container">
+            <video id="lightboxVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="lightbox-video-info">
+            <h3 id="lightboxVideoTitle"></h3>
+            <p id="lightboxVideoDescription"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Notification Toast -->
+@await Html.PartialAsync("_Confirmation")
+@await Html.PartialAsync("_Toast")
+<script>
+    const maxStock = @maxStock;
+</script>
+<!-- Review Form Modal -->
+<div id="reviewFormModal" class="review-modal">
+    <div class="review-modal-overlay"></div>
+    <div class="review-modal-content">
+        <div class="review-modal-header">
+            <h2>Write a Review</h2>
+            <button class="close-review-modal">&times;</button>
+        </div>
+
+        <div class="review-modal-body">
+            <div class="review-product-info">
+                <div class="product-thumb">
+                    <img id="reviewProductImage" src="" alt="Product">
+                </div>
+                <div class="product-details">
+                    <h3 id="reviewProductName">@Model.Name</h3>
+                    <div class="product-price" id="reviewProductPrice">₹@Model.Price.ToString("0")</div>
+                </div>
+            </div>
+
+            <form id="reviewForm" class="review-form">
+                <input type="hidden" id="reviewProductId" value="@Model.Id">
+
+                <!-- Rating Selection -->
+                <div class="form-group">
+                    <label for="rating">Overall Rating *</label>
+                    <div class="star-rating" id="starRating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" title="5 stars">
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 stars">
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 stars">
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 stars">
+                            <i class="fas fa-star"></i>
+                        </label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 star">
+                            <i class="fas fa-star"></i>
+                        </label>
+                    </div>
+                    <div class="rating-error" id="ratingError"></div>
+                </div>
+
+                <!-- Fit Feedback -->
+                <div class="form-group">
+                    <label for="fitFeedback">How does it fit?</label>
+                    <div class="fit-options">
+                        <div class="fit-option">
+                            <input type="radio" id="fitPerfect" name="fitFeedback" value="Perfect">
+                            <label for="fitPerfect">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Perfect Fit</span>
+                            </label>
+                        </div>
+                        <div class="fit-option">
+                            <input type="radio" id="fitTight" name="fitFeedback" value="Tight">
+                            <label for="fitTight">
+                                <i class="fas fa-arrows-alt-h"></i>
+                                <span>A Bit Tight</span>
+                            </label>
+                        </div>
+                        <div class="fit-option">
+                            <input type="radio" id="fitLoose" name="fitFeedback" value="Loose">
+                            <label for="fitLoose">
+                                <i class="fas fa-arrows-alt-h"></i>
+                                <span>A Bit Loose</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Text -->
+                <div class="form-group">
+                    <label for="reviewText">Your Review *</label>
+                    <textarea id="reviewText" name="reviewText" rows="6"
+                              placeholder="Share your experience with this product. What did you like or dislike about it?"
+                              maxlength="1000"></textarea>
+                    <div class="char-counter">
+                        <span id="charCount">0</span>/1000 characters
+                    </div>
+                    <div class="review-error" id="reviewTextError"></div>
+                </div>
+
+                <!-- Review Guidelines -->
+                <div class="review-guidelines">
+                    <h4>Review Guidelines:</h4>
+                    <ul>
+                        <li>Share your genuine experience with the product</li>
+                        <li>Focus on the product quality, fit, and value</li>
+                        <li>Be respectful and avoid offensive language</li>
+                        <li>Don't include personal information</li>
+                    </ul>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel-review">Cancel</button>
+                    <button type="submit" class="btn-submit-review" disabled>
+                        <i class="fas fa-paper-plane"></i> Submit Review
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- All Reviews Modal -->
+<div id="allReviewsModal" class="all-reviews-modal">
+    <div class="all-reviews-overlay"></div>
+    <div class="all-reviews-content">
+        <div class="all-reviews-header">
+            <div class="header-left">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-stats">
+                    <div class="overall-rating-mini">
+                        <span class="rating-number">@Math.Round(ViewData["AverageRating"] as double? ?? 4.5, 1)</span>
+                        <div class="rating-stars">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (i <= Math.Floor(ViewData["AverageRating"] as double? ?? 4.5))
+                                {
+                                    <i class="fas fa-star"></i>
+                                }
+                                else if (i == Math.Floor(ViewData["AverageRating"] as double? ?? 4.5) + 1 &&
+                                (ViewData["AverageRating"] as double? ?? 4.5) - Math.Floor(ViewData["AverageRating"] as double? ?? 4.5) >= 0.5)
+                                {
+                                    <i class="fas fa-star-half-alt"></i>
+                                }
+                                else
+                                {
+                                    <i class="far fa-star"></i>
+                                }
+                            }
+                        </div>
+                        <span class="total-reviews">(@(ViewData["TotalReviews"] ?? 128) reviews)</span>
+                    </div>
+                </div>
+            </div>
+            <button class="close-all-reviews">&times;</button>
+        </div>
+
+        <div class="all-reviews-body">
+            <!-- Reviews will be loaded here -->
+            <div class="reviews-loading">
+                <div class="spinner-large"></div>
+                <p>Loading reviews...</p>
+            </div>
+        </div>
+
+        <div class="all-reviews-footer">
+            <div class="pagination-controls" id="reviewsPagination">
+                <!-- Pagination will be added here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Review Eligibility Modal -->
+<div id="reviewEligibilityModal" class="eligibility-modal">
+    <div class="eligibility-overlay"></div>
+    <div class="eligibility-content">
+        <div class="eligibility-header">
+            <h2>Review Requirements</h2>
+            <button class="close-eligibility-modal">&times;</button>
+        </div>
+        <div class="eligibility-body">
+            <div class="eligibility-icon">
+                <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3 id="eligibilityTitle">Review Not Available</h3>
+            <p id="eligibilityMessage">You need to meet certain requirements to write a review.</p>
+
+            <div class="requirements-list">
+                <div class="requirement-item" id="reqLogin">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="req-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="req-check">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                    }
+                    <div class="req-text">
+                        <span class="req-title">Be Logged In</span>
+                        <span class="req-desc">You must be signed in to your account</span>
+                    </div>
+                </div>
+
+                <div class="requirement-item" id="reqPurchase">
+                    @if ((bool)ViewData["isPurchasedProduct"])
+                    {
+                        <div class="req-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="req-check">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                    }
+
+                    <div class="req-text">
+                        <span class="req-title">Purchase the Product</span>
+                        <span class="req-desc">Buy this product and wait for delivery</span>
+                    </div>
+                </div>
+
+                <div class="requirement-item" id="reqDelivered">
+                    @if ((bool)ViewData["isDeliveredProduct"])
+                    {
+                        <div class="req-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="req-check">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                    }
+                    <div class="req-text">
+                        <span class="req-title">Order Must Be Delivered</span>
+                        <span class="req-desc">Your order status should be 'Delivered'</span>
+                    </div>
+                </div>
+
+                <div class="requirement-item" id="reqNotReviewed">
+                    @if (!(bool)ViewData["notAlreadyReview"])
+                    {
+                        <div class="req-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    }else{
+                        <div class="req-check">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                    }
+                    
+                    <div class="req-text">
+                        <span class="req-title">Not Already Reviewed</span>
+                        <span class="req-desc">You haven't reviewed this product before</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eligibility-actions">
+                <button class="btn-close-eligibility">Close</button>
+                <a href="/Account/Login" class="btn-login" id="loginBtn">Login to Continue</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Include modal.js first for add-to-cart functionality -->
+<script src="~/user/modal.js"></script>
+<!-- Include detail.js for video functionality -->
+<script src="~/user/detail/detail.js"></script>
+<script src="~/user/detail/review.js"></script>

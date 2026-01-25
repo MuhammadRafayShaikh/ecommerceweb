@@ -1,0 +1,119 @@
+﻿@model List<E_Commerce.Models.Product>
+@{
+    var stats = ViewBag.Stats as ProductStats;
+}
+
+@if (!Model.Any())
+{
+    <div class="empty-state" id="productsEmptyState">
+        <i class="fas fa-box-open"></i>
+        <h3>No products found</h3>
+        <p>Try changing your search or filters.</p>
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>SKU</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    // Calculate stock status
+                    var totalStock = product.ProductColors?.Sum(pc => pc.Stock) ?? 0;
+                    var stockClass = "stock-out";
+                    var stockText = "Out of Stock";
+                    
+                    if (totalStock > 10)
+                    {
+                        stockClass = "stock-in";
+                        stockText = $"{totalStock} in stock";
+                    }
+                    else if (totalStock > 0)
+                    {
+                        stockClass = "stock-low";
+                        stockText = $"Low stock ({totalStock})";
+                    }
+                    
+                    // Get first image
+                    var firstImage = product.ProductColors?
+                        .SelectMany(pc => pc.Images)
+                        .FirstOrDefault()?.ImagePath;
+                    
+                    <tr>
+                        <td>
+                            <div class="product-image-cell">
+                                @if (!string.IsNullOrEmpty(firstImage))
+                                {
+                                    <img src="~/ProductImages/@firstImage" 
+                                         class="product-image" 
+                                         alt="@product.Name"
+                                         onerror="this.src='/images/placeholder.png'">
+                                }
+                                else
+                                {
+                                    <div class="product-image placeholder">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                }
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-name">@product.Name</div>
+                            <div class="product-sku">@product.SKU</div>
+                        </td>
+                        <td>@product.Category?.Name</td>
+                        <td class="product-price">₹@product.Price</td>
+                        <td>@product.SKU</td>
+                        <td>
+                            <div class="product-stock">
+                                <span class="stock-badge @stockClass">@stockText</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="product-status @(product.IsActive ? "status-active" : "status-inactive")">
+                                @(product.IsActive ? "Active" : "Inactive")
+                            </span>
+                        </td>
+                        <td>
+                            <div class="action-buttons">
+                                <a class="btn-icon btn-view" 
+                                   href="/Product/Detail/@product.Id" 
+                                   title="View" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a class="btn-icon btn-edit" 
+                                   href="/Product/Edit/@product.Id" 
+                                   title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <button class="btn-icon isActive @(product.IsActive ? "btn-active" : "btn-inactive")"
+                                        data-id="@product.Id"
+                                        title="@(product.IsActive ? "Deactivate" : "Activate")">
+                                    <i class="fas @(product.IsActive ? "fa-toggle-on" : "fa-toggle-off")"></i>
+                                </button>
+
+                                <button class="btn-icon btn-delete delete-product" 
+                                        data-id="@product.Id" 
+                                        title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

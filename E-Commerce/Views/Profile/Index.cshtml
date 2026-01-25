@@ -1,0 +1,630 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "My Profile";
+}
+@model E_Commerce.ViewModels.ProfileViewModel
+
+<!-- Profile Page CSS -->
+<link rel="stylesheet" href="~/user/profile/profile.css" asp-append-version="true">
+
+<div class="profile-container">
+    <!-- Header -->
+    <div class="profile-header">
+        <div class="header-content">
+            <h1><i class="fas fa-user-circle"></i> My Profile</h1>
+            <p class="header-subtitle">Manage your account settings and preferences</p>
+        </div>
+        <div class="header-actions">
+            <a href="/" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    @if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
+    {
+        <div class="alert alert-success">
+            <i class="fas fa-check-circle"></i> @ViewBag.SuccessMessage
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-circle"></i> @ViewBag.ErrorMessage
+        </div>
+    }
+
+    <div class="profile-layout">
+        <!-- Left Sidebar -->
+        <div class="profile-sidebar">
+            <!-- Profile Picture Section -->
+            <div class="profile-picture-section">
+                <div class="profile-avatar" id="profileAvatar">
+                    <div class="avatar-initials">
+                        @{
+                            var initials = (!string.IsNullOrEmpty(Model.FirstName) ? Model.FirstName[0] : 'U').ToString() +
+                            (!string.IsNullOrEmpty(Model.LastName) ? Model.LastName[0] : 's').ToString();
+                        }
+                        @initials
+                    </div>
+                    <div class="avatar-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <h3 class="profile-name">@Model.FirstName @Model.LastName</h3>
+                <p class="profile-email">@Model.Email</p>
+
+               
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="profile-nav">
+                <a href="#personal-info" class="nav-item active" data-section="personal-info">
+                    <i class="fas fa-user"></i> Personal Info
+                </a>
+                <a href="#security" class="nav-item" data-section="security">
+                    <i class="fas fa-shield-alt"></i> Security
+                </a>
+                <a href="#preferences" class="nav-item" data-section="preferences">
+                    <i class="fas fa-cog"></i> Preferences
+                </a>
+                <a href="#activity" class="nav-item" data-section="activity">
+                    <i class="fas fa-chart-line"></i> Activity
+                </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+                <h4><i class="fas fa-chart-bar"></i> Quick Stats</h4>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="far fa-calendar"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="accountAge">0</span>
+                            <span class="stat-label">Days on site</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="far fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">
+                                @(Model.EmailConfirmed ? "Verified" : "Pending")
+                            </span>
+                            <span class="stat-label">Email Status</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-content">
+            <!-- Personal Information Section -->
+            <div class="profile-section active" id="personal-info-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user"></i> Personal Information</h2>
+                    <a href="@Url.Action("Edit", "Profile")" class="btn-edit-section">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </a>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Full Name</h4>
+                            <p>@Model.FirstName @Model.LastName</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Address</h4>
+                            <p>@Model.Email</p>
+                            @if (!Model.EmailConfirmed)
+                            {
+                                <a href="@Url.Action("ResendEmailVerification", "Profile")" class="verify-badge">
+                                    <i class="fas fa-exclamation-triangle"></i> Verify Email
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="verified-badge">
+                                    <i class="fas fa-check-circle"></i> Verified
+                                </span>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone Number</h4>
+                            <p>@(string.IsNullOrEmpty(Model.PhoneNumber) ? "Not set" : Model.PhoneNumber)</p>
+                            @if (!string.IsNullOrEmpty(Model.PhoneNumber) && Model.PhoneNumberConfirmed)
+                            {
+                                <span class="verified-badge">
+                                    <i class="fas fa-check-circle"></i> Verified
+                                </span>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-user-tag"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Username</h4>
+                            <p>@Model.UserName</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="far fa-calendar-plus"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Account Created</h4>
+                            <p>@Model.CreatedAt.ToString("MMMM dd, yyyy")</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="far fa-calendar-check"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Last Updated</h4>
+                            <p>@(Model.UpdatedAt?.ToString("MMMM dd, yyyy") ?? "Never")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Section -->
+            <div class="profile-section" id="security-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-shield-alt"></i> Security</h2>
+                </div>
+
+                <div class="security-grid">
+                    <!-- Change Password Card -->
+                    <div class="security-card">
+                        <div class="security-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="security-content">
+                            <h4>Change Password</h4>
+                            <p>Update your password regularly to keep your account secure</p>
+                            <button class="btn-change-password" onclick="openPasswordModal()">
+                                <i class="fas fa-edit"></i> Change Password
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Two-Factor Authentication Card -->
+                    <div class="security-card">
+                        <div class="security-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="security-content">
+                            <h4>Two-Factor Authentication</h4>
+                            <p>Add an extra layer of security to your account</p>
+                            <div class="security-status">
+                                <span class="status-badge disabled">
+                                    <i class="fas fa-times-circle"></i> Disabled
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Login History Card -->
+                    <div class="security-card">
+                        <div class="security-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="security-content">
+                            <h4>Login History</h4>
+                            <p>View recent login activity on your account</p>
+                            <button class="btn-view-logins">
+                                <i class="fas fa-eye"></i> View History
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Active Sessions Card -->
+                    <div class="security-card">
+                        <div class="security-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="security-content">
+                            <h4>Active Sessions</h4>
+                            <p>Manage devices logged into your account</p>
+                            <button class="btn-manage-sessions">
+                                <i class="fas fa-laptop"></i> Manage Sessions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preferences Section -->
+            <div class="profile-section" id="preferences-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-cog"></i> Preferences</h2>
+                </div>
+
+                <div class="preferences-grid">
+                    <!-- Notification Settings -->
+                    <div class="preference-card">
+                        <div class="preference-header">
+                            <div class="preference-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <div class="preference-title">
+                                <h4>Notifications</h4>
+                                <p>Manage how you receive notifications</p>
+                            </div>
+                        </div>
+                        <div class="preference-body">
+                            <div class="toggle-item">
+                                <div class="toggle-label">
+                                    <span>Email Notifications</span>
+                                    <p>Receive order updates via email</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <div class="toggle-label">
+                                    <span>SMS Notifications</span>
+                                    <p>Receive order updates via SMS</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <div class="toggle-label">
+                                    <span>Promotional Emails</span>
+                                    <p>Receive special offers and discounts</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Settings -->
+                    <div class="preference-card">
+                        <div class="preference-header">
+                            <div class="preference-icon">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <div class="preference-title">
+                                <h4>Privacy</h4>
+                                <p>Control your privacy settings</p>
+                            </div>
+                        </div>
+                        <div class="preference-body">
+                            <div class="toggle-item">
+                                <div class="toggle-label">
+                                    <span>Show Profile</span>
+                                    <p>Allow others to see your profile</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <div class="toggle-label">
+                                    <span>Show Activity</span>
+                                    <p>Show your recent activity</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Language & Region -->
+                    <div class="preference-card">
+                        <div class="preference-header">
+                            <div class="preference-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="preference-title">
+                                <h4>Language & Region</h4>
+                                <p>Set your preferred language and region</p>
+                            </div>
+                        </div>
+                        <div class="preference-body">
+                            <div class="preference-field">
+                                <label>Language</label>
+                                <select class="form-select">
+                                    <option selected>English</option>
+                                    <option>Hindi</option>
+                                    <option>Spanish</option>
+                                    <option>French</option>
+                                </select>
+                            </div>
+                            <div class="preference-field">
+                                <label>Time Zone</label>
+                                <select class="form-select">
+                                    <option selected>IST (UTC +5:30)</option>
+                                    <option>UTC</option>
+                                    <option>EST (UTC -5)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Display Settings -->
+                    <div class="preference-card">
+                        <div class="preference-header">
+                            <div class="preference-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="preference-title">
+                                <h4>Display</h4>
+                                <p>Customize how the site looks</p>
+                            </div>
+                        </div>
+                        <div class="preference-body">
+                            <div class="preference-field">
+                                <label>Theme</label>
+                                <div class="theme-options">
+                                    <button class="theme-option active" data-theme="light">
+                                        <i class="fas fa-sun"></i> Light
+                                    </button>
+                                    <button class="theme-option" data-theme="dark">
+                                        <i class="fas fa-moon"></i> Dark
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Section -->
+            <div class="profile-section" id="activity-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> Activity</h2>
+                    <button class="btn-refresh" onclick="loadActivity()">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+
+                <div class="activity-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Total Orders</h4>
+                            <p class="stat-number">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Wishlist Items</h4>
+                            <p class="stat-number">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Reviews Written</h4>
+                            <p class="stat-number">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Last Login</h4>
+                            <p class="stat-number" id="lastLoginTime">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="activityList">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>No recent activity to show</p>
+                                <span class="activity-time">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="danger-zone">
+                <div class="danger-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Danger Zone</h3>
+                </div>
+                <div class="danger-content">
+                    <p>These actions are irreversible. Please proceed with caution.</p>
+                    <div class="danger-actions">
+                        <button class="btn-danger" onclick="openDeleteModal()">
+                            <i class="fas fa-trash-alt"></i> Delete Account
+                        </button>
+                        @* <a href="@Url.Action("Logout", "Account")" class="btn-logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a> *@
+                        <form asp-controller="Account" asp-action="Logout" method="post">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn-logout">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Password Change Modal -->
+<div id="passwordModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-key"></i> Change Password</h2>
+            <button class="close-modal" onclick="closePasswordModal()">&times;</button>
+        </div>
+        <form id="changePasswordForm" method="post" action="@Url.Action("ChangePassword", "Profile")">
+            <input type="hidden" asp-for="Email"/>
+            @Html.AntiForgeryToken()
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="CurrentPassword">Current Password *</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="CurrentPassword" name="CurrentPassword" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('CurrentPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="NewPassword">New Password *</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-key"></i>
+                        <input type="password" id="NewPassword" name="NewPassword" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('NewPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text">Password strength: <span id="strengthText">Weak</span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ConfirmPassword">Confirm New Password *</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-key"></i>
+                        <input type="password" id="ConfirmPassword" name="ConfirmPassword" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('ConfirmPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="password-requirements">
+                    <h4>Password Requirements:</h4>
+                    <ul>
+                        <li id="req-length">At least 6 characters</li>
+                        <li id="req-uppercase">One uppercase letter</li>
+                        <li id="req-lowercase">One lowercase letter</li>
+                        <li id="req-number">One number</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" onclick="closePasswordModal()">Cancel</button>
+                <button type="submit" class="btn-save" disabled>Change Password</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Delete Account Modal -->
+<div id="deleteModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header danger">
+            <h2><i class="fas fa-exclamation-triangle"></i> Delete Account</h2>
+            <button class="close-modal" onclick="closeDeleteModal()">&times;</button>
+        </div>
+        <form id="deleteAccountForm" method="post" action="@Url.Action("DeleteAccount", "Profile")">
+            @Html.AntiForgeryToken()
+            <div class="modal-body">
+                <div class="warning-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h3>Are you absolutely sure?</h3>
+                <p>This action cannot be undone. This will permanently:</p>
+                <ul class="delete-consequences">
+                    <li>Deactivate your account</li>
+                    <li>Remove your personal information from our database</li>
+                    <li>Cancel any pending orders</li>
+                    <li>Delete your wishlist and saved preferences</li>
+                </ul>
+
+                <div class="confirmation-box">
+                    <label for="confirmText">
+                        Please type <strong>DELETE</strong> to confirm:
+                    </label>
+                    <input type="text" id="confirmText" name="confirmText"
+                           placeholder="Type DELETE here"
+                           oninput="validateDeleteConfirmation()">
+                    <div class="confirmation-error" id="confirmError"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" onclick="closeDeleteModal()">Cancel</button>
+                <button type="submit" class="btn-delete" disabled>Delete Account</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal-overlay">
+    <div class="modal-content success-modal">
+        <div class="modal-header success">
+            <h2><i class="fas fa-check-circle"></i> Success!</h2>
+            <button class="close-modal" onclick="closeSuccessModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 id="successTitle">Operation Successful</h3>
+            <p id="successMessage">Your changes have been saved successfully.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-ok" onclick="closeSuccessModal()">OK</button>
+        </div>
+    </div>
+</div>
+@await Html.PartialAsync("_Toast")
+<script src="~/user/profile/profile.js"></script>

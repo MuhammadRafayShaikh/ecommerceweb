@@ -1,0 +1,336 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+@model List<E_Commerce.Models.Product>
+<style>
+    .btn-active {
+        background-color: rgba(76, 175, 80, 0.1);
+        color: #28a745;
+    }
+
+    .btn-inactive {
+        background-color: rgba(255, 193, 7, 0.1);
+        color: #ffc107;
+    }
+
+    .btn-active:hover {
+        background-color: #28a745;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    }
+
+    .btn-inactive:hover {
+        background-color: #ffc107;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+    }
+
+    .loading-indicator {
+        display: none;
+        text-align: center;
+        padding: 20px;
+        color: var(--primary);
+    }
+
+        .loading-indicator i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+    .stock-badge {
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .stock-in {
+        background: rgba(76, 175, 80, 0.1);
+        color: #28a745;
+    }
+
+    .stock-low {
+        background: rgba(255, 193, 7, 0.1);
+        color: #ffc107;
+    }
+
+    .stock-out {
+        background: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+    }
+
+    .filter-select {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 150px;
+    }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.1);
+        }
+
+    .table-controls {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+</style>
+<!-- Main Content -->
+<div class="main-content" id="mainContent">
+    <!-- Header -->
+@await Html.PartialAsync("_AdminProductHeader")
+    <div class="page-container" id="viewProductsPage">
+        <div class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="totalProductsCount">@ViewData["totalProducts"]</h3>
+                    <p>Total Products</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="activeProductsCount">@ViewData["activeProducts"]</h3>
+                    <p>Active Products</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="inStockCount">@ViewData["inStockProducts"]</h3>
+                    <p>In Stock</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-rupee-sign"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="totalInventoryValue">₹2,84,500</h3>
+                    <p>Inventory Value</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-table-container">
+            <div class="table-header">
+                <h2><i class="fas fa-list"></i> All Products</h2>
+                <div class="table-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="productSearch"
+                               placeholder="Search products by name or SKU..."
+                               onkeyup="debounceSearch()">
+                    </div>
+                    <select class="filter-select" id="categoryFilter" onchange="loadProducts()">
+                        <option value="0">All Categories</option>
+                        @foreach (Category categories in ViewData["categories"] as List<Category>)
+                        {
+                            <option value="@categories.Id">@categories.Name</option>
+                        }
+                    </select>
+                    <select class="filter-select" id="statusFilter" onchange="loadProducts()">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="loading-indicator" id="loadingIndicator">
+                <i class="fas fa-spinner fa-spin"></i> Loading products...
+            </div>
+
+            <!-- Products Table (will be loaded via AJAX) -->
+            <div id="productsTableContainer">
+
+            </div>
+
+
+
+            <div class="pagination" id="productsPagination" style="display: none;">
+                <button onclick="changeProductsPage(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button onclick="changeProductsPage(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let searchTimeout;
+        function debounceSearch() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                loadProducts();
+            }, 500);
+        }
+
+        $(document).ready(function () {
+            loadProducts();
+
+            $(document).on('click', '.isActive', function () {
+                let btn = $(this);
+                let productId = btn.data("id");
+
+                $.ajax({
+                    url: "/Product/CheckActive",
+                    type: "POST",
+                    data: { productId: productId },
+                    success: function (response) {
+                        if (response.success) {
+                            if (response.isActive) {
+                                showNotification("Product activated successfully", "success");
+                                btn.removeClass("btn-inactive").addClass("btn-active");
+                                btn.find('i').removeClass('fa-toggle-off').addClass('fa-toggle-on');
+                                btn.attr('title', 'Deactivate');
+                            } else {
+                                showNotification("Product deactivated successfully", "warning");
+                                btn.removeClass("btn-active").addClass("btn-inactive");
+                                btn.find('i').removeClass('fa-toggle-on').addClass('fa-toggle-off');
+                                btn.attr('title', 'Activate');
+                            }
+
+                            // Update stats after status change
+                            updateStats();
+                        }
+                    }
+                });
+            });
+
+            // Delete product
+            $(document).on('click', '.delete-product', function () {
+                let productId = $(this).data('id');
+                deleteProduct(productId);
+            });
+        });
+
+        // Load products with filters
+        function loadProducts() {
+            const searchTerm = $('#productSearch').val();
+            const categoryId = $('#categoryFilter').val();
+            const status = $('#statusFilter').val();
+
+            // Show loading
+            $('#loadingIndicator').show();
+            $('#productsTableContainer').html('');
+
+            $.ajax({
+                url: '/Product/GetFilteredProducts',
+                type: 'GET',
+                data: {
+                    search: searchTerm,
+                    categoryId: categoryId,
+                    status: status
+                },
+                success: function (response) {
+                    $('#productsTableContainer').html(response.tableHtml);
+                    updateStats(response.stats);
+                    $('#loadingIndicator').hide();
+                },
+                error: function () {
+                    $('#loadingIndicator').hide();
+                    $('#productsTableContainer').html(`
+                        <div class="empty-state">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Error Loading Products</h3>
+                            <p>Failed to load products. Please try again.</p>
+                        </div>
+                    `);
+                }
+            });
+        }
+
+        // Update statistics
+        function updateStats(stats) {
+            if (stats) {
+                $('#totalProductsCount').text(stats.totalProducts);
+                $('#activeProductsCount').text(stats.activeProducts);
+                $('#inStockCount').text(stats.inStockProducts);
+                $('#totalInventoryValue').text('₹' + stats.totalInventoryValue.toLocaleString('en-IN'));
+            }
+        }
+
+        // Delete product function
+        function deleteProduct(productId) {
+            if (confirm('Are you sure you want to delete this product? This action cannot be undone.')) {
+                $.ajax({
+                    url: '/Product/Delete',
+                    type: 'POST',
+                    data: { id: productId },
+                    success: function (response) {
+                        if (response.success) {
+                            showNotification('Product deleted successfully', 'success');
+                            loadProducts(); // Reload the products list
+                        } else {
+                            showNotification(response.message || 'Failed to delete product', 'error');
+                        }
+                    },
+                    error: function () {
+                        showNotification('An error occurred while deleting the product', 'error');
+                    }
+                });
+            }
+        }
+
+        // Show notification function
+        function showNotification(message, type = 'info') {
+            // Remove existing notification
+            $('.notification').remove();
+
+            const icon = type === 'success' ? 'check-circle' :
+                        type === 'warning' ? 'exclamation-triangle' :
+                        type === 'error' ? 'times-circle' : 'info-circle';
+
+            const notification = $(`
+                <div class="notification ${type}">
+                    <i class="fas fa-${icon}"></i>
+                    <span>${message}</span>
+                    <button class="notification-close"><i class="fas fa-times"></i></button>
+                </div>
+            `);
+
+            $('body').append(notification);
+
+            // Show with animation
+            setTimeout(() => {
+                notification.addClass('show');
+            }, 10);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                notification.removeClass('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+
+            // Close button
+            notification.find('.notification-close').on('click', function() {
+                notification.removeClass('show');
+                setTimeout(() => notification.remove(), 300);
+            });
+        }
+    </script>
+
+    <script src="~/admin/product.js"></script>

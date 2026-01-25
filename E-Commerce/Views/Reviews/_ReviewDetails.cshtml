@@ -1,0 +1,169 @@
+﻿@model ProductReview
+
+<div class="review-details">
+    <div class="review-left">
+        <!-- Customer Information -->
+        <div class="review-detail-item">
+            <div class="detail-label">
+                <i class="fas fa-user"></i> Customer Information
+            </div>
+            <div class="detail-value">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 20px;">
+                        @Model.User?.FirstName?[0]@Model.User?.LastName?[0]
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; font-size: 18px; color: var(--dark);">
+                            @Model.User?.FirstName @Model.User?.LastName
+                        </div>
+                        <div style="color: #666; font-size: 14px;">
+                            @Model.User?.Email
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Information -->
+        <div class="review-detail-item">
+            <div class="detail-label">
+                <i class="fas fa-tshirt"></i> Product Information
+            </div>
+            <div class="detail-value">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                    <img src="~/ProductImages/@Model.Product.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover; border: 1px solid #eee;">
+                    <div>
+                        <div style="font-weight: 600; font-size: 16px; color: var(--dark); margin-bottom: 5px;">
+                            @Model.Product?.Name
+                        </div>
+                        <div style="color: var(--success); font-weight: 500;">
+                            @Model.Product?.Price.ToString("C")
+                        </div>
+                        @if (Model.Product?.Category != null)
+                        {
+                            <div style="color: #666; font-size: 14px;">
+                                Category: @Model.Product.Category.Name
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fit Feedback -->
+        @if (!string.IsNullOrEmpty(Model.FitFeedback))
+        {
+            <div class="review-detail-item">
+                <div class="detail-label">
+                    <i class="fas fa-ruler-combined"></i> Fit Feedback
+                </div>
+                <div class="detail-value">
+                    <span style="padding: 8px 16px; border-radius: 20px; font-weight: 500; text-transform: capitalize;
+                          @(Model.FitFeedback == "Perfect" ? "background: rgba(76, 175, 80, 0.1); color: var(--success);" :
+                            Model.FitFeedback == "Tight" ? "background: rgba(255, 152, 0, 0.1); color: var(--warning);" :
+                            "background: rgba(33, 150, 243, 0.1); color: var(--info);")">
+                        @Model.FitFeedback
+                    </span>
+                </div>
+            </div>
+        }
+
+        <!-- Status -->
+        <div class="review-detail-item">
+            <div class="detail-label">
+                <i class="fas fa-info-circle"></i> Status
+            </div>
+            <div class="detail-value">
+                <span style="padding: 8px 16px; border-radius: 20px; font-weight: 500; text-transform: uppercase;
+                      @(Model.Status == ProductReview.ReviewStatus.Pending ? "background: rgba(255, 152, 0, 0.1); color: var(--warning);" :
+                        Model.Status == ProductReview.ReviewStatus.Approved ? "background: rgba(76, 175, 80, 0.1); color: var(--success);" :
+                        "background: rgba(244, 67, 54, 0.1); color: var(--danger);")">
+                    @Model.Status
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-right">
+        <!-- Rating -->
+        <div class="review-detail-item">
+            <div class="detail-label">
+                <i class="fas fa-star"></i> Rating
+            </div>
+            <div class="detail-value">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <div style="display: flex; gap: 5px;">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <i class="fas fa-star" style="font-size: 24px; color: @(i <= Model.Rating ? "#ffc107" : "#ddd");"></i>
+                        }
+                    </div>
+                    <div style="font-size: 24px; font-weight: 700; color: var(--dark);">
+                        @Model.Rating.0/5.0
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Text -->
+        <div class="review-detail-item">
+            <div class="detail-label">
+                <i class="fas fa-comment"></i> Review Text
+            </div>
+            <div class="detail-value review-text">
+                @Model.ReviewText
+            </div>
+        </div>
+
+        <!-- Review Date -->
+        <div class="review-detail-item">
+            <div class="detail-label">
+                <i class="fas fa-calendar"></i> Review Date
+            </div>
+            <div class="detail-value">
+                <div style="font-weight: 500; color: var(--dark);">
+                    @Model.CreatedAt.ToString("dddd, MMMM dd, yyyy")
+                </div>
+                <div style="color: #666; font-size: 14px;">
+                    @Model.CreatedAt.ToString("hh:mm tt")
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="review-detail-item">
+            <div class="detail-label">
+                <i class="fas fa-cogs"></i> Actions
+            </div>
+            <div class="detail-value">
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    @if (Model.Status == ProductReview.ReviewStatus.Pending)
+                    {
+                        <button class="btn btn-success" onclick="approveReview(@Model.Id)" style="padding: 10px 20px;">
+                            <i class="fas fa-check"></i> Approve
+                        </button>
+                        <button class="btn btn-danger" onclick="rejectReview(@Model.Id)" style="padding: 10px 20px;">
+                            <i class="fas fa-times"></i> Reject
+                        </button>
+                    }
+                    else if (Model.Status == ProductReview.ReviewStatus.Approved)
+                    {
+                        <button class="btn btn-danger" onclick="rejectReview(@Model.Id)" style="padding: 10px 20px;">
+                            <i class="fas fa-times"></i> Reject
+                        </button>
+                    }
+                    else if (Model.Status == ProductReview.ReviewStatus.Rejected)
+                    {
+                        <button class="btn btn-success" onclick="approveReview(@Model.Id)" style="padding: 10px 20px;">
+                            <i class="fas fa-check"></i> Approve
+                        </button>
+                    }
+
+                    <button class="btn btn-outline" onclick="deleteReview(@Model.Id)" style="padding: 10px 20px;">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,338 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+@model List<E_Commerce.Models.Product>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .loading-discount {
+        text-align: center;
+        padding: 20px;
+        color: var(--primary);
+        display: none;
+    }
+
+        .loading-discount i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+    .discount-badge {
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 15px;
+        font-size: 13px;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .no-discount-badge {
+        background: #f8f9fa;
+        color: #6c757d;
+        padding: 4px 12px;
+        border-radius: 15px;
+        font-size: 13px;
+        font-weight: 500;
+        border: 1px solid #dee2e6;
+    }
+
+    .discount-input-small {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .discount-input-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        gap: 15px;
+        align-items: end;
+    }
+
+    .btn-success {
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+        border: none;
+    }
+
+        .btn-success:hover {
+            background: linear-gradient(45deg, #218838, #1ea085);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+
+    .btn-danger {
+        background: linear-gradient(45deg, #dc3545, #c82333);
+        color: white;
+        border: none;
+    }
+
+        .btn-danger:hover {
+            background: linear-gradient(45deg, #c82333, #bd2130);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+        }
+
+    .btn-warning {
+        background: linear-gradient(45deg, #ffc107, #e0a800);
+        color: #212529;
+        border: none;
+    }
+
+        .btn-warning:hover {
+            background: linear-gradient(45deg, #e0a800, #d39e00);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+
+    .discount-stat-card {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+        .discount-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+    .discount-stat-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 24px;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    .discount-stat-card:nth-child(1) .discount-stat-icon {
+        background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+    }
+
+    .discount-stat-card:nth-child(2) .discount-stat-icon {
+        background: linear-gradient(45deg, #2196f3, #0d8bf2);
+    }
+
+    .discount-stat-card:nth-child(3) .discount-stat-icon {
+        background: linear-gradient(45deg, #ff9800, #f57c00);
+    }
+
+    .discount-management-container {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+</style>
+<div class="main-content" id="mainContent">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-title">
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <h1><i class="fas fa-tshirt"></i> <span id="pageTitle">Add New Product</span></h1>
+        </div>
+
+        <div class="header-controls">
+            <a class="btn btn-secondary" asp-controller="Product" asp-action="Add">
+                <i class="fas fa-plus"></i> Add Product
+            </a>
+            <a class="btn btn-primary" asp-controller="Product" asp-action="Index">
+                <i class="fas fa-list"></i> View All
+            </a>
+            <div class="admin-profile">
+                <div class="admin-avatar">AS</div>
+                <div class="admin-info">
+                    <h3>Admin Sharma</h3>
+                    <p>Store Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container" id="discountManagementPage">
+        <div class="discount-stats">
+            <div class="discount-stat-card">
+                <div class="discount-stat-icon">
+                    <i class="fas fa-percentage"></i>
+                </div>
+                <div class="discount-stat-info">
+                    <h3 id="discountedProductsCount">@Model.Where(x => x.Discount != null).Count()</h3>
+                    <p>Discounted Products</p>
+                </div>
+            </div>
+
+            <div class="discount-stat-card">
+                <div class="discount-stat-icon">
+                    <i class="fas fa-rupee-sign"></i>
+                </div>
+                <div class="discount-stat-info">
+                    <h3 id="totalDiscountValue">₹8,450</h3>
+                    <p>Total Discount Value</p>
+                </div>
+            </div>
+
+            <div class="discount-stat-card">
+                <div class="discount-stat-icon">
+                    <i class="fas fa-tags"></i>
+                </div>
+                <div class="discount-stat-info">
+                    <h3 id="avgDiscountPercentage">15%</h3>
+                    <p>Average Discount</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="discount-management-container">
+
+            <div class="table-header">
+                <h2><i class="fas fa-percentage"></i> Discount Management</h2>
+                <div class="table-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="discountSearch"
+                               placeholder="Search products by name or SKU..."
+                               onkeyup="debounceDiscountSearch()">
+                    </div>
+                    <select class="filter-select" id="discountCategoryFilter" onchange="loadDiscountProducts()">
+                        <option value="0">All Categories</option>
+                        @foreach (Category category in ViewData["categories"] as List<Category>)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                    <select class="filter-select" id="discountStatusFilter" onchange="loadDiscountProducts()">
+                        <option value="">All Discounts</option>
+                        <option value="with-discount">With Discount</option>
+                        <option value="without-discount">Without Discount</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="discount-form">
+                <h3 style="margin-bottom: 15px; color: var(--dark);">Bulk Discount Apply</h3>
+                <div class="discount-input-group">
+                    <div class="form-group discount-type-select">
+                        <label>Discount Type</label>
+                        <select class="form-control" id="bulkDiscountType">
+                            <option value="percentage">Percentage (%)</option>
+                            <option value="fixed">Fixed Amount (₹)</option>
+                        </select>
+                    </div>
+                    <div class="form-group discount-value-input">
+                        <label>Discount Value</label>
+                        <input type="number" class="form-control" id="bulkDiscountValue" placeholder="Enter value" min="0">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-warning" onclick="applyBulkDiscount()" style="background-color: var(--warning);">
+                            <i class="fas fa-tags"></i> Apply to Selected
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="loading-discount" id="loadingDiscount">
+                <i class="fas fa-spinner fa-spin"></i> Loading discount products...
+            </div>
+
+            <div id="discountTableContainer">
+                @await Html.PartialAsync("_DiscountProductsTable", Model)
+            </div>
+
+
+
+
+            <div class="pagination" id="discountPagination" style="display: none;">
+                <button onclick="changeDiscountPage(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button onclick="changeDiscountPage(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Debounce function for search
+        let discountSearchTimeout;
+        function debounceDiscountSearch() {
+            clearTimeout(discountSearchTimeout);
+            discountSearchTimeout = setTimeout(() => {
+                loadDiscountProducts();
+            }, 500);
+        }
+
+        // Initial load on page ready
+        $(document).ready(function () {
+            loadDiscountProducts();
+
+            
+        });
+
+        // Load discount products with filters
+        function loadDiscountProducts() {
+            const searchTerm = $('#discountSearch').val();
+            const categoryId = $('#discountCategoryFilter').val();
+            const discountStatus = $('#discountStatusFilter').val();
+
+            // Show loading
+            $('#loadingDiscount').show();
+            $('#discountTableContainer').html('');
+
+            $.ajax({
+                url: '/Product/GetFilteredProductsOfDiscounts',
+                type: 'GET',
+                data: {
+                    search: searchTerm,
+                    categoryId: categoryId,
+                    discountStatus: discountStatus
+                },
+                success: function (response) {
+                    $('#discountTableContainer').html(response.tableHtml);
+                    updateDiscountStats(response.stats);
+                    $('#loadingDiscount').hide();
+                },
+                error: function () {
+                    $('#loadingDiscount').hide();
+                    $('#discountTableContainer').html(`
+                        <div class="empty-state">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Error Loading Products</h3>
+                            <p>Failed to load products. Please try again.</p>
+                        </div>
+                    `);
+                }
+            });
+        }
+
+        // Update discount statistics
+        function updateDiscountStats(stats) {
+            if (stats) {
+                $('#discountedProductsCount').text(stats.discountedProducts);
+                $('#totalDiscountValue').text('₹' + stats.totalDiscountValue.toLocaleString('en-IN'));
+                $('#avgDiscountPercentage').text(stats.avgDiscountPercentage.toFixed(1) + '%');
+            }
+        }
+
+    </script>
+
+
+    <script src="~/admin/discount.js"></script>
+
+

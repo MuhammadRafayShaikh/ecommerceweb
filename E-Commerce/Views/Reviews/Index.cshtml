@@ -1,0 +1,1869 @@
+﻿@model IEnumerable<ProductReview>
+@{
+    ViewData["Title"] = "Reviews Management";
+    Layout = "_Layout1";
+}
+
+<style>
+    /* Reviews Management Styles */
+    :root {
+        --primary: #9c27b0;
+        --primary-light: #e1bee7;
+        --primary-dark: #7b1fa2;
+        --secondary: #ff4081;
+        --accent: #ff9800;
+        --light: #f9f0fa;
+        --dark: #2d1b33;
+        --success: #4caf50;
+        --warning: #ffc107;
+        --danger: #f44336;
+        --info: #2196f3;
+        --card-shadow: 0 10px 30px rgba(156, 39, 176, 0.1);
+        --transition: all 0.3s ease;
+    }
+
+    /* Stats Cards */
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 35px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stat-card {
+        background: linear-gradient(135deg, white 0%, #fdfdfd 100%);
+        border-radius: 18px;
+        padding: 30px;
+        box-shadow: var(--card-shadow);
+        display: flex;
+        align-items: center;
+        transition: var(--transition);
+        animation: fadeInUp 0.6s ease;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(156, 39, 176, 0.08);
+        cursor: pointer;
+    }
+
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 18px 18px 0 0;
+    }
+
+    .stat-card.pending::before { background: linear-gradient(90deg, var(--warning), #ff8f00); }
+    .stat-card.approved::before { background: linear-gradient(90deg, var(--success), #2e7d32); }
+    .stat-card.rejected::before { background: linear-gradient(90deg, var(--danger), #c62828); }
+    .stat-card.total::before { background: linear-gradient(90deg, var(--primary), var(--primary-dark)); }
+
+    .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(156, 39, 176, 0.15);
+    }
+
+    .stat-card.active {
+        border: 2px solid var(--primary);
+        box-shadow: 0 15px 35px rgba(156, 39, 176, 0.2);
+    }
+
+    .stat-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 25px;
+        font-size: 28px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+
+    .stat-icon.pending { background: linear-gradient(135deg, var(--warning), #ff8f00); }
+    .stat-icon.approved { background: linear-gradient(135deg, var(--success), #2e7d32); }
+    .stat-icon.rejected { background: linear-gradient(135deg, var(--danger), #c62828); }
+    .stat-icon.total { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+
+    .stat-info h3 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: var(--dark);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .stat-info p {
+        color: #666;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .stat-trend {
+        font-size: 13px;
+        padding: 3px 10px;
+        border-radius: 12px;
+        display: inline-block;
+        margin-top: 5px;
+        font-weight: 500;
+    }
+
+    .trend-up { background: rgba(76, 175, 80, 0.1); color: var(--success); }
+    .trend-down { background: rgba(244, 67, 54, 0.1); color: var(--danger); }
+
+    /* Filters Bar */
+    .filters-container {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: var(--card-shadow);
+        margin-bottom: 30px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid rgba(156, 39, 176, 0.08);
+    }
+
+    .filters-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .filters-header h3 {
+        font-size: 20px;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .filters-header h3 i {
+        color: var(--primary);
+    }
+
+    .filter-controls {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .filter-label {
+        font-weight: 500;
+        color: var(--dark);
+        font-size: 14px;
+    }
+
+    .filter-select {
+        padding: 12px 20px;
+        border: 2px solid #eee;
+        border-radius: 12px;
+        font-size: 14px;
+        background: #f9f9f9;
+        color: #555;
+        min-width: 150px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .filter-select:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: white;
+        box-shadow: 0 0 0 4px rgba(156, 39, 176, 0.1);
+    }
+
+    .search-box {
+        position: relative;
+        min-width: 300px;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 12px 20px 12px 45px;
+        border: 2px solid #eee;
+        border-radius: 12px;
+        font-size: 14px;
+        transition: var(--transition);
+        background: #f9f9f9;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .search-box input:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: white;
+        box-shadow: 0 0 0 4px rgba(156, 39, 176, 0.1);
+    }
+
+    .search-box i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 16px;
+    }
+
+    /* Bulk Actions */
+    .bulk-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 15px;
+        background: #f9f0fa;
+        border-radius: 12px;
+        margin-top: 20px;
+        border: 1px solid rgba(156, 39, 176, 0.1);
+        display: none;
+    }
+
+    .bulk-actions.active {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .bulk-count {
+        font-weight: 600;
+        color: var(--primary);
+        margin-right: 10px;
+    }
+
+    /* Reviews Table Container */
+    .reviews-table-container {
+        background-color: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: var(--card-shadow);
+        animation: fadeInUp 0.6s ease;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid rgba(156, 39, 176, 0.08);
+        margin-bottom: 40px;
+    }
+
+    .table-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f5f5f5;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .table-header h2 {
+        font-size: 26px;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 600;
+    }
+
+    .table-header h2 i {
+        color: var(--primary);
+        background: rgba(156, 39, 176, 0.1);
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .table-controls {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: white;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, var(--primary-dark), #6a1b9a);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(156, 39, 176, 0.3);
+    }
+
+    .btn-success {
+        background: linear-gradient(135deg, var(--success), #2e7d32);
+        color: white;
+        border: none;
+    }
+
+    .btn-success:hover {
+        background: linear-gradient(135deg, #2e7d32, #1b5e20);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+    }
+
+    .btn-danger {
+        background: linear-gradient(135deg, var(--danger), #c62828);
+        color: white;
+        border: none;
+    }
+
+    .btn-danger:hover {
+        background: linear-gradient(135deg, #c62828, #b71c1c);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(244, 67, 54, 0.3);
+    }
+
+    .btn-warning {
+        background: linear-gradient(135deg, var(--warning), #ff8f00);
+        color: white;
+        border: none;
+    }
+
+    .btn-warning:hover {
+        background: linear-gradient(135deg, #ff8f00, #ef6c00);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--dark);
+        border: 2px solid #ddd;
+    }
+
+    .btn-outline:hover {
+        background: #f5f5f5;
+        border-color: #ccc;
+        transform: translateY(-3px);
+    }
+
+    /* Table Styles */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        border-radius: 12px;
+        border: 1px solid #eee;
+    }
+
+    .reviews-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 1200px;
+    }
+
+    .reviews-table thead {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    }
+
+    .reviews-table th {
+        text-align: left;
+        padding: 20px 15px;
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .reviews-table th:first-child {
+        border-radius: 10px 0 0 0;
+        width: 50px;
+        text-align: center;
+    }
+
+    .reviews-table th:last-child {
+        border-radius: 0 10px 0 0;
+    }
+
+    .reviews-table td {
+        padding: 20px 15px;
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 14px;
+        vertical-align: middle;
+        color: #555;
+    }
+
+    .reviews-table tbody tr {
+        transition: var(--transition);
+    }
+
+    .reviews-table tbody tr:hover {
+        background-color: rgba(156, 39, 176, 0.03);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Checkbox */
+    .review-checkbox {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .review-checkbox:checked {
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    .review-checkbox:checked::after {
+        content: '✓';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    /* Review Content */
+    .review-content {
+        max-width: 300px;
+    }
+
+    .review-text {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        color: var(--dark);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .review-excerpt {
+        color: #777;
+        font-size: 13px;
+        font-style: italic;
+    }
+
+    /* Customer Info */
+    .customer-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .customer-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        margin-right: 12px;
+        font-size: 14px;
+        box-shadow: 0 4px 10px rgba(156, 39, 176, 0.2);
+    }
+
+    .customer-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .customer-name {
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 2px;
+        font-size: 14px;
+    }
+
+    .customer-email {
+        font-size: 12px;
+        color: #777;
+    }
+
+    /* Product Info */
+    .product-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .product-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-right: 12px;
+        border: 1px solid #eee;
+    }
+
+    .product-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-name {
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 2px;
+        font-size: 14px;
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .product-price {
+        font-size: 12px;
+        color: var(--success);
+        font-weight: 500;
+    }
+
+    /* Rating Stars */
+    .rating-stars {
+        display: flex;
+        gap: 2px;
+        margin-bottom: 5px;
+    }
+
+    .star {
+        color: #ddd;
+        font-size: 16px;
+    }
+
+    .star.filled {
+        color: #ffc107;
+    }
+
+    .rating-value {
+        font-weight: 600;
+        color: var(--dark);
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    /* Fit Feedback */
+    .fit-feedback {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    .fit-perfect { background: rgba(76, 175, 80, 0.1); color: var(--success); }
+    .fit-tight { background: rgba(255, 152, 0, 0.1); color: var(--warning); }
+    .fit-loose { background: rgba(33, 150, 243, 0.1); color: var(--info); }
+
+    /* Status Badge */
+    .status-badge {
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .status-pending {
+        background: rgba(255, 152, 0, 0.1);
+        color: var(--warning);
+        border: 1px solid rgba(255, 152, 0, 0.2);
+    }
+
+    .status-approved {
+        background: rgba(76, 175, 80, 0.1);
+        color: var(--success);
+        border: 1px solid rgba(76, 175, 80, 0.2);
+    }
+
+    .status-rejected {
+        background: rgba(244, 67, 54, 0.1);
+        color: var(--danger);
+        border: 1px solid rgba(244, 67, 54, 0.2);
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 14px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-view {
+        background: linear-gradient(135deg, var(--info), #1565c0);
+        color: white;
+    }
+
+    .btn-view:hover {
+        background: linear-gradient(135deg, #1565c0, #0d47a1);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+    }
+
+    .btn-approve {
+        background: linear-gradient(135deg, var(--success), #2e7d32);
+        color: white;
+    }
+
+    .btn-approve:hover {
+        background: linear-gradient(135deg, #2e7d32, #1b5e20);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+    }
+
+    .btn-reject {
+        background: linear-gradient(135deg, var(--danger), #c62828);
+        color: white;
+    }
+
+    .btn-reject:hover {
+        background: linear-gradient(135deg, #c62828, #b71c1c);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(244, 67, 54, 0.3);
+    }
+
+    .btn-delete {
+        background: linear-gradient(135deg, #757575, #424242);
+        color: white;
+    }
+
+    .btn-delete:hover {
+        background: linear-gradient(135deg, #424242, #212121);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(117, 117, 117, 0.3);
+    }
+
+    /* Empty State */
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #777;
+    }
+
+    .empty-state i {
+        font-size: 80px;
+        color: #e0e0e0;
+        margin-bottom: 25px;
+        opacity: 0.6;
+    }
+
+    .empty-state h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #aaa;
+        font-weight: 500;
+    }
+
+    .empty-state p {
+        font-size: 16px;
+        color: #bbb;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Pagination */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        gap: 8px;
+    }
+
+    .page-link {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        background-color: white;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #555;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .page-link:hover, .page-link.active {
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: white;
+        border-color: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(156, 39, 176, 0.2);
+    }
+
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        animation: fadeIn 0.3s ease;
+        backdrop-filter: blur(3px);
+    }
+
+    .modal-content {
+        background-color: white;
+        margin: 8% auto;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 20px;
+        animation: slideDown 0.4s ease;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        border: 1px solid rgba(156, 39, 176, 0.1);
+    }
+
+    .modal-header {
+        padding: 25px 30px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: white;
+    }
+
+    .modal-header h3 {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .modal-close {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: rotate(90deg);
+    }
+
+    .modal-body {
+        padding: 30px;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    /* Review Details */
+    .review-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .review-detail-item {
+        margin-bottom: 20px;
+    }
+
+    .detail-label {
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 8px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .detail-label i {
+        color: var(--primary);
+        font-size: 14px;
+    }
+
+    .detail-value {
+        color: #555;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .detail-value.review-text {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        line-height: 1.6;
+    }
+
+    /* Loading Overlay */
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 3000;
+        backdrop-filter: blur(3px);
+    }
+
+    .loading-spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid var(--primary);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    /* Animations */
+    @@keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Responsive Design */
+    @@media (max-width: 1400px) {
+        .stats-container,
+        .reviews-table-container,
+        .filters-container {
+            max-width: 1200px;
+        }
+    }
+
+    @@media (max-width: 1200px) {
+        .stats-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .review-details {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @@media (max-width: 992px) {
+        .table-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .filters-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .filter-controls {
+            width: 100%;
+        }
+
+        .search-box {
+            min-width: 100%;
+        }
+
+        .stats-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .reviews-table-container {
+            padding: 20px;
+        }
+
+        .filters-container {
+            padding: 20px;
+        }
+
+        .stat-card {
+            padding: 20px;
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            font-size: 24px;
+        }
+
+        .stat-info h3 {
+            font-size: 30px;
+        }
+
+        .modal-content {
+            margin: 15% auto;
+            width: 95%;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .btn-icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    @@media (max-width: 576px) {
+        .filter-controls {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .filter-select, .search-box input {
+            width: 100%;
+        }
+
+        .bulk-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .pagination {
+            flex-wrap: wrap;
+        }
+
+        .customer-info, .product-info {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .customer-avatar, .product-image {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+    }
+</style>
+
+<!-- Main Content -->
+<div class="main-content" id="mainContent">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-title">
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <h1><i class="fas fa-star"></i> Reviews Management</h1>
+        </div>
+
+        <div class="header-controls">
+            <div class="admin-profile">
+                <div class="admin-avatar">AS</div>
+                <div class="admin-info">
+                    <h3>Admin Sharma</h3>
+                    <p>Store Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-container" id="statsContainer">
+        <!-- Stats will be loaded via AJAX -->
+    </div>
+
+    <!-- Filters Bar -->
+    <div class="filters-container">
+        <div class="filters-header">
+            <h3><i class="fas fa-filter"></i> Filter Reviews</h3>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <span class="filter-label">Status:</span>
+                    <select class="filter-select" id="statusFilter" onchange="filterReviews()">
+                        <option value="all" selected="@(ViewBag.Status == "all" ? "selected" : null)">All Reviews</option>
+                        <option value="pending" selected="@(ViewBag.Status == "pending" ? "selected" : null)">Pending</option>
+                        <option value="approved" selected="@(ViewBag.Status == "approved" ? "selected" : null)">Approved</option>
+                        <option value="rejected" selected="@(ViewBag.Status == "rejected" ? "selected" : null)">Rejected</option>
+
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <span class="filter-label">Sort By:</span>
+                    <select class="filter-select" id="sortFilter" onchange="filterReviews()">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="rating_high">Highest Rating</option>
+                        <option value="rating_low">Lowest Rating</option>
+                    </select>
+                </div>
+
+                <div class="search-box">
+                    <form method="get" id="searchForm" action="/Reviews">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" value="@ViewBag.SearchTerm" placeholder="Search reviews, products, or customers..." onkeyup="debounceSearch()">
+                    </form>
+                </div>
+
+                <button class="btn btn-outline" onclick="clearFilters()">
+                    <i class="fas fa-times"></i> Clear
+                </button>
+            </div>
+        </div>
+
+        <!-- Bulk Actions -->
+        <div class="bulk-actions" id="bulkActions">
+            <span class="bulk-count" id="selectedCount">0 reviews selected</span>
+            <button class="btn btn-success" onclick="bulkAction('approve')">
+                <i class="fas fa-check"></i> Approve Selected
+            </button>
+            <button class="btn btn-danger" onclick="bulkAction('reject')">
+                <i class="fas fa-times"></i> Reject Selected
+            </button>
+            <button class="btn btn-outline" onclick="bulkAction('delete')">
+                <i class="fas fa-trash"></i> Delete Selected
+            </button>
+            <button class="btn btn-outline" onclick="clearSelection()">
+                <i class="fas fa-times-circle"></i> Clear Selection
+            </button>
+        </div>
+    </div>
+
+    <!-- Reviews Table -->
+    <div class="reviews-table-container">
+        <div class="table-header">
+            <h2><i class="fas fa-comments"></i> Customer Reviews</h2>
+            <div class="table-controls">
+                <button class="btn btn-primary" onclick="selectAll()">
+                    <i class="fas fa-check-square"></i> Select All
+                </button>
+                <button class="btn btn-outline" onclick="refreshReviews()">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="reviews-table">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" id="selectAllCheckbox" class="review-checkbox" onchange="toggleSelectAll()">
+                        </th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Rating</th>
+                        <th>Review</th>
+                        <th>Fit</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="reviewsTableBody">
+                    @foreach (var review in Model)
+                    {
+                        <tr id="review-@review.Id">
+                            <td>
+                                <input type="checkbox" class="review-checkbox review-select" value="@review.Id" onchange="updateSelection()">
+                            </td>
+                            <td>
+                                <div class="customer-info">
+                                    <div class="customer-avatar">
+                                        @review.User?.FirstName?[0]@review.User?.LastName?[0]
+                                    </div>
+                                    <div class="customer-details">
+                                        <div class="customer-name">
+                                            @review.User?.FirstName @review.User?.LastName
+                                        </div>
+                                        <div class="customer-email">
+                                            @review.User?.Email?.Split('@')[0]
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-info">
+                                    <img src="~/ProductImages/@review.Product.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()" class="product-image" alt="@review.Product?.Name">
+                                    <div class="product-details">
+                                        <div class="product-name">@review.Product?.Name</div>
+                                        <div class="product-price">@review.Product?.Price.ToString("C")</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-stars">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        <i class="fas fa-star star @(i <= review.Rating ? "filled" : "")"></i>
+                                    }
+                                </div>
+                                <span class="rating-value">@review.Rating.0</span>
+                            </td>
+                            <td>
+                                <div class="review-content">
+                                    <div class="review-text">@review.ReviewText</div>
+                                    <div class="review-excerpt">
+                                        @(review.ReviewText.Length > 100 ? review.ReviewText.Substring(0, 100) + "..." : "")
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(review.FitFeedback))
+                                {
+                                    <span class="fit-feedback fit-@review.FitFeedback?.ToLower()">
+                                        @review.FitFeedback
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span style="color: #999; font-style: italic;">Not specified</span>
+                                }
+                            </td>
+                            <td>
+                                <span class="status-badge status-@review.Status.ToString().ToLower()">
+                                    @review.Status
+                                </span>
+                            </td>
+                            <td>
+                                <div style="font-size: 13px; color: #555;">
+                                    @review.CreatedAt.ToString("MMM dd, yyyy")
+                                </div>
+                                <div style="font-size: 12px; color: #888;">
+                                    @review.CreatedAt.ToString("hh:mm tt")
+                                </div>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-view" onclick="viewReview(@review.Id)" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    @if (review.Status == ProductReview.ReviewStatus.Pending)
+                                    {
+                                        <button class="btn-icon btn-approve" onclick="approveReview(@review.Id)" title="Approve">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        <button class="btn-icon btn-reject" onclick="rejectReview(@review.Id)" title="Reject">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    }
+                                    else if (review.Status == ProductReview.ReviewStatus.Approved)
+                                    {
+                                        <button class="btn-icon btn-reject" onclick="rejectReview(@review.Id)" title="Reject">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    }
+                                    else if (review.Status == ProductReview.ReviewStatus.Rejected)
+                                    {
+                                        <button class="btn-icon btn-approve" onclick="approveReview(@review.Id)" title="Approve">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                    }
+                                    <button class="btn-icon btn-delete" onclick="deleteReview(@review.Id)" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="empty-state">
+                <i class="fas fa-comment-slash"></i>
+                <h3>No reviews found</h3>
+                <p>@(string.IsNullOrEmpty(ViewBag.SearchTerm) ? "There are no reviews yet." : "No reviews match your search.")</p>
+            </div>
+        }
+
+        <!-- Pagination -->
+        @if (ViewBag.TotalPages > 1)
+        {
+            <div class="pagination">
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <a asp-action="Index"
+                       asp-route-page="@(ViewBag.CurrentPage - 1)"
+                       asp-route-status="@ViewBag.Status"
+                       asp-route-search="@ViewBag.SearchTerm"
+                       class="page-link">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                }
+
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <a asp-action="Index"
+                       asp-route-page="@i"
+                       asp-route-status="@ViewBag.Status"
+                       asp-route-search="@ViewBag.SearchTerm"
+                       class="page-link @(i == ViewBag.CurrentPage ? "active" : "")">
+                        @i
+                    </a>
+                }
+
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <a asp-action="Index"
+                       asp-route-page="@(ViewBag.CurrentPage + 1)"
+                       asp-route-status="@ViewBag.Status"
+                       asp-route-search="@ViewBag.SearchTerm"
+                       class="page-link">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                }
+            </div>
+        }
+    </div>
+
+    <!-- Review Details Modal -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-star"></i> Review Details</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="reviewDetails">
+                <!-- Review details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+<script>
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+        loadStats();
+
+        // Toggle sidebar for mobile
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        // Initialize filters from URL
+        initializeFilters();
+    });
+
+    // Load statistics
+    async function loadStats() {
+        try {
+            const response = await fetch('/Reviews/GetStats');
+            const stats = await response.json();
+
+            const statsContainer = document.getElementById('statsContainer');
+            statsContainer.innerHTML = `
+                <div class="stat-card pending" onclick="filterByStatus('pending')">
+                    <div class="stat-icon pending">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>${stats.pending}</h3>
+                        <p>Pending Reviews</p>
+                        <span class="stat-trend trend-up">Requires Action</span>
+                    </div>
+                </div>
+                <div class="stat-card approved" onclick="filterByStatus('approved')">
+                    <div class="stat-icon approved">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>${stats.approved}</h3>
+                        <p>Approved Reviews</p>
+                        <span class="stat-trend trend-up">${stats.avgRating.toFixed(1)} Avg Rating</span>
+                    </div>
+                </div>
+                <div class="stat-card rejected" onclick="filterByStatus('rejected')">
+                    <div class="stat-icon rejected">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>${stats.rejected}</h3>
+                        <p>Rejected Reviews</p>
+                        <span class="stat-trend trend-down">Not Displayed</span>
+                    </div>
+                </div>
+                <div class="stat-card total" onclick="filterByStatus('all')">
+                    <div class="stat-icon total">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>${stats.total}</h3>
+                        <p>Total Reviews</p>
+                        <span class="stat-trend trend-up">${stats.today} New Today</span>
+                    </div>
+                </div>
+            `;
+
+            // Highlight active filter
+            const status = getUrlParameter('status') || 'all';
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            const activeCard = document.querySelector(`.stat-card.${status}`);
+            if (activeCard) {
+                activeCard.classList.add('active');
+            }
+        } catch (error) {
+            console.error('Error loading stats:', error);
+        }
+    }
+
+    // Initialize filters from URL
+    function initializeFilters() {
+        const status = getUrlParameter('status');
+        const search = getUrlParameter('search');
+
+        if (status) {
+            document.getElementById('statusFilter').value = status;
+        }
+
+        if (search) {
+            document.querySelector('input[name="search"]').value = search;
+        }
+    }
+
+    // Get URL parameter
+    function getUrlParameter(name) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        const results = regex.exec(window.location.href);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Filter reviews
+    function filterReviews() {
+        const status = document.getElementById('statusFilter').value;
+        const sort = document.getElementById('sortFilter').value;
+        const search = document.querySelector('input[name="search"]').value;
+
+        let url = `/Reviews?status=${status}&search=${encodeURIComponent(search)}`;
+
+        // Add sort parameter if needed
+        if (sort !== 'newest') {
+            url += `&sort=${sort}`;
+        }
+
+        window.location.href = url;
+    }
+
+    // Filter by status from stats cards
+    function filterByStatus(status) {
+        document.getElementById('statusFilter').value = status;
+        filterReviews();
+    }
+
+    // Clear filters
+    function clearFilters() {
+        document.getElementById('statusFilter').value = 'all';
+        document.getElementById('sortFilter').value = 'newest';
+        document.querySelector('input[name="search"]').value = '';
+        filterReviews();
+    }
+
+    // Search with debounce
+    let searchTimeout;
+    function debounceSearch() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            filterReviews();
+        }, 500);
+    }
+
+    // Refresh reviews
+    function refreshReviews() {
+        window.location.reload();
+    }
+
+    // View review details
+    async function viewReview(reviewId) {
+        showLoading(true);
+
+        try {
+            const response = await fetch('/Reviews/Details/' + reviewId);
+            if (!response.ok) throw new Error('Failed to load review details');
+
+            const html = await response.text();
+            document.getElementById('reviewDetails').innerHTML = html;
+            document.getElementById('reviewModal').style.display = 'block';
+        } catch (error) {
+            console.error('Error loading review details:', error);
+            showNotification('Failed to load review details', 'danger');
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    // Approve review
+    async function approveReview(reviewId) {
+        if (!confirm('Are you sure you want to approve this review?')) {
+            return;
+        }
+
+        showLoading(true);
+
+        try {
+
+                $.ajax({
+                    url: `/Reviews/Approve/${reviewId}`,
+                    type: "POST",
+                    success: function (result) {
+                        if (result.success) {
+                            updateReviewStatus(reviewId, result.status, result.statusClass);
+                            showNotification(result.message, 'success');
+                            loadStats();
+                        } else {
+                            showNotification(result.message, 'danger');
+                        }
+                    }
+                });
+
+
+            // const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            // const response = await fetch(`/Reviews/Approve/${reviewId}`, {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //         'RequestVerificationToken': token || ''
+            //     }
+            // });
+
+            // const result = await response.json();
+
+            // if (result.success) {
+            //     updateReviewStatus(reviewId, result.status, result.statusClass);
+            //     showNotification(result.message, 'success');
+            //     loadStats(); Refresh stats
+            // } else {
+            //     showNotification(result.message, 'danger');
+            // }
+        } catch (error) {
+            console.error('Error approving review:', error);
+            showNotification('Failed to approve review', 'danger');
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    // Reject review
+    async function rejectReview(reviewId) {
+        if (!confirm('Are you sure you want to reject this review?')) {
+            return;
+        }
+
+        showLoading(true);
+
+        try {
+
+            $.ajax({
+                url: `/Reviews/Reject/${reviewId}`,
+                type : "POST",
+                success: function(result){
+                        if (result.success) {
+                            updateReviewStatus(reviewId, result.status, result.statusClass);
+                            showNotification(result.message, 'success');
+                            loadStats(); // Refresh stats
+                        } else {
+                            showNotification(result.message, 'danger');
+                        }
+                }
+            })
+            // const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            // const response = await fetch(`/Reviews/Reject/${reviewId}`, {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //         'RequestVerificationToken': token || ''
+            //     }
+            // });
+
+            // const result = await response.json();
+
+            
+        } catch (error) {
+            console.error('Error rejecting review:', error);
+            showNotification('Failed to reject review', 'danger');
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    // Delete review
+    async function deleteReview(reviewId) {
+        if (!confirm('Are you sure you want to delete this review? This action cannot be undone.')) {
+            return;
+        }
+
+        showLoading(true);
+
+        try {
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            const response = await fetch(`/Reviews/Delete/${reviewId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': token || ''
+                }
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                // Remove row from table
+                const row = document.getElementById(`review-${reviewId}`);
+                if (row) {
+                    row.style.opacity = '0.5';
+                    row.style.transition = 'opacity 0.3s ease';
+                    setTimeout(() => row.remove(), 300);
+                }
+
+                showNotification(result.message, 'warning');
+                loadStats(); // Refresh stats
+                updateSelection(); // Update bulk actions
+            } else {
+                showNotification(result.message, 'danger');
+            }
+        } catch (error) {
+            console.error('Error deleting review:', error);
+            showNotification('Failed to delete review', 'danger');
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    // Update review status in UI
+    function updateReviewStatus(reviewId, status, statusClass) {
+        const row = document.getElementById(`review-${reviewId}`);
+        if (!row) return;
+
+        // Update status badge
+        const statusCell = row.querySelector('.status-badge');
+        if (statusCell) {
+            statusCell.className = `status-badge status-${statusClass}`;
+            statusCell.textContent = status;
+        }
+
+        // Update action buttons
+        const actionCell = row.querySelector('.action-buttons');
+        if (actionCell) {
+            if (status === 'Approved') {
+                actionCell.innerHTML = `
+                    <button class="btn-icon btn-view" onclick="viewReview(${reviewId})" title="View Details">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-icon btn-reject" onclick="rejectReview(${reviewId})" title="Reject">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="btn-icon btn-delete" onclick="deleteReview(${reviewId})" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+            } else if (status === 'Rejected') {
+                actionCell.innerHTML = `
+                    <button class="btn-icon btn-view" onclick="viewReview(${reviewId})" title="View Details">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-icon btn-approve" onclick="approveReview(${reviewId})" title="Approve">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="btn-icon btn-delete" onclick="deleteReview(${reviewId})" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+            }
+        }
+    }
+
+    // Bulk selection
+    function toggleSelectAll() {
+        const selectAll = document.getElementById('selectAllCheckbox').checked;
+        document.querySelectorAll('.review-select').forEach(checkbox => {
+            checkbox.checked = selectAll;
+        });
+        updateSelection();
+    }
+
+    function selectAll() {
+        document.getElementById('selectAllCheckbox').checked = true;
+        toggleSelectAll();
+    }
+
+    function updateSelection() {
+        const selected = document.querySelectorAll('.review-select:checked');
+        const selectedCount = selected.length;
+        const totalCount = document.querySelectorAll('.review-select').length;
+
+        document.getElementById('selectedCount').textContent = `${selectedCount} reviews selected`;
+        document.getElementById('selectAllCheckbox').checked = selectedCount === totalCount;
+
+        // Show/hide bulk actions
+        const bulkActions = document.getElementById('bulkActions');
+        if (selectedCount > 0) {
+            bulkActions.classList.add('active');
+        } else {
+            bulkActions.classList.remove('active');
+        }
+    }
+
+    function clearSelection() {
+        document.querySelectorAll('.review-select').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        document.getElementById('selectAllCheckbox').checked = false;
+        updateSelection();
+    }
+
+    // Bulk action
+    async function bulkAction(action) {
+        const selected = document.querySelectorAll('.review-select:checked');
+        if (selected.length === 0) {
+            showNotification('Please select at least one review.', 'warning');
+            return;
+        }
+
+        const confirmMessage = action === 'approve' ? 'Approve selected reviews?' :
+                             action === 'reject' ? 'Reject selected reviews?' :
+                             'Delete selected reviews? This action cannot be undone.';
+
+        if (!confirm(confirmMessage)) {
+            return;
+        }
+
+        showLoading(true);
+
+        const reviewIds = Array.from(selected).map(checkbox => parseInt(checkbox.value));
+
+        try {
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            const response = await fetch('/Reviews/BulkAction', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': token || ''
+                },
+                body: JSON.stringify({ action, reviewIds })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                showNotification(result.message, 'success');
+
+                // Refresh page after bulk actions
+                if (action === 'delete') {
+                    setTimeout(() => location.reload(), 1500);
+                } else {
+                    // Update status for approved/rejected reviews
+                    reviewIds.forEach(id => {
+                        const status = action === 'approve' ? 'Approved' : 'Rejected';
+                        const statusClass = action;
+                        updateReviewStatus(id, status, statusClass);
+                    });
+
+                    clearSelection();
+                    loadStats(); // Refresh stats
+                }
+            } else {
+                showNotification(result.message, 'danger');
+            }
+        } catch (error) {
+            console.error('Error performing bulk action:', error);
+            showNotification('Failed to perform bulk action', 'danger');
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    // Close modal
+    function closeModal() {
+        document.getElementById('reviewModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('reviewModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+
+    // Show loading overlay
+    function showLoading(show) {
+        const overlay = document.getElementById('loadingOverlay');
+        if (overlay) {
+            overlay.style.display = show ? 'flex' : 'none';
+        }
+    }
+
+    // Notification function
+    function showNotification(message, type) {
+        // Remove existing notifications
+        document.querySelectorAll('.custom-notification').forEach(n => n.remove());
+
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = 'custom-notification';
+        notification.style.cssText = `
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            padding: 18px 25px;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            z-index: 3000;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            animation: slideInRight 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Poppins', sans-serif;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        `;
+
+        // Set color based on type
+        const colors = {
+            'success': 'linear-gradient(135deg, var(--success), #2e7d32)',
+            'warning': 'linear-gradient(135deg, var(--warning), #ff8f00)',
+            'info': 'linear-gradient(135deg, var(--info), #1565c0)',
+            'danger': 'linear-gradient(135deg, var(--danger), #c62828)'
+        };
+
+        notification.style.background = colors[type] || 'linear-gradient(135deg, var(--primary), var(--primary-dark))';
+
+        // Add icon based on type
+        const icons = {
+            'success': 'check-circle',
+            'warning': 'exclamation-triangle',
+            'info': 'info-circle',
+            'danger': 'times-circle'
+        };
+
+        notification.innerHTML = `<i class="fas fa-${icons[type] || 'info-circle'}"></i> ${message}`;
+
+        // Add to document
+        document.body.appendChild(notification);
+
+        // Add animation
+        const style = document.createElement('style');
+        style.textContent = `
+    @@keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+    @@keyframes fadeOut {
+                from { opacity: 1; transform: translateX(0); }
+                to { opacity: 0; transform: translateX(100%); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Remove after 4 seconds
+        setTimeout(() => {
+            notification.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    document.body.removeChild(notification);
+                }
+            }, 300);
+        }, 4000);
+    }
+</script>
