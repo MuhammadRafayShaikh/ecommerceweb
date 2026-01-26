@@ -41,9 +41,110 @@
                     <li><a asp-controller="Home" asp-action="About" class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">About</a></li>
                 </ul>
             </nav>
-                
+
             <div class="header-icons">
-                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                @if (ViewContext.RouteData.Values["Action"].ToString() == "Collections" ||
+                ViewContext.RouteData.Values["Action"].ToString() == "Featured" ||
+                ViewContext.RouteData.Values["Action"].ToString() == "Sales")
+                {
+                    <div class="header-search-container">
+                        <div class="search-wrapper">
+                            <a href="#" class="search-icon" id="searchToggle">
+                                <i class="fas fa-search"></i>
+                            </a>
+
+                            <!-- Search Modal/Dropdown -->
+                            <div class="search-modal" id="searchModal">
+                                <div class="search-modal-content">
+                                    <div class="search-header">
+                                        <h3><i class="fas fa-search"></i> Search Products</h3>
+                                        <button class="close-search" id="closeSearch">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="search-input-container">
+                                        <div class="search-input-group">
+                                            <i class="fas fa-search search-input-icon"></i>
+                                            <input type="text"
+                                                   id="searchInput"
+                                                   placeholder="Search by product name, description, fabric, color, occasion..."
+                                                   autocomplete="off">
+                                            <button class="clear-search" id="clearSearch">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+
+                                        <!-- Search Filters -->
+                                        <div class="search-filters">
+                                            <div class="filter-group">
+                                                <label for="searchCategory">
+                                                    <i class="fas fa-filter"></i> Filter by:
+                                                </label>
+                                                <select id="searchCategory">
+                                                    <option value="">All Categories</option>
+                                                    @foreach (var category in await GetCategoriesForSearch())
+                                                    {
+                                                        <option value="@category.Id">@category.Name</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search Results -->
+                                    <div class="search-results-container">
+                                        <div class="search-results-header">
+                                            <h4 id="searchResultsTitle">Type to search products...</h4>
+                                            <div class="search-stats">
+                                                <span id="searchResultsCount">0 results</span>
+                                                <span id="searchTime" style="display: none;">in 0.0s</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="search-results" id="searchResults">
+                                            <!-- Results will be loaded here -->
+                                            <div class="no-results">
+                                                <div class="no-results-icon">
+                                                    <i class="fas fa-search"></i>
+                                                </div>
+                                                <h4>Start Typing to Search</h4>
+                                                <p>Search for products by name, description, fabric, occasion, or color</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Loading Indicator -->
+                                        <div class="search-loading" id="searchLoading" style="display: none;">
+                                            <div class="loading-spinner">
+                                                <i class="fas fa-spinner fa-spin"></i>
+                                            </div>
+                                            <p>Searching...</p>
+                                        </div>
+
+                                        <!-- Search Tips -->
+                                        <div class="search-tips">
+                                            <h5><i class="fas fa-lightbulb"></i> Search Tips:</h5>
+                                            <ul>
+                                                <li>Try searching by product name (e.g., "Anarkali", "Sherwani")</li>
+                                                <li>Search by fabric (e.g., "Silk", "Cotton")</li>
+                                                <li>Search by occasion (e.g., "Wedding", "Party")</li>
+                                                <li>Search by color (e.g., "Red", "Blue", "Gold")</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                @functions {
+                    private async Task<List<Category>> GetCategoriesForSearch()
+                    {
+                        // You might want to cache this
+                        return await GetCategories.GetCategoriesAsync();
+                    }
+                }
 
                 @if (!User.Identity.IsAuthenticated)
                 {

@@ -109,13 +109,13 @@ async function loadUserStats() {
             }
 
             // Update other stats
-            const statCards = document.querySelectorAll('.stat-number');
-            if (statCards.length >= 4 && result.stats) {
-                // This is just an example - you would replace with actual data
-                statCards[0].textContent = result.stats.totalOrders || '0';
-                statCards[1].textContent = result.stats.wishlistItems || '0';
-                statCards[2].textContent = result.stats.reviewsWritten || '0';
-            }
+            //const statCards = document.querySelectorAll('.stat-number');
+            //if (statCards.length >= 4 && result.stats) {
+            //    // This is just an example - you would replace with actual data
+            //    statCards[0].textContent = result.stats.totalOrders || '0';
+            //    statCards[1].textContent = result.stats.wishlistItems || '0';
+            //    statCards[2].textContent = result.stats.reviewsWritten || '0';
+            //}
         }
     } catch (error) {
         console.error('Error loading user stats:', error);
@@ -391,6 +391,284 @@ function closePasswordModal() {
         document.body.style.overflow = 'auto';
     }
 }
+
+// Open login history modal
+function openLoginHistoryModal() {
+    const modal = document.getElementById('loginHistoryModal');
+    if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        loadLoginHistory();
+    }
+}
+
+// Close login history modal
+function closeLoginHistoryModal() {
+    const modal = document.getElementById('loginHistoryModal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Load login history
+async function loadLoginHistory() {
+    try {
+        const period = document.getElementById('historyPeriod').value;
+        const status = document.getElementById('historyStatus').value;
+
+        // Show loading state
+        const tableBody = document.getElementById('loginHistoryTable');
+        const noDataMessage = document.getElementById('noHistoryData');
+
+        if (tableBody) {
+            tableBody.innerHTML = `
+                <tr class="loading-row">
+                    <td colspan="5">
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i> Loading login history...
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }
+
+        if (noDataMessage) {
+            noDataMessage.style.display = 'none';
+        }
+
+        // Fetch data
+        const response = await fetch(`/Profile/GetLoginHistory?days=${period}&status=${status}`);
+        const result = await response.json();
+
+        if (result.success) {
+            updateLoginHistoryStats(result.statistics);
+            renderLoginHistoryTable(result.data);
+            renderPagination(result.pagination);
+
+            // Show/hide no data message
+            if (result.data.length === 0) {
+                if (tableBody) tableBody.innerHTML = '';
+                if (noDataMessage) noDataMessage.style.display = 'block';
+            }
+        } else {
+            showToast(result.message || 'Failed to load login history', 'error');
+            if (tableBody) {
+                tableBody.innerHTML = `
+                    <tr class="error-row">
+                        <td colspan="5">
+                            <div class="error-message">
+                                <i class="fas fa-exclamation-triangle"></i> 
+                                ${result.message || 'Failed to load data'}
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+    } catch (error) {
+        console.error('Error loading login history:', error);
+        showToast('Network error. Please try again.', 'error');
+    }
+}
+
+// Update statistics
+function updateLoginHistoryStats(stats) {
+    if (stats) {
+        const totalElement = document.getElementById('totalLogins');
+        const successElement = document.getElementById('successfulLogins');
+        const failedElement = document.getElementById('failedLogins');
+        const lastLoginElement = document.getElementById('lastLogin');
+
+        if (totalElement) totalElement.textContent = stats.totalLogins || 0;
+        if (successElement) successElement.textContent = stats.successfulLogins || 0;
+        if (failedElement) failedElement.textContent = stats.failedLogins || 0;
+
+        if (lastLoginElement && stats.lastLogin) {
+            const date = new Date(stats.lastLogin);
+            lastLoginElement.textContent = date.toLocaleString();
+        }
+    }
+}
+
+// Render login history table
+function renderLoginHistoryTable(data) {
+    const tableBody = document.getElementById('loginHistoryTable');
+    if (!tableBody) return;
+
+    if (data.length === 0) {
+        tableBody.innerHTML = '';
+        return;
+    }
+
+    let html = '';
+    data.forEach(item => {
+        html += `
+            <tr>
+                <td>
+                    <div class="time-cell">
+                        <div class="time-main">${item.friendlyTime}</div>
+                        <div class="time-detail">${item.loginTime}</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="device-cell">
+                        <div class="device-icon">
+                            <i class="fas fa-${item.deviceInfo.toLowerCase().includes('mobile') ? 'mobile-alt' :
+                item.deviceInfo.toLowerCase().includes('tablet') ? 'tablet-alt' :
+                    'laptop'}"></i>
+                        </div>
+                        <div class="device-info">
+                            <div class="device-name">${item.deviceInfo}</div>
+                            <div class="browser-name">${item.browserInfo}</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="ip-cell">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="ip-address">${item.ipAddress || 'N/A'}</span>
+                    </div>
+                </td>
+                <td>
+                    <span class="status-badge ${item.statusClass}">
+                        <i class="fas fa-${item.isSuccessful ? 'check-circle' : 'times-circle'}"></i>
+                        ${item.statusText}
+                    </span>
+                </td>
+                <td>
+                    <button class="btn-details" onclick="showLoginDetails(${item.id})">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </td>
+            </tr>
+        `;
+    });
+
+    tableBody.innerHTML = html;
+}
+
+// Render pagination
+function renderPagination(pagination) {
+    const paginationElement = document.getElementById('historyPagination');
+    if (!paginationElement) return;
+
+    if (pagination.totalPages <= 1) {
+        paginationElement.innerHTML = '';
+        return;
+    }
+
+    let html = `
+        <div class="pagination-controls">
+            <button class="pagination-btn ${pagination.currentPage === 1 ? 'disabled' : ''}" 
+                    onclick="changeHistoryPage(${pagination.currentPage - 1})" 
+                    ${pagination.currentPage === 1 ? 'disabled' : ''}>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            
+            <div class="page-numbers">
+    `;
+
+    // Show page numbers
+    for (let i = 1; i <= pagination.totalPages; i++) {
+        if (i === pagination.currentPage) {
+            html += `<span class="page-number active">${i}</span>`;
+        } else if (i <= 3 || i > pagination.totalPages - 2 ||
+            Math.abs(i - pagination.currentPage) <= 1) {
+            html += `<button class="page-number" onclick="changeHistoryPage(${i})">${i}</button>`;
+        } else if (i === 4 && pagination.currentPage > 4) {
+            html += `<span class="page-dots">...</span>`;
+        } else if (i === pagination.totalPages - 3 && pagination.currentPage < pagination.totalPages - 3) {
+            html += `<span class="page-dots">...</span>`;
+        }
+    }
+
+    html += `
+            </div>
+            
+            <button class="pagination-btn ${pagination.currentPage === pagination.totalPages ? 'disabled' : ''}" 
+                    onclick="changeHistoryPage(${pagination.currentPage + 1})" 
+                    ${pagination.currentPage === pagination.totalPages ? 'disabled' : ''}>
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="pagination-info">
+            Showing page ${pagination.currentPage} of ${pagination.totalPages} 
+            (${pagination.totalItems} total logins)
+        </div>
+    `;
+
+    paginationElement.innerHTML = html;
+}
+
+// Change history page
+function changeHistoryPage(page) {
+    if (page < 1) return;
+
+    const period = document.getElementById('historyPeriod').value;
+    const status = document.getElementById('historyStatus').value;
+
+    fetch(`/Profile/GetLoginHistory?days=${period}&status=${status}&page=${page}`)
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                renderLoginHistoryTable(result.data);
+                renderPagination(result.pagination);
+                // Scroll to top of table
+                const table = document.querySelector('.history-table-container');
+                if (table) table.scrollTop = 0;
+            }
+        });
+}
+
+// Show login details
+function showLoginDetails(loginId) {
+    // You can expand this to show more details
+    alert(`Details for login ID: ${loginId}\nThis would show detailed information about this login attempt.`);
+}
+
+// Export login history
+function exportLoginHistory(format) {
+    const period = document.getElementById('historyPeriod').value;
+    const status = document.getElementById('historyStatus').value;
+
+    const url = `/Profile/ExportLoginHistory?format=${format}&period=${period}&status=${status}`;
+
+    // direct download
+    window.location.href = url;
+}
+
+
+// Also update the existing loadActivity function to handle both modals
+// Add this to your existing initialization
+function initializeModals() {
+    // Close modals when clicking outside
+    const modals = document.querySelectorAll('.modal-overlay');
+    modals.forEach(modal => {
+        modal.addEventListener('click', function (e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    });
+}
+
+// Call this in your DOMContentLoaded
+initializeModals();
 
 function openDeleteModal() {
     const modal = document.getElementById('deleteModal');

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nadcAZO2EO4=",
+  "dgSpecHash": "NbcSvxZ6n6I=",
   "success": true,
   "projectFilePath": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\E-Commerce.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\Rohaan\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Rohaan\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Rohaan\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\Rohaan\\.nuget\\packages\\questpdf\\2025.12.3\\questpdf.2025.12.3.nupkg.sha512",
     "C:\\Users\\Rohaan\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Rohaan\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Rohaan\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",

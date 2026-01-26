@@ -76,6 +76,12 @@
                     </div>
                     
                     <!-- Account Information Card -->
+                    
+                </div>
+                
+                <!-- Right Column -->
+                <div class="form-column">
+                    <!-- Password Change Card -->
                     <div class="form-card">
                         <div class="card-header">
                             <i class="fas fa-user-cog"></i>
@@ -97,64 +103,6 @@
                             <div class="info-item">
                                 <span class="info-label">Status:</span>
                                 <span class="info-value status-active">@Model.Status</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Column -->
-                <div class="form-column">
-                    <!-- Password Change Card -->
-                    <div class="form-card">
-                        <div class="card-header">
-                            <i class="fas fa-key"></i>
-                            <h3>Change Password</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label asp-for="CurrentPassword"></label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-lock"></i>
-                                    <input asp-for="CurrentPassword" type="password" placeholder="Enter current password">
-                                    <button type="button" class="toggle-password" onclick="togglePassword('CurrentPassword')">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                                <span asp-validation-for="CurrentPassword" class="text-danger"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label asp-for="NewPassword"></label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-key"></i>
-                                    <input asp-for="NewPassword" type="password" placeholder="Enter new password">
-                                    <button type="button" class="toggle-password" onclick="togglePassword('NewPassword')">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                                <span asp-validation-for="NewPassword" class="text-danger"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label asp-for="ConfirmPassword"></label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-key"></i>
-                                    <input asp-for="ConfirmPassword" type="password" placeholder="Confirm new password">
-                                    <button type="button" class="toggle-password" onclick="togglePassword('ConfirmPassword')">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                            </div>
-                            
-                            <div class="password-requirements">
-                                <h4>Password Requirements:</h4>
-                                <ul>
-                                    <li id="req-length">At least 6 characters</li>
-                                    <li id="req-uppercase">One uppercase letter</li>
-                                    <li id="req-lowercase">One lowercase letter</li>
-                                    <li id="req-number">One number</li>
-                                </ul>
                             </div>
                         </div>
                     </div>

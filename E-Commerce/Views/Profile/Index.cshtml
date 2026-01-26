@@ -67,9 +67,6 @@
                 <a href="#security" class="nav-item" data-section="security">
                     <i class="fas fa-shield-alt"></i> Security
                 </a>
-                <a href="#preferences" class="nav-item" data-section="preferences">
-                    <i class="fas fa-cog"></i> Preferences
-                </a>
                 <a href="#activity" class="nav-item" data-section="activity">
                     <i class="fas fa-chart-line"></i> Activity
                 </a>
@@ -240,170 +237,9 @@
                         <div class="security-content">
                             <h4>Login History</h4>
                             <p>View recent login activity on your account</p>
-                            <button class="btn-view-logins">
+                            <button class="btn-view-logins" onclick="openLoginHistoryModal()">
                                 <i class="fas fa-eye"></i> View History
                             </button>
-                        </div>
-                    </div>
-
-                    <!-- Active Sessions Card -->
-                    <div class="security-card">
-                        <div class="security-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <div class="security-content">
-                            <h4>Active Sessions</h4>
-                            <p>Manage devices logged into your account</p>
-                            <button class="btn-manage-sessions">
-                                <i class="fas fa-laptop"></i> Manage Sessions
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Preferences Section -->
-            <div class="profile-section" id="preferences-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-cog"></i> Preferences</h2>
-                </div>
-
-                <div class="preferences-grid">
-                    <!-- Notification Settings -->
-                    <div class="preference-card">
-                        <div class="preference-header">
-                            <div class="preference-icon">
-                                <i class="fas fa-bell"></i>
-                            </div>
-                            <div class="preference-title">
-                                <h4>Notifications</h4>
-                                <p>Manage how you receive notifications</p>
-                            </div>
-                        </div>
-                        <div class="preference-body">
-                            <div class="toggle-item">
-                                <div class="toggle-label">
-                                    <span>Email Notifications</span>
-                                    <p>Receive order updates via email</p>
-                                </div>
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                            <div class="toggle-item">
-                                <div class="toggle-label">
-                                    <span>SMS Notifications</span>
-                                    <p>Receive order updates via SMS</p>
-                                </div>
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                            <div class="toggle-item">
-                                <div class="toggle-label">
-                                    <span>Promotional Emails</span>
-                                    <p>Receive special offers and discounts</p>
-                                </div>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Privacy Settings -->
-                    <div class="preference-card">
-                        <div class="preference-header">
-                            <div class="preference-icon">
-                                <i class="fas fa-user-secret"></i>
-                            </div>
-                            <div class="preference-title">
-                                <h4>Privacy</h4>
-                                <p>Control your privacy settings</p>
-                            </div>
-                        </div>
-                        <div class="preference-body">
-                            <div class="toggle-item">
-                                <div class="toggle-label">
-                                    <span>Show Profile</span>
-                                    <p>Allow others to see your profile</p>
-                                </div>
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                            <div class="toggle-item">
-                                <div class="toggle-label">
-                                    <span>Show Activity</span>
-                                    <p>Show your recent activity</p>
-                                </div>
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Language & Region -->
-                    <div class="preference-card">
-                        <div class="preference-header">
-                            <div class="preference-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="preference-title">
-                                <h4>Language & Region</h4>
-                                <p>Set your preferred language and region</p>
-                            </div>
-                        </div>
-                        <div class="preference-body">
-                            <div class="preference-field">
-                                <label>Language</label>
-                                <select class="form-select">
-                                    <option selected>English</option>
-                                    <option>Hindi</option>
-                                    <option>Spanish</option>
-                                    <option>French</option>
-                                </select>
-                            </div>
-                            <div class="preference-field">
-                                <label>Time Zone</label>
-                                <select class="form-select">
-                                    <option selected>IST (UTC +5:30)</option>
-                                    <option>UTC</option>
-                                    <option>EST (UTC -5)</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Display Settings -->
-                    <div class="preference-card">
-                        <div class="preference-header">
-                            <div class="preference-icon">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <div class="preference-title">
-                                <h4>Display</h4>
-                                <p>Customize how the site looks</p>
-                            </div>
-                        </div>
-                        <div class="preference-body">
-                            <div class="preference-field">
-                                <label>Theme</label>
-                                <div class="theme-options">
-                                    <button class="theme-option active" data-theme="light">
-                                        <i class="fas fa-sun"></i> Light
-                                    </button>
-                                    <button class="theme-option" data-theme="dark">
-                                        <i class="fas fa-moon"></i> Dark
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -425,7 +261,7 @@
                         </div>
                         <div class="stat-content">
                             <h4>Total Orders</h4>
-                            <p class="stat-number">0</p>
+                            <p class="stat-number">@ViewData["totalOrders"]</p>
                         </div>
                     </div>
 
@@ -434,8 +270,8 @@
                             <i class="fas fa-heart"></i>
                         </div>
                         <div class="stat-content">
-                            <h4>Wishlist Items</h4>
-                            <p class="stat-number">0</p>
+                            <h4>Cart Items</h4>
+                            <p class="stat-number">@ViewData["totalCarts"]</p>
                         </div>
                     </div>
 
@@ -445,7 +281,7 @@
                         </div>
                         <div class="stat-content">
                             <h4>Reviews Written</h4>
-                            <p class="stat-number">0</p>
+                            <p class="stat-number">@ViewData["totalReviews"]</p>
                         </div>
                     </div>
 
@@ -456,21 +292,6 @@
                         <div class="stat-content">
                             <h4>Last Login</h4>
                             <p class="stat-number" id="lastLoginTime">--</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="recent-activity">
-                    <h3>Recent Activity</h3>
-                    <div class="activity-list" id="activityList">
-                        <div class="activity-item">
-                            <div class="activity-icon">
-                                <i class="fas fa-info-circle"></i>
-                            </div>
-                            <div class="activity-content">
-                                <p>No recent activity to show</p>
-                                <span class="activity-time">--</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -564,6 +385,115 @@
                 <button type="submit" class="btn-save" disabled>Change Password</button>
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Login History Modal -->
+<div id="loginHistoryModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-history"></i> Login History</h2>
+            <button class="close-modal" onclick="closeLoginHistoryModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="login-history-container">
+                <!-- Filter Controls -->
+                <div class="history-filters">
+                    <div class="filter-group">
+                        <label for="historyPeriod">Period:</label>
+                        <select id="historyPeriod" onchange="loadLoginHistory()">
+                            <option value="7">Last 7 days</option>
+                            <option value="30" selected>Last 30 days</option>
+                            <option value="90">Last 90 days</option>
+                            <option value="365">Last year</option>
+                            <option value="all">All time</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="historyStatus">Status:</label>
+                        <select id="historyStatus" onchange="loadLoginHistory()">
+                            <option value="all">All</option>
+                            <option value="successful">Successful Only</option>
+                            <option value="failed">Failed Only</option>
+                        </select>
+                    </div>
+                    <button class="btn-refresh-history" onclick="loadLoginHistory()">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+
+                <!-- Stats Summary -->
+                <div class="history-stats">
+                    <div class="history-stat">
+                        <span class="stat-label">Total Logins:</span>
+                        <span class="stat-value" id="totalLogins">0</span>
+                    </div>
+                    <div class="history-stat">
+                        <span class="stat-label">Successful:</span>
+                        <span class="stat-value" id="successfulLogins">0</span>
+                    </div>
+                    <div class="history-stat">
+                        <span class="stat-label">Failed:</span>
+                        <span class="stat-value" id="failedLogins">0</span>
+                    </div>
+                    <div class="history-stat">
+                        <span class="stat-label">Last Login:</span>
+                        <span class="stat-value" id="lastLogin">--</span>
+                    </div>
+                </div>
+
+                <!-- Login History Table -->
+                <div class="history-table-container">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-calendar"></i> Date & Time</th>
+                                <th><i class="fas fa-laptop"></i> Device/Browser</th>
+                                <th><i class="fas fa-map-marker-alt"></i> IP Address</th>
+                                <th><i class="fas fa-check-circle"></i> Status</th>
+                                <th><i class="fas fa-info-circle"></i> Details</th>
+                            </tr>
+                        </thead>
+                        <tbody id="loginHistoryTable">
+                            <!-- Data will be loaded here -->
+                            <tr class="loading-row">
+                                <td colspan="5">
+                                    <div class="loading-spinner">
+                                        <i class="fas fa-spinner fa-spin"></i> Loading login history...
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="history-pagination" id="historyPagination">
+                    <!-- Pagination will be loaded here -->
+                </div>
+
+                <!-- No Data Message -->
+                <div class="no-data-message" id="noHistoryData" style="display: none;">
+                    <div class="no-data-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>No Login History Found</h3>
+                    <p>You haven't logged in during the selected period.</p>
+                </div>
+
+                <!-- Export Options -->
+                <div class="export-options">
+                    <button class="btn-export" onclick="exportLoginHistory('csv')">
+                        <i class="fas fa-file-csv"></i> Export as CSV
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-close" onclick="closeLoginHistoryModal()">
+                <i class="fas fa-times"></i> Close
+            </button>
+        </div>
     </div>
 </div>
 

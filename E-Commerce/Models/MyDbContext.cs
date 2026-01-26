@@ -25,6 +25,7 @@ namespace E_Commerce.Models
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Settings> Settings { get; set; }
         public DbSet<ProductReview> ProductReviews { get; set; }
+        public DbSet<LoginHistory> LoginHistory { get; set; }
 
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)

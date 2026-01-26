@@ -277,18 +277,7 @@ namespace E_Commerce.Controllers
             if (userId != null)
             {
                 await GetCartProducts();
-                //return Json(cartProducts);
-                //    var cartExistance = await _myDbContext.Products
-                //.Select(p => new Collections
-                //{
-                //    IsInCart = cartProductIds.Contains(p.Id)
-                //})
-                //.ToListAsync();
-                //    TempData["IsInCart"] = cartExistance;
-                //    var isIncart = TempData["IsInCart"];
-                //    return Json(isIncart);
             }
-            //List<Colors> colors = products.SelectMany(x => x.ProductColors).Select(x => new Colors { ColorCode = x.ColorCode, ColorName = x.ColorName}).Distinct().ToList();
             E_Commerce.Models.Collections collections = new Collections
             {
                 Categories = categories,
@@ -350,6 +339,97 @@ namespace E_Commerce.Controllers
             E_Commerce.Models.Collections collections = new Collections { Products = products };
             return PartialView("~/Views/Home/CollectionsPartial/_CollectionsCard.cshtml", collections);
             //return Json(new {fabric = fabric, occasion = occasion, color = color, minPrice = minPrice, maxPrice = maxPrice});
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> SearchProducts(string query, int? categoryId = null)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(query))
+                {
+                    return Json(new { success = false, message = "Please enter search query" });
+                }
+
+                var searchQuery = query.ToLower().Trim();
+
+                // Base query for active products
+                var baseQuery = _myDbContext.Products
+                    .Include(x => x.Discount)
+                    .Include(x => x.ProductColors)
+                        .ThenInclude(x => x.Images)
+                    .Include(x => x.Reviews)
+                    .Where(x => x.IsActive);
+
+                // Apply category filter if provided
+                if (categoryId.HasValue && categoryId > 0)
+                {
+                    baseQuery = baseQuery.Where(x => x.CategoryId == categoryId);
+                }
+
+                // Search in multiple fields
+                var products = await baseQuery
+                    .Where(p =>
+                        p.Name.ToLower().Contains(searchQuery) ||
+                        p.ShortDescription.ToLower().Contains(searchQuery) ||
+                        p.FullDescription.ToLower().Contains(searchQuery) ||
+                        p.Fabric.ToLower().Contains(searchQuery) ||
+                        p.Occasion.ToLower().Contains(searchQuery) ||
+                        p.ProductColors.Any(pc => pc.ColorName.ToLower().Contains(searchQuery)) ||
+                        p.Category.Name.ToLower().Contains(searchQuery)
+                    )
+                    .OrderByDescending(x => x.Id)
+                    .Take(20) // Limit results
+                    .ToListAsync();
+
+                // Prepare view model
+                var result = products.Select(p => new
+                {
+                    id = p.Id,
+                    name = p.Name,
+                    shortDescription = p.ShortDescription,
+                    price = p.Price,
+                    discountedPrice = CalculateDiscountedPrice(p.Price, p.Discount),
+                    image = p.ProductColors.SelectMany(pc => pc.Images)
+                            .Select(img => img.ImagePath)
+                            .FirstOrDefault() ?? "/images/default-product.jpg",
+                    category = p.Category?.Name,
+                    fabric = p.Fabric,
+                    occasion = p.Occasion,
+                    rating = p.AverageRating,
+                    reviewCount = p.Reviews?.Count ?? 0,
+                    hasDiscount = p.Discount != null
+                }).ToList();
+
+                return Json(new
+                {
+                    success = true,
+                    products = result,
+                    count = result.Count,
+                    query = searchQuery
+                });
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex, "Error searching products");
+                return Json(new { success = false, message = "Error searching products" });
+            }
+        }
+
+        private decimal CalculateDiscountedPrice(decimal price, Discount discount)
+        {
+            if (discount == null) return price;
+
+            if (discount.DiscountType == Discount._Type.Percentage)
+            {
+                return price - (price * discount.DiscountValue / 100);
+            }
+            else if (discount.DiscountType == Discount._Type.Fixed)
+            {
+                return price - discount.DiscountValue;
+            }
+
+            return price;
         }
 
         public async Task<IActionResult> Featured(string highlightedProduct = "")

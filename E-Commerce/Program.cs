@@ -19,6 +19,7 @@ builder.Services.AddScoped<EmailService>();
 
 builder.Services.AddMemoryCache();
 builder.Services.AddScoped<SettingsService>();
+builder.Services.AddScoped<GetCategories>();
 
 builder.Services.AddSingleton<IBackgroundEmailQueue, BackgroundEmailQueue>();
 builder.Services.AddHostedService<EmailBackgroundService>();

@@ -4,6 +4,7 @@ using E_Commerce.Models;
 using System.Security.Claims;
 using E_Commerce.Services;
 using E_Commerce.Interfaces;
+using Microsoft.EntityFrameworkCore;
 namespace E_Commerce.Controllers
 {
     public class AccountController : Controller
@@ -11,6 +12,7 @@ namespace E_Commerce.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly MyDbContext _context;
 
         private readonly IBackgroundEmailQueue _emailQueue;
         private readonly EmailService _emailService;
@@ -19,7 +21,8 @@ namespace E_Commerce.Controllers
             SignInManager<ApplicationUser> signInManager,
             RoleManager<IdentityRole> roleManager,
             EmailService emailService,
-            IBackgroundEmailQueue emailQueue
+            IBackgroundEmailQueue emailQueue,
+            MyDbContext context
             )
         {
             _userManager = userManager;
@@ -28,6 +31,8 @@ namespace E_Commerce.Controllers
 
             _emailService = emailService;
             _emailQueue = emailQueue;
+
+            _context = context;
 
         }
 
@@ -149,15 +154,44 @@ namespace E_Commerce.Controllers
             );
             if (result.Succeeded)
             {
-                if(await _userManager.IsInRoleAsync(user, "Admin"))
+                //var user = await _userManager.FindByEmailAsync(model.Email);
+
+                var loginHistory = new LoginHistory
+                {
+                    UserId = user.Id,
+                    LoginTime = DateTime.UtcNow,
+                    IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString(),
+                    UserAgent = Request.Headers["User-Agent"].ToString(),
+                    IsSuccessful = true
+                };
+
+                _context.LoginHistory.Add(loginHistory);
+                await _context.SaveChangesAsync();
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
                 {
                     return RedirectToAction("Index", "Admin");
                 }
-                
+
                 return RedirectToAction("Index", "Home");
             }
+            else
+            {
+                if (user != null)
+                {
+                    _context.LoginHistory.Add(new LoginHistory
+                    {
+                        UserId = user.Id,
+                        LoginTime = DateTime.UtcNow,
+                        IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString(),
+                        UserAgent = Request.Headers["User-Agent"].ToString(),
+                        IsSuccessful = false
+                    });
 
-            ModelState.AddModelError("", "Invalid email or password");
+                    await _context.SaveChangesAsync();
+                }
+                ModelState.AddModelError("", "Invalid email or password");
+            }
+
             return View(model);
         }
 
