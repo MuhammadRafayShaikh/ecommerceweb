@@ -4465,11 +4465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\E-Commerce.csproj",
+      "projectUniqueName": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\E-Commerce.csproj",
       "projectName": "E-Commerce",
-      "projectPath": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\E-Commerce.csproj",
+      "projectPath": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\E-Commerce.csproj",
       "packagesPath": "C:\\Users\\Rohaan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\obj\\",
+      "outputPath": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rohaan\\AppData\\Roaming\\NuGet\\NuGet.Config",

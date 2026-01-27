@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XWT0/3MorERBFa+n4SCunfebFTOQ7jCjfU3bMIpDVAI=",
+  "Hash": "HhFH0yUw40O3bBtdqaRroBZ5ce34vZ5zS4rvMVZtYMs=",
   "Source": "E-Commerce",
   "BasePath": "_content/E-Commerce",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "E-Commerce\\wwwroot",
       "Source": "E-Commerce",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\E-Commerce.styles.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\E-Commerce.styles.css",
       "SourceId": "E-Commerce",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "E-Commerce.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\E-Commerce.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\E-Commerce.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\E-Commerce.bundle.scp.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\E-Commerce.bundle.scp.css",
       "SourceId": "E-Commerce",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "E-Commerce.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\E-Commerce.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\E-Commerce.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\category.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\category.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/category.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\category.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\category.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\category.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/category.js",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\category.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\customers\\customer.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\customers\\customer.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/customers/customer.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\customers\\customer.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\customers\\customer.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\customers\\customer.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/customers/customer.js",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\customers\\customer.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\discount.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\discount.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/discount.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\discount.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\discount.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\discount.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/discount.js",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\discount.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\editproduct.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\editproduct.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/editproduct.css",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\editproduct.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\editproduct.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\editproduct.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/editproduct.js",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\editproduct.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\order\\order.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/order/order.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\order\\order.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\order\\order.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/order/order.js",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\order\\order.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\product.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\product.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/product.css",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\product.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\product.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\product.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/product.js",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\product.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\productdetail.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\productdetail.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/productdetail.css",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\productdetail.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\productdetail.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\productdetail.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/productdetail.js",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\productdetail.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\script.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\script.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/script.js",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\script.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\admin\\style.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\style.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "admin/style.css",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\admin\\style.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\auth\\login.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\login.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "auth/login.css",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\auth\\login.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\auth\\login.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\login.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "auth/login.js",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\auth\\login.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\auth\\register.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\register.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "auth/register.css",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\auth\\register.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\auth\\register.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\register.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "auth/register.js",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\auth\\register.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\CategoryImages\\AI_Background_2025-06-29_48891410503520120251227235301.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\CategoryImages\\AI_Background_2025-06-29_48891410503520120251227235301.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "CategoryImages/AI_Background_2025-06-29_48891410503520120251227235301.png",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\CategoryImages\\AI_Background_2025-06-29_48891410503520120251227235301.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\CategoryImages\\default.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\CategoryImages\\default.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "CategoryImages/default.png",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\CategoryImages\\default.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\CategoryImages\\images20260123155745.jpg",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\CategoryImages\\images20260123155745.jpg",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "CategoryImages/images20260123155745.jpg",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\CategoryImages\\images20260123155745.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\CategoryImages\\news image20260106225602.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\CategoryImages\\news image20260106225602.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "CategoryImages/news image20260106225602.png",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\CategoryImages\\news image20260106225602.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\css\\site.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -530,10 +530,48 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\EmailTemplates\\registration.html",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\ContactAdmin.html",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
+      "BasePath": "_content/E-Commerce",
+      "RelativePath": "EmailTemplates/ContactAdmin.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EmailTemplates\\ContactAdmin.html"
+    },
+    {
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\ContactUserAutoReply.html",
+      "SourceId": "E-Commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
+      "BasePath": "_content/E-Commerce",
+      "RelativePath": "EmailTemplates/ContactUserAutoReply.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EmailTemplates\\ContactUserAutoReply.html"
+    },
+    {
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\registration.html",
+      "SourceId": "E-Commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "EmailTemplates/registration.html",
       "AssetKind": "All",
@@ -549,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\EmailTemplates\\registration.html"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\EmailTemplates\\verification.html",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\verification.html",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "EmailTemplates/verification.html",
       "AssetKind": "All",
@@ -568,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\EmailTemplates\\verification.html"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\favicon.ico",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -587,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\images\\logo.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\images\\logo.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "images/logo.png",
       "AssetKind": "All",
@@ -606,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\js\\site.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -625,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -644,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -663,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -682,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -701,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -720,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -739,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -758,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -777,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -796,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -815,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -834,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -853,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -872,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -891,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -910,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -929,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -948,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -967,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -986,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1005,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1024,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1043,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1062,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1081,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1100,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1119,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1138,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1157,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1176,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1195,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1214,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1233,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1252,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1271,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1290,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1309,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1328,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1347,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1366,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1385,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1404,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1423,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1442,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1461,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1480,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1499,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1518,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1537,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1556,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1575,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1594,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1613,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1632,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1651,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1670,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1689,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1708,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\notification.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\notification.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "notification.js",
       "AssetKind": "All",
@@ -1727,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\notification.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\18570c89-36d9-48cf-81a5-c38d5f4a27a3.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\18570c89-36d9-48cf-81a5-c38d5f4a27a3.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/18570c89-36d9-48cf-81a5-c38d5f4a27a3.png",
       "AssetKind": "All",
@@ -1746,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\18570c89-36d9-48cf-81a5-c38d5f4a27a3.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\21873dad-d008-4f1c-9c26-099d7ef27f6e.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\21873dad-d008-4f1c-9c26-099d7ef27f6e.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/21873dad-d008-4f1c-9c26-099d7ef27f6e.png",
       "AssetKind": "All",
@@ -1765,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\21873dad-d008-4f1c-9c26-099d7ef27f6e.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\23fe872f-1198-4b54-81e0-1f9446f47230.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\23fe872f-1198-4b54-81e0-1f9446f47230.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/23fe872f-1198-4b54-81e0-1f9446f47230.png",
       "AssetKind": "All",
@@ -1784,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\23fe872f-1198-4b54-81e0-1f9446f47230.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\2d07fd7d-9c98-479f-bbd3-139b3922fe6b.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\2d07fd7d-9c98-479f-bbd3-139b3922fe6b.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/2d07fd7d-9c98-479f-bbd3-139b3922fe6b.png",
       "AssetKind": "All",
@@ -1803,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\2d07fd7d-9c98-479f-bbd3-139b3922fe6b.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\3a9406db-849c-4cd1-a5bb-3b408d7de243.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\3a9406db-849c-4cd1-a5bb-3b408d7de243.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/3a9406db-849c-4cd1-a5bb-3b408d7de243.png",
       "AssetKind": "All",
@@ -1822,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\3a9406db-849c-4cd1-a5bb-3b408d7de243.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\3d2a0812-aabe-4cd1-a92a-68a085e1b449.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\3d2a0812-aabe-4cd1-a92a-68a085e1b449.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/3d2a0812-aabe-4cd1-a92a-68a085e1b449.png",
       "AssetKind": "All",
@@ -1841,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\3d2a0812-aabe-4cd1-a92a-68a085e1b449.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\525be1ab-4352-4223-8ceb-aa80986eed83.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\525be1ab-4352-4223-8ceb-aa80986eed83.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/525be1ab-4352-4223-8ceb-aa80986eed83.png",
       "AssetKind": "All",
@@ -1860,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\525be1ab-4352-4223-8ceb-aa80986eed83.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\58787014-bf7d-491a-a631-46b4a213da9d.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\58787014-bf7d-491a-a631-46b4a213da9d.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/58787014-bf7d-491a-a631-46b4a213da9d.png",
       "AssetKind": "All",
@@ -1879,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\58787014-bf7d-491a-a631-46b4a213da9d.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\676b58ad-63f9-4eea-8a68-3f07ae3810b6.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\676b58ad-63f9-4eea-8a68-3f07ae3810b6.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/676b58ad-63f9-4eea-8a68-3f07ae3810b6.png",
       "AssetKind": "All",
@@ -1898,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\676b58ad-63f9-4eea-8a68-3f07ae3810b6.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\6f532267-acf7-44a2-a0b4-0c46b0433ae1.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\6f532267-acf7-44a2-a0b4-0c46b0433ae1.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/6f532267-acf7-44a2-a0b4-0c46b0433ae1.png",
       "AssetKind": "All",
@@ -1917,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\6f532267-acf7-44a2-a0b4-0c46b0433ae1.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\762aa9a7-ca22-44a6-a988-78b3034a9612.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\762aa9a7-ca22-44a6-a988-78b3034a9612.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/762aa9a7-ca22-44a6-a988-78b3034a9612.png",
       "AssetKind": "All",
@@ -1936,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\762aa9a7-ca22-44a6-a988-78b3034a9612.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\76c187f9-adf2-469f-919e-7c6bc30a7c1b.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\76c187f9-adf2-469f-919e-7c6bc30a7c1b.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/76c187f9-adf2-469f-919e-7c6bc30a7c1b.png",
       "AssetKind": "All",
@@ -1955,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\76c187f9-adf2-469f-919e-7c6bc30a7c1b.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\7bc634bf-1b46-4b36-988a-e392be3759b6.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\7bc634bf-1b46-4b36-988a-e392be3759b6.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/7bc634bf-1b46-4b36-988a-e392be3759b6.png",
       "AssetKind": "All",
@@ -1974,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\7bc634bf-1b46-4b36-988a-e392be3759b6.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\822804d4-3b19-436a-8cf6-2a3fe9e8a383.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\822804d4-3b19-436a-8cf6-2a3fe9e8a383.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/822804d4-3b19-436a-8cf6-2a3fe9e8a383.png",
       "AssetKind": "All",
@@ -1993,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\822804d4-3b19-436a-8cf6-2a3fe9e8a383.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\8c9102f2-90e5-479f-94f5-2233d69d3273.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\8c9102f2-90e5-479f-94f5-2233d69d3273.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/8c9102f2-90e5-479f-94f5-2233d69d3273.png",
       "AssetKind": "All",
@@ -2012,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\8c9102f2-90e5-479f-94f5-2233d69d3273.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\8ff89a29-7684-45a6-96ec-60fcff87856d.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\8ff89a29-7684-45a6-96ec-60fcff87856d.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/8ff89a29-7684-45a6-96ec-60fcff87856d.png",
       "AssetKind": "All",
@@ -2031,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\8ff89a29-7684-45a6-96ec-60fcff87856d.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\91b7014f-9251-4961-8582-651430e78774.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\91b7014f-9251-4961-8582-651430e78774.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/91b7014f-9251-4961-8582-651430e78774.png",
       "AssetKind": "All",
@@ -2050,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\91b7014f-9251-4961-8582-651430e78774.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\9734f0ea-72c0-449a-856b-748bcc1fec8e.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\9734f0ea-72c0-449a-856b-748bcc1fec8e.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/9734f0ea-72c0-449a-856b-748bcc1fec8e.png",
       "AssetKind": "All",
@@ -2069,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\9734f0ea-72c0-449a-856b-748bcc1fec8e.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\9b13a8a1-1d79-47b4-993a-4b28e1dec342.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\9b13a8a1-1d79-47b4-993a-4b28e1dec342.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/9b13a8a1-1d79-47b4-993a-4b28e1dec342.png",
       "AssetKind": "All",
@@ -2088,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\9b13a8a1-1d79-47b4-993a-4b28e1dec342.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\b23fee3e-1627-42b7-bb8d-b2716402c86c.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\b23fee3e-1627-42b7-bb8d-b2716402c86c.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/b23fee3e-1627-42b7-bb8d-b2716402c86c.png",
       "AssetKind": "All",
@@ -2107,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\b23fee3e-1627-42b7-bb8d-b2716402c86c.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\b31acf84-0349-4bc8-8ea9-d89847d8d7c4.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\b31acf84-0349-4bc8-8ea9-d89847d8d7c4.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/b31acf84-0349-4bc8-8ea9-d89847d8d7c4.png",
       "AssetKind": "All",
@@ -2126,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\b31acf84-0349-4bc8-8ea9-d89847d8d7c4.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\b4c11327-6bec-4b30-b3d2-b334c9d3d49e.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\b4c11327-6bec-4b30-b3d2-b334c9d3d49e.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/b4c11327-6bec-4b30-b3d2-b334c9d3d49e.png",
       "AssetKind": "All",
@@ -2145,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\b4c11327-6bec-4b30-b3d2-b334c9d3d49e.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\b82c75f5-2ef5-4864-8c58-aeec73c3057b.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\b82c75f5-2ef5-4864-8c58-aeec73c3057b.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/b82c75f5-2ef5-4864-8c58-aeec73c3057b.png",
       "AssetKind": "All",
@@ -2164,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\b82c75f5-2ef5-4864-8c58-aeec73c3057b.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\c1be4151-6bc3-4a12-9494-3ea59599ee51.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\c1be4151-6bc3-4a12-9494-3ea59599ee51.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/c1be4151-6bc3-4a12-9494-3ea59599ee51.png",
       "AssetKind": "All",
@@ -2183,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\c1be4151-6bc3-4a12-9494-3ea59599ee51.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\d8c22282-2a21-4e77-a01a-98f7f6e0d818.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\d8c22282-2a21-4e77-a01a-98f7f6e0d818.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/d8c22282-2a21-4e77-a01a-98f7f6e0d818.png",
       "AssetKind": "All",
@@ -2202,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\d8c22282-2a21-4e77-a01a-98f7f6e0d818.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\dd0a907b-f725-4411-a3b8-b2785734b303.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\dd0a907b-f725-4411-a3b8-b2785734b303.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/dd0a907b-f725-4411-a3b8-b2785734b303.png",
       "AssetKind": "All",
@@ -2221,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\dd0a907b-f725-4411-a3b8-b2785734b303.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\e67fc8d8-3a25-448c-9b77-49de3756ed99.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\e67fc8d8-3a25-448c-9b77-49de3756ed99.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/e67fc8d8-3a25-448c-9b77-49de3756ed99.png",
       "AssetKind": "All",
@@ -2240,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\e67fc8d8-3a25-448c-9b77-49de3756ed99.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\e7fd22df-fb34-415a-b05d-4c9d86ef857f.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\e7fd22df-fb34-415a-b05d-4c9d86ef857f.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/e7fd22df-fb34-415a-b05d-4c9d86ef857f.png",
       "AssetKind": "All",
@@ -2259,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\e7fd22df-fb34-415a-b05d-4c9d86ef857f.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\eafd94fa-c721-4ec2-8bbc-8b9540cc05d5.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\eafd94fa-c721-4ec2-8bbc-8b9540cc05d5.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/eafd94fa-c721-4ec2-8bbc-8b9540cc05d5.png",
       "AssetKind": "All",
@@ -2278,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\eafd94fa-c721-4ec2-8bbc-8b9540cc05d5.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductImages\\f562386d-e963-4eee-9658-2dd9719411c0.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductImages\\f562386d-e963-4eee-9658-2dd9719411c0.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductImages/f562386d-e963-4eee-9658-2dd9719411c0.png",
       "AssetKind": "All",
@@ -2297,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\ProductImages\\f562386d-e963-4eee-9658-2dd9719411c0.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\ProductVideos\\2665e6e8-fba2-43f9-8eb6-f9eb57443eab.mp4",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\ProductVideos\\2665e6e8-fba2-43f9-8eb6-f9eb57443eab.mp4",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "ProductVideos/2665e6e8-fba2-43f9-8eb6-f9eb57443eab.mp4",
       "AssetKind": "All",
@@ -2316,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\ProductVideos\\2665e6e8-fba2-43f9-8eb6-f9eb57443eab.mp4"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222554.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222554.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125222554.png",
       "AssetKind": "All",
@@ -2335,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222554.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222604.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222604.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125222604.png",
       "AssetKind": "All",
@@ -2354,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222604.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222911.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222911.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125222911.png",
       "AssetKind": "All",
@@ -2373,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222911.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222952.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222952.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125222952.png",
       "AssetKind": "All",
@@ -2392,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125222952.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223012.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223012.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125223012.png",
       "AssetKind": "All",
@@ -2411,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223012.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223021.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223021.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125223021.png",
       "AssetKind": "All",
@@ -2430,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223021.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223028.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223028.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125223028.png",
       "AssetKind": "All",
@@ -2449,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223028.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223036.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223036.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125223036.png",
       "AssetKind": "All",
@@ -2468,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223036.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223100.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223100.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125223100.png",
       "AssetKind": "All",
@@ -2487,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223100.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223143.png",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223143.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/profile-pictures/a19ea02f-966c-4493-b020-be30473f8700_20260125223143.png",
       "AssetKind": "All",
@@ -2506,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\a19ea02f-966c-4493-b020-be30473f8700_20260125223143.png"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\about\\about.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\about\\about.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/about/about.css",
       "AssetKind": "All",
@@ -2525,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\user\\about\\about.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\about\\about.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\about\\about.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/about/about.js",
       "AssetKind": "All",
@@ -2544,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\user\\about\\about.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\cart.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cart.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/cart.css",
       "AssetKind": "All",
@@ -2563,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\user\\cart.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\cart.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cart.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/cart.js",
       "AssetKind": "All",
@@ -2582,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\user\\cart.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\cartitems.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cartitems.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/cartitems.js",
       "AssetKind": "All",
@@ -2601,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\user\\cartitems.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\checkout\\checkout.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\checkout\\checkout.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/checkout/checkout.css",
       "AssetKind": "All",
@@ -2620,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\user\\checkout\\checkout.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\checkout\\checkout.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\checkout\\checkout.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/checkout/checkout.js",
       "AssetKind": "All",
@@ -2639,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\user\\checkout\\checkout.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\collections.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\collections.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/collections.css",
       "AssetKind": "All",
@@ -2658,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\user\\collections.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\collections.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\collections.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/collections.js",
       "AssetKind": "All",
@@ -2677,10 +2715,48 @@
       "OriginalItemSpec": "wwwroot\\user\\collections.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\detail\\detail.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\contact\\contact.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
+      "BasePath": "_content/E-Commerce",
+      "RelativePath": "user/contact/contact.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user\\contact\\contact.css"
+    },
+    {
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\contact\\contact.js",
+      "SourceId": "E-Commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
+      "BasePath": "_content/E-Commerce",
+      "RelativePath": "user/contact/contact.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user\\contact\\contact.js"
+    },
+    {
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.css",
+      "SourceId": "E-Commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/detail/detail.css",
       "AssetKind": "All",
@@ -2696,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\user\\detail\\detail.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\detail\\detail.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/detail/detail.js",
       "AssetKind": "All",
@@ -2715,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\user\\detail\\detail.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\detail\\review.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\review.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/detail/review.js",
       "AssetKind": "All",
@@ -2734,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\user\\detail\\review.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\featured\\featured.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\featured\\featured.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/featured/featured.css",
       "AssetKind": "All",
@@ -2753,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\user\\featured\\featured.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\featured\\featured.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\featured\\featured.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/featured/featured.js",
       "AssetKind": "All",
@@ -2772,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\user\\featured\\featured.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\index.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\index.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/index.css",
       "AssetKind": "All",
@@ -2791,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\user\\index.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\index.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\index.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/index.js",
       "AssetKind": "All",
@@ -2810,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\user\\index.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\modal.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\modal.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/modal.css",
       "AssetKind": "All",
@@ -2829,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\user\\modal.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\modal.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\modal.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/modal.js",
       "AssetKind": "All",
@@ -2848,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\user\\modal.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\notification\\confirmation.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\notification\\confirmation.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/notification/confirmation.js",
       "AssetKind": "All",
@@ -2867,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\user\\notification\\confirmation.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\notification\\notification.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\notification\\notification.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/notification/notification.js",
       "AssetKind": "All",
@@ -2886,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\user\\notification\\notification.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\order\\order.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\order.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/order/order.js",
       "AssetKind": "All",
@@ -2905,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\user\\order\\order.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\order\\orders.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\orders.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/order/orders.css",
       "AssetKind": "All",
@@ -2924,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\user\\order\\orders.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\order\\track.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\track.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/order/track.css",
       "AssetKind": "All",
@@ -2943,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\user\\order\\track.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\profile\\profile.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\profile\\profile.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/profile/profile.css",
       "AssetKind": "All",
@@ -2962,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\user\\profile\\profile.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\profile\\profile.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\profile\\profile.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/profile/profile.js",
       "AssetKind": "All",
@@ -2981,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\user\\profile\\profile.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\sales\\sales.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\sales\\sales.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/sales/sales.css",
       "AssetKind": "All",
@@ -3000,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\user\\sales\\sales.css"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\sales\\sales.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\sales\\sales.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/sales/sales.js",
       "AssetKind": "All",
@@ -3019,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\user\\sales\\sales.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\script.js",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\script.js",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/script.js",
       "AssetKind": "All",
@@ -3038,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\user\\script.js"
     },
     {
-      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\user\\style.css",
+      "Identity": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\style.css",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommercewe4do\\ecommerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "user/style.css",
       "AssetKind": "All",

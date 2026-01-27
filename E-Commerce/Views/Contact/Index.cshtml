@@ -1,0 +1,244 @@
+﻿@model E_Commerce.Models.ViewModels.ContactViewModel
+@{
+    ViewData["Title"] = "Contact Us";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/user/contact/contact.css" />
+
+<!-- Contact Hero Section -->
+<section class="contact-hero">
+    <div class="contact-hero-content">
+        <h1>Get in Touch</h1>
+        <div class="hero-divider"></div>
+        <p>We'd love to hear from you. Whether you have a question about our suits, need customization help, or just want to share your thoughts, our team is ready to assist you.</p>
+    </div>
+</section>
+
+<!-- Contact Main Section -->
+<section class="contact-main">
+    <div class="contact-container">
+        <!-- Contact Info Cards -->
+        <div class="contact-info">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Visit Our Store</h3>
+                <p>123 Fashion Street, Bandra West<br>Mumbai, Maharashtra 400050</p>
+                <a href="https://maps.google.com" target="_blank" class="info-link">View on Map <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>+91 22 1234 5678<br>+91 98765 43210</p>
+                <p class="timing">Mon-Sat: 10 AM - 8 PM<br>Sunday: 11 AM - 6 PM</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>info@elegantstitch.com<br>support@elegantstitch.com</p>
+                <p class="response-time">Response within 24 hours</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Live Chat</h3>
+                <p>Available 24/7 for quick assistance with orders and general inquiries.</p>
+                <button class="chat-button" onclick="openChat()">Start Chat <i class="fas fa-comment"></i></button>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <div class="form-header">
+                <h2>Send us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <form asp-action="Contact" asp-controller="Contact" method="post" class="contact-form" id="contactForm">
+                @if (ViewBag.SuccessMessage != null)
+                {
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i> @ViewBag.SuccessMessage
+                    </div>
+                }
+
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-error">
+                        <i class="fas fa-exclamation-circle"></i> @ViewBag.ErrorMessage
+                    </div>
+                }
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="FullName">Full Name *</label>
+                        <input asp-for="FullName" type="text" placeholder="Enter your full name" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Email">Email Address *</label>
+                        <input asp-for="Email" type="email" placeholder="Enter your email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Phone">Phone Number</label>
+                        <input asp-for="Phone" type="tel" placeholder="Enter your phone number" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Subject">Subject *</label>
+                        <select asp-for="Subject">
+                            <option value="">Select a subject</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Order Support">Order Support</option>
+                            <option value="Customization Request">Customization Request</option>
+                            <option value="Size & Fit Help">Size & Fit Help</option>
+                            <option value="Return & Exchange">Return & Exchange</option>
+                            <option value="Wholesale Inquiry">Wholesale Inquiry</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Message">Message *</label>
+                    <textarea asp-for="Message" rows="6" placeholder="Tell us how we can help you..."></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>What are your delivery timelines?</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Standard delivery takes 5-7 business days. Express delivery (additional charges apply) takes 2-3 business days. For custom orders, please allow 10-14 business days for production and delivery.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Do you offer international shipping?</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we ship to over 50 countries worldwide. International shipping typically takes 10-15 business days. Customs duties and taxes are the responsibility of the recipient.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>What is your return policy?</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>We offer a 15-day return policy for unused items with original tags. Customized suits are non-returnable unless there's a manufacturing defect. Return shipping is free for domestic orders.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Can I customize a suit design?</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutely! We specialize in custom designs. You can choose fabrics, embroidery patterns, and silhouettes. Please contact our design team for custom orders and quotes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="section-title">
+        <h2>Find Our Store</h2>
+        <p>Visit us at our flagship store in Mumbai</p>
+    </div>
+
+    <div class="map-container">
+        <div class="map-placeholder">
+            <div class="map-info">
+                <h3><i class="fas fa-map-pin"></i> Elegant Stitch Flagship Store</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Bandra West, Mumbai</p>
+                <p><i class="fas fa-clock"></i> Open: 10 AM - 8 PM (Mon-Sat), 11 AM - 6 PM (Sun)</p>
+                <p><i class="fas fa-phone"></i> +91 22 1234 5678</p>
+                <a href="https://maps.google.com" target="_blank" class="directions-button">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+            <div class="map-image">
+                <!-- In real implementation, you would embed Google Maps here -->
+                <img src="https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Store Location">
+                <div class="map-overlay">
+                    <div class="map-marker">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Chat Widget -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+        <h4>Live Chat Support</h4>
+        <button class="chat-close" onclick="closeChat()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="chat-body">
+        <div class="chat-messages">
+            <div class="chat-message bot">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm Anaya, your virtual assistant. How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+            <button onclick="sendChatMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="~/user/contact/contact.js"></script>

@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Contacting Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: white;
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2d3748;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .logo-accent {
+            color: #9f7aea;
+        }
+
+        .greeting {
+            font-size: 28px;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .confirmation-box {
+            background: #f8f5ff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px dashed #9f7aea;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .reference-id {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d3748;
+            letter-spacing: 2px;
+        }
+
+        .info-section {
+            margin: 30px 0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+            .info-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: #f8f5ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 20px;
+            color: #9f7aea;
+        }
+
+        .info-content h3 {
+            color: #2d3748;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .info-content p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .assurance-box {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+            .assurance-box h3 {
+                color: #38a169;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+        .support-section {
+            background: #ebf8ff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .support-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4299e1;
+        }
+
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+            .social-link:hover {
+                opacity: 1;
+            }
+
+        .signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+
+            .support-contact {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .info-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="logo">Elegant<span class="logo-accent">Stitch</span></div>
+            <h1 class="greeting">Dear {{FullName}},</h1>
+        </div>
+
+        <div class="content">
+            <div class="confirmation-box">
+                <div class="icon">✨</div>
+                <h2 style="color: #2d3748; margin-bottom: 15px;">Message Received!</h2>
+                <p style="color: #666; font-size: 16px;">
+                    Thank you for contacting Elegant Stitch. We're thrilled to assist you with your inquiry about:
+                </p>
+                <h3 style="color: #9f7aea; margin: 20px 0; font-size: 20px;">"{{Subject}}"</h3>
+                <div class="reference-id">ES-{{ContactId}}</div>
+                <p style="color: #666;">
+                    Please keep this reference ID for future communication.
+                </p>
+            </div>
+
+            <div class="info-section">
+                <h2 style="color: #2d3748; margin-bottom: 25px; text-align: center;">What Happens Next?</h2>
+
+                <div class="info-item">
+                    <div class="info-icon">📋</div>
+                    <div class="info-content">
+                        <h3>Review Process</h3>
+                        <p>Our dedicated customer support team has received your message and is currently reviewing the details.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">⏱️</div>
+                    <div class="info-content">
+                        <h3>Response Time</h3>
+                        <p>We strive to respond to all inquiries within <strong>24 hours</strong> during business days.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">👥</div>
+                    <div class="info-content">
+                        <h3>Expert Assistance</h3>
+                        <p>Your inquiry will be handled by our specialized team best equipped to address your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="assurance-box">
+                <h3>✅ Our Commitment to You</h3>
+                <p>We value your interest in Elegant Stitch and assure you that we will provide the most thoughtful and comprehensive response to help you with your fashion and stitching needs.</p>
+            </div>
+
+            <div class="support-section">
+                <h3 style="color: #2b6cb0; margin-bottom: 20px;">Need Immediate Assistance?</h3>
+                <div class="support-contact">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Call Us</strong><br>
+                            +91 22 1234 5678
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <strong>Hours</strong><br>
+                            Mon-Sat: 9AM-8PM IST
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div style="margin-bottom: 20px;">
+                <strong>Stay Connected</strong>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Pinterest</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+
+            <div class="signature">
+                <p>This is an automated message. Please do not reply to this email.</p>
+                <p style="margin-top: 10px; font-size: 12px;">
+                    Elegant Stitch • Fashion Street, Mumbai • ISO 9001:2015 Certified
+                </p>
+                <p style="font-size: 11px; opacity: 0.6; margin-top: 10px;">
+                    Submitted: {{SubmittedAt}}
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

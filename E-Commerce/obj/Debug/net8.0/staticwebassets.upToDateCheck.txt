@@ -3,6 +3,7 @@ wwwroot\admin\category.js
 wwwroot\admin\customers\customer.css
 wwwroot\admin\customers\customer.js
 wwwroot\admin\discount.css
+wwwroot\admin\discount.js
 wwwroot\admin\editproduct.css
 wwwroot\admin\editproduct.js
 wwwroot\admin\order\order.css
@@ -22,6 +23,10 @@ wwwroot\CategoryImages\default.png
 wwwroot\CategoryImages\images20260123155745.jpg
 wwwroot\CategoryImages\news image20260106225602.png
 wwwroot\css\site.css
+wwwroot\EmailTemplates\ContactAdmin.html
+wwwroot\EmailTemplates\ContactUserAutoReply.html
+wwwroot\EmailTemplates\registration.html
+wwwroot\EmailTemplates\verification.html
 wwwroot\favicon.ico
 wwwroot\images\logo.png
 wwwroot\js\site.js
@@ -114,6 +119,16 @@ wwwroot\ProductImages\e7fd22df-fb34-415a-b05d-4c9d86ef857f.png
 wwwroot\ProductImages\eafd94fa-c721-4ec2-8bbc-8b9540cc05d5.png
 wwwroot\ProductImages\f562386d-e963-4eee-9658-2dd9719411c0.png
 wwwroot\ProductVideos\2665e6e8-fba2-43f9-8eb6-f9eb57443eab.mp4
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125222554.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125222604.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125222911.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125222952.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125223012.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125223021.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125223028.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125223036.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125223100.png
+wwwroot\uploads\profile-pictures\a19ea02f-966c-4493-b020-be30473f8700_20260125223143.png
 wwwroot\user\about\about.css
 wwwroot\user\about\about.js
 wwwroot\user\cart.css
@@ -123,8 +138,10 @@ wwwroot\user\checkout\checkout.css
 wwwroot\user\checkout\checkout.js
 wwwroot\user\collections.css
 wwwroot\user\collections.js
+wwwroot\user\contact\contact.css
 wwwroot\user\detail\detail.css
 wwwroot\user\detail\detail.js
+wwwroot\user\detail\review.js
 wwwroot\user\featured\featured.css
 wwwroot\user\featured\featured.js
 wwwroot\user\index.css
@@ -136,8 +153,10 @@ wwwroot\user\notification\notification.js
 wwwroot\user\order\order.js
 wwwroot\user\order\orders.css
 wwwroot\user\order\track.css
+wwwroot\user\profile\profile.css
+wwwroot\user\profile\profile.js
 wwwroot\user\sales\sales.css
 wwwroot\user\sales\sales.js
 wwwroot\user\script.js
 wwwroot\user\style.css
-wwwroot\admin\discount.js
+wwwroot\user\contact\contact.js

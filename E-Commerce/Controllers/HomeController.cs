@@ -41,7 +41,11 @@ namespace E_Commerce.Controllers
 
         private async Task<Product> BestSelling(BestSellingDTO bestSelling)
         {
-            return await _myDbContext.Products.Include(x => x.ProductColors).ThenInclude(x => x.Images).Where(x => x.Id == bestSelling.ProductId).FirstOrDefaultAsync();
+            if (bestSelling != null)
+            {
+                return await _myDbContext.Products.Include(x => x.ProductColors).ThenInclude(x => x.Images).Where(x => x.Id == bestSelling.ProductId).FirstOrDefaultAsync();
+            }
+            return null;
         }
 
         private async Task<Product> NewProduct()
