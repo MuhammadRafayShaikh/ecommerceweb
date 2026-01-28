@@ -102,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb2xsZWN0aW9uc1BhcnRpYWxcX0ZpbHRlcnNTZWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rohaan/Downloads/ecommerceweb (1)/ecommerceweb/E-Commerce/Views/Home/Faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rohaan/Downloads/ecommerceweb (1)/ecommerceweb/E-Commerce/Views/Home/Featured.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGZWF0dXJlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -118,8 +122,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rohaan/Downloads/ecommerceweb (1)/ecommerceweb/E-Commerce/Views/Home/ReturnExchange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXR1cm5FeGNoYW5nZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rohaan/Downloads/ecommerceweb (1)/ecommerceweb/E-Commerce/Views/Home/Sales.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rohaan/Downloads/ecommerceweb (1)/ecommerceweb/E-Commerce/Views/Home/ShippingPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGlwcGluZ1BvbGljeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rohaan/Downloads/ecommerceweb (1)/ecommerceweb/E-Commerce/Views/Order/Details.cshtml]

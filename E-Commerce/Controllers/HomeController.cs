@@ -19,6 +19,22 @@ namespace E_Commerce.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            Dictionary<int, string> links = new Dictionary<int, string>();
+            links.Add(0, "Collections");
+            links.Add(1, "Featured");
+            links.Add(2, "Sales");
+            //return Json(links.Last().Key);
+            Random random = new Random();
+            int shopNowLinkIndex = random.Next(0, links.Count());
+            //while
+            //for(int i = 0; i <= links.Count(); i++)
+            //{
+
+            //}
+            string shopNowLink = links[shopNowLinkIndex];
+            //return Json(value);
+            ViewData["shopNowLink"] = shopNowLink;
+
             List<Category> categories = await _myDbContext.Categories.Where(x => x.IsActive).Include(x => x.Products).Take(4).ToListAsync();
             Product newProduct = await NewProduct();
             AttractiveDiscountDto attractiveDiscounts = await AttractiveDiscount();
@@ -508,6 +524,21 @@ namespace E_Commerce.Controllers
         }
 
         public ViewResult About()
+        {
+            return View();
+        }
+
+        public ViewResult Faq()
+        {
+            return View();
+        }
+
+        public ViewResult ShippingPolicy()
+        {
+            return View();
+        }
+
+        public ViewResult ReturnExchange()
         {
             return View();
         }

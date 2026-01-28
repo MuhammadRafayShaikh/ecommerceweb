@@ -585,6 +585,14 @@
       "PackagePath": "staticwebassets\\user\\detail\\review.js"
     },
     {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\faq\\faq.css",
+      "PackagePath": "staticwebassets\\user\\faq\\faq.css"
+    },
+    {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\faq\\faq.js",
+      "PackagePath": "staticwebassets\\user\\faq\\faq.js"
+    },
+    {
       "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\featured\\featured.css",
       "PackagePath": "staticwebassets\\user\\featured\\featured.css"
     },
@@ -637,6 +645,14 @@
       "PackagePath": "staticwebassets\\user\\profile\\profile.js"
     },
     {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\return-exchange\\return-exchange.css",
+      "PackagePath": "staticwebassets\\user\\return-exchange\\return-exchange.css"
+    },
+    {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\return-exchange\\return-exchange.js",
+      "PackagePath": "staticwebassets\\user\\return-exchange\\return-exchange.js"
+    },
+    {
       "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\sales\\sales.css",
       "PackagePath": "staticwebassets\\user\\sales\\sales.css"
     },
@@ -647,6 +663,14 @@
     {
       "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\script.js",
       "PackagePath": "staticwebassets\\user\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\shipping\\shipping-policy.css",
+      "PackagePath": "staticwebassets\\user\\shipping\\shipping-policy.css"
+    },
+    {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\shipping\\shipping-policy.js",
+      "PackagePath": "staticwebassets\\user\\shipping\\shipping-policy.js"
     },
     {
       "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\style.css",

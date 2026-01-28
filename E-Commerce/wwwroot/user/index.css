@@ -1,7 +1,7 @@
 ﻿/* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('');
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -75,7 +75,7 @@
 .floating-suit {
     width: 500px;
     height: 500px;
-    background: url('') center/cover;
+    background: url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
     border-radius: 50%;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     animation: float 6s ease-in-out infinite;

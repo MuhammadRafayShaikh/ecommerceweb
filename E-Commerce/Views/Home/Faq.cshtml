@@ -1,0 +1,650 @@
+﻿@{
+    ViewData["Title"] = "FAQs - Elegant Stitch";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/user/faq/faq.css" />
+
+<!-- FAQs Hero Section -->
+<section class="faq-hero">
+    <div class="faq-hero-content">
+        <h1>Frequently Asked Questions</h1>
+        <div class="hero-divider"></div>
+        <p>Find quick answers to common questions about shopping, orders, delivery, and more at Elegant Stitch.</p>
+        <div class="search-box">
+            <input type="text" id="faqSearch" placeholder="Search for answers...">
+            <button id="searchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links -->
+<section class="quick-links">
+    <div class="links-container">
+        <a href="#orders" class="quick-link active">
+            <div class="link-icon">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <span>Orders</span>
+        </a>
+        <a href="#shipping" class="quick-link">
+            <div class="link-icon">
+                <i class="fas fa-shipping-fast"></i>
+            </div>
+            <span>Shipping</span>
+        </a>
+        <a href="#returns" class="quick-link">
+            <div class="link-icon">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <span>Returns</span>
+        </a>
+        <a href="#sizing" class="quick-link">
+            <div class="link-icon">
+                <i class="fas fa-ruler-combined"></i>
+            </div>
+            <span>Sizing & Fit</span>
+        </a>
+        <a href="#customization" class="quick-link">
+            <div class="link-icon">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <span>Customization</span>
+        </a>
+        <a href="#care" class="quick-link">
+            <div class="link-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <span>Product Care</span>
+        </a>
+        <a href="#payments" class="quick-link">
+            <div class="link-icon">
+                <i class="fas fa-credit-card"></i>
+            </div>
+            <span>Payments</span>
+        </a>
+        <a href="#account" class="quick-link">
+            <div class="link-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <span>Account</span>
+        </a>
+    </div>
+</section>
+
+<!-- Main FAQs Sections -->
+<main class="faq-main">
+    <!-- Orders Section -->
+    <section id="orders" class="faq-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <h2>Orders & Purchases</h2>
+            <p>Questions about placing and managing orders</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>How do I place an order?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Placing an order is easy! Simply:</p>
+                    <ol>
+                        <li>Browse our collection and select your preferred suit</li>
+                        <li>Choose your size and any customization options</li>
+                        <li>Click 'Add to Cart'</li>
+                        <li>Proceed to checkout, fill in your details, and complete payment</li>
+                    </ol>
+                    <p>You'll receive an order confirmation email immediately.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>Can I modify or cancel my order after placing it?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you can modify or cancel your order within 1 hour of placing it. After that, orders go into processing and cannot be changed. To cancel:</p>
+                    <ul>
+                        <li>Go to 'My Orders' in your account</li>
+                        <li>Find the order you wish to cancel</li>
+                        <li>Click 'Cancel Order'</li>
+                        <li>For modifications, contact our customer support immediately</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>How do I track my order?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Once your order is shipped, you'll receive a tracking number via email and SMS. You can also:</p>
+                    <ul>
+                        <li>Log into your account and go to 'My Orders'</li>
+                        <li>Enter the tracking number on our 'Track Order' page</li>
+                        <li>Use the tracking link provided in your shipping email</li>
+                    </ul>
+                    <p>For custom orders, we'll provide updates at each stage via email.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>Do you accept bulk/corporate orders?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we welcome bulk orders for weddings, corporate events, or retail purposes. Benefits include:</p>
+                    <ul>
+                        <li>Special wholesale pricing (10+ pieces)</li>
+                        <li>Custom design consultations</li>
+                        <li>Priority production</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <p>Contact our wholesale team at <strong>wholesale@elegantstitch.com</strong> or call <strong>+91 22 9876 5432</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Section -->
+    <section id="shipping" class="faq-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h2>Shipping & Delivery</h2>
+            <p>Information about shipping timelines and costs</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What are your delivery timelines?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="timeline-info">
+                        <div class="timeline-item">
+                            <span class="timeline-type">Standard Delivery</span>
+                            <span class="timeline-duration">5-7 business days</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-type">Express Delivery</span>
+                            <span class="timeline-duration">2-3 business days</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-type">Custom Orders</span>
+                            <span class="timeline-duration">10-14 business days</span>
+                        </div>
+                    </div>
+                    <p><strong>Note:</strong> Timelines start from order confirmation. Custom orders include design consultation and production time.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>Do you ship internationally?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We ship to over 50 countries worldwide. International shipping typically takes:</p>
+                    <ul>
+                        <li><strong>USA, Canada, UK:</strong> 7-10 business days</li>
+                        <li><strong>Australia, Singapore, UAE:</strong> 8-12 business days</li>
+                        <li><strong>Other countries:</strong> 10-15 business days</li>
+                    </ul>
+                    <p><strong>Important:</strong> Customs duties and taxes are the responsibility of the recipient. We recommend checking your country's import regulations before ordering.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What are the shipping charges?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="shipping-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Destination</th>
+                                    <th>Standard</th>
+                                    <th>Express</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Within India</td>
+                                    <td>₹99 (Free above ₹3000)</td>
+                                    <td>₹299</td>
+                                </tr>
+                                <tr>
+                                    <td>USA, UK, Canada</td>
+                                    <td>$24.99</td>
+                                    <td>$39.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Australia, UAE</td>
+                                    <td>$19.99</td>
+                                    <td>$34.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Countries</td>
+                                    <td>$29.99</td>
+                                    <td>$44.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What happens if I'm not home during delivery?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our delivery partners will attempt delivery 3 times:</p>
+                    <ul>
+                        <li><strong>1st attempt:</strong> At the address provided</li>
+                        <li><strong>2nd attempt:</strong> Next business day</li>
+                        <li><strong>3rd attempt:</strong> Following business day</li>
+                    </ul>
+                    <p>If all attempts fail, the package will be returned to our warehouse. You can:</p>
+                    <ul>
+                        <li>Reschedule delivery through the tracking link</li>
+                        <li>Pick up from the nearest delivery center</li>
+                        <li>Contact our customer support for assistance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Returns Section -->
+    <section id="returns" class="faq-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h2>Returns & Exchanges</h2>
+            <p>Our return policy and exchange procedures</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What is your return policy?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="policy-card">
+                        <div class="policy-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Return Window</h4>
+                                <p>15 days from delivery date</p>
+                            </div>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Condition</h4>
+                                <p>Unworn, unwashed with original tags</p>
+                            </div>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Refund Method</h4>
+                                <p>Original payment method within 7-10 days</p>
+                            </div>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fas fa-times-circle"></i>
+                            <div>
+                                <h4>Non-Returnable</h4>
+                                <p>Customized suits, innerwear, sale items</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>How do I initiate a return?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Follow these simple steps:</p>
+                    <ol>
+                        <li>Log into your account and go to 'My Orders'</li>
+                        <li>Select the item you wish to return</li>
+                        <li>Choose a return reason (size, color, etc.)</li>
+                        <li>Print the return label provided</li>
+                        <li>Package the item securely with original tags</li>
+                        <li>Drop off at the nearest pickup location or schedule a pickup</li>
+                    </ol>
+                    <p>Once we receive and inspect the item, we'll process your refund.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What if I receive a damaged or defective item?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We sincerely apologize for any inconvenience. Please:</p>
+                    <ul>
+                        <li>Contact us within 48 hours of delivery</li>
+                        <li>Send photos of the damaged/defective area</li>
+                        <li>Include your order number and details</li>
+                    </ul>
+                    <p>We'll arrange a free pickup and replacement immediately. For manufacturing defects, we offer:</p>
+                    <ul>
+                        <li>Free replacement of the same item</li>
+                        <li>Exchange for any other product</li>
+                        <li>Full refund if preferred</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>Do you offer exchanges?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer easy exchanges for:</p>
+                    <ul>
+                        <li><strong>Size exchanges:</strong> Within 15 days for a different size</li>
+                        <li><strong>Color exchanges:</strong> If available in stock</li>
+                        <li><strong>Style exchanges:</strong> For equal or higher value items</li>
+                    </ul>
+                    <p><strong>Exchange Process:</strong></p>
+                    <ol>
+                        <li>Initiate exchange through 'My Orders'</li>
+                        <li>Choose your preferred size/color</li>
+                        <li>We'll ship the new item once we receive your return</li>
+                        <li>No additional shipping charges for exchanges within India</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sizing & Fit Section -->
+    <section id="sizing" class="faq-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-ruler-combined"></i>
+            </div>
+            <h2>Sizing & Fit Guide</h2>
+            <p>Help with choosing the right size</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>How do I choose the right size?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We recommend following these steps:</p>
+                    <ol>
+                        <li><strong>Measure yourself:</strong> Use a soft measuring tape</li>
+                        <li><strong>Key measurements:</strong> Bust, waist, hips, and length</li>
+                        <li><strong>Compare:</strong> Check against our size chart for each product</li>
+                        <li><strong>Consider style:</strong> Different styles fit differently</li>
+                    </ol>
+                    <div class="size-tip">
+                        <i class="fas fa-lightbulb"></i>
+                        <p><strong>Pro Tip:</strong> If between sizes, we recommend sizing up for comfort.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>Where can I find the size chart?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Size charts are available:</p>
+                    <ul>
+                        <li>On each product page (scroll to 'Size Guide')</li>
+                        <li>In our downloadable <a href="#" class="download-link">Complete Size Guide PDF</a></li>
+                        <li>On our mobile app under 'Help' section</li>
+                    </ul>
+                    <p>We provide detailed measurements in both inches and centimeters for international customers.</p>
+                </div>
+            </div>
+
+            <div class="faq-card wide">
+                <div class="faq-question">
+                    <h3>What if the suit doesn't fit perfectly?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="fit-solutions">
+                        <div class="solution">
+                            <div class="solution-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h4>Easy Exchange</h4>
+                            <p>Exchange for a different size within 15 days</p>
+                        </div>
+                        <div class="solution">
+                            <div class="solution-icon">
+                                <i class="fas fa-scissors"></i>
+                            </div>
+                            <h4>Minor Alterations</h4>
+                            <p>We provide alteration guidelines for common adjustments</p>
+                        </div>
+                        <div class="solution">
+                            <div class="solution-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>Expert Advice</h4>
+                            <p>Contact our styling team for personalized fit advice</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Size Chart Table -->
+        <div class="size-chart">
+            <h3>Standard Size Chart (in inches)</h3>
+            <div class="chart-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Bust</th>
+                            <th>Waist</th>
+                            <th>Hips</th>
+                            <th>Shoulder</th>
+                            <th>Length</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XS</td>
+                            <td>32-33</td>
+                            <td>26-27</td>
+                            <td>35-36</td>
+                            <td>15</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>34-35</td>
+                            <td>28-29</td>
+                            <td>37-38</td>
+                            <td>15.5</td>
+                            <td>41</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>36-37</td>
+                            <td>30-31</td>
+                            <td>39-40</td>
+                            <td>16</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>38-39</td>
+                            <td>32-33</td>
+                            <td>41-42</td>
+                            <td>16.5</td>
+                            <td>43</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>40-41</td>
+                            <td>34-35</td>
+                            <td>43-44</td>
+                            <td>17</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td>XXL</td>
+                            <td>42-43</td>
+                            <td>36-37</td>
+                            <td>45-46</td>
+                            <td>17.5</td>
+                            <td>45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="chart-note"><i class="fas fa-info-circle"></i> Note: Measurements may vary slightly by style. Always check individual product size guides.</p>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section id="customization" class="faq-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <h2>Customization Services</h2>
+            <p>Personalize your suit to match your style</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>What customization options do you offer?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer extensive customization to make your suit uniquely yours:</p>
+                    <div class="custom-options">
+                        <div class="option">
+                            <strong>Fabric & Color:</strong> Choose from 200+ premium fabrics
+                        </div>
+                        <div class="option">
+                            <strong>Embroidery:</strong> Add traditional or modern embroidery patterns
+                        </div>
+                        <div class="option">
+                            <strong>Silhouette:</strong> Modify necklines, sleeves, and length
+                        </div>
+                        <div class="option">
+                            <strong>Monograms:</strong> Add initials or special messages
+                        </div>
+                        <div class="option">
+                            <strong>Blouse Design:</strong> Customize blouse style and fit
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>How long do custom orders take?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="custom-timeline">
+                        <div class="timeline-stage">
+                            <span class="stage">Design Consultation</span>
+                            <span class="time">1-2 days</span>
+                        </div>
+                        <div class="timeline-stage">
+                            <span class="stage">Fabric & Embellishment</span>
+                            <span class="time">3-5 days</span>
+                        </div>
+                        <div class="timeline-stage">
+                            <span class="stage">Stitching & Finishing</span>
+                            <span class="time">6-8 days</span>
+                        </div>
+                        <div class="timeline-stage">
+                            <span class="stage">Quality Check & Shipping</span>
+                            <span class="time">1-2 days</span>
+                        </div>
+                    </div>
+                    <p><strong>Total:</strong> 10-14 business days from order confirmation</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>Can I see samples before ordering?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer several options:</p>
+                    <ul>
+                        <li><strong>Fabric Swatches:</strong> Order fabric samples (₹199 per set)</li>
+                        <li><strong>Virtual Consultation:</strong> Video call with our designers</li>
+                        <li><strong>Store Visit:</strong> Visit our Mumbai flagship store</li>
+                        <li><strong>Digital Mockups:</strong> Preview your design before ordering</li>
+                    </ul>
+                    <p>Contact our design team at <strong>design@elegantstitch.com</strong> to schedule a consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="contact-cta">
+        <div class="cta-content">
+            <div class="cta-icon">
+                <i class="fas fa-question-circle"></i>
+            </div>
+            <h2>Still Have Questions?</h2>
+            <p>Can't find the answer you're looking for? Our customer support team is here to help.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                </a>
+                <a href="tel:+912212345678" class="cta-button secondary">
+                    <i class="fas fa-phone"></i>
+                    Call Us: +91 22 1234 5678
+                </a>
+                <button class="cta-button tertiary" onclick="openChat()">
+                    <i class="fas fa-comments"></i>
+                    Live Chat
+                </button>
+            </div>
+            <p class="cta-note"><i class="fas fa-clock"></i> Available: Mon-Sat 9 AM - 8 PM, Sunday 10 AM - 6 PM (IST)</p>
+        </div>
+    </section>
+</main>
+
+<script src="~/user/faq/faq.js"></script>

@@ -1,5 +1,7 @@
 ﻿@{
     Settings settings = await SettingsService.GetSettingsAsync();
+    var controller = ViewContext.RouteData.Values["Controller"]?.ToString();
+    var action = ViewContext.RouteData.Values["Action"]?.ToString();
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -33,19 +35,17 @@
 
             <nav id="navMenu">
                 <ul>
-                    <li><a href="/" class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">Home</a></li>
-                    <li><a asp-controller="Home" asp-action="Collections" class="@(ViewContext.RouteData.Values["Action"].ToString() == "Collections" ? "active" : "")">Collections</a></li>
-                    <li><a asp-controller="Home" asp-action="Featured" class="@(ViewContext.RouteData.Values["Action"].ToString() == "Featured" ? "active" : "")">Featured</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a asp-controller="Home" asp-action="Sales" class="@(ViewContext.RouteData.Values["Action"].ToString() == "Sales" ? "active" : "")">Sale</a></li>
-                    <li><a asp-controller="Home" asp-action="About" class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">About</a></li>
+                    <li><a href="/" class="@(controller == "Home" && action == "Index" ? "active" : "")">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="Collections" class="@(controller == "Home" && action == "Collections" ? "active" : "")">Collections</a></li>
+                    <li><a asp-controller="Home" asp-action="Featured" class="@(controller == "Home" && action == "Featured" ? "active" : "")">Featured</a></li>
+                    <li><a asp-controller="Home" asp-action="Sales" class="@(controller == "Home" && action == "Sales" ? "active" : "")">Sale</a></li>
+                    <li><a asp-controller="Contact" asp-action="Index" class="@(controller == "Contact" ? "active" : "")">Contact</a></li>
+                    <li><a asp-controller="Home" asp-action="About" class="@(controller == "Home" && action == "About" ? "active" : "")">About</a></li>
                 </ul>
             </nav>
 
             <div class="header-icons">
-                @if (ViewContext.RouteData.Values["Action"].ToString() == "Collections" ||
-                ViewContext.RouteData.Values["Action"].ToString() == "Featured" ||
-                ViewContext.RouteData.Values["Action"].ToString() == "Sales")
+                @if (action == "Collections")
                 {
                     <div class="header-search-container">
                         <div class="search-wrapper">
@@ -210,17 +210,15 @@
                 <a href="/">Home</a><br>
                 <a asp-controller="Home" asp-action="Collections">Collections</a><br>
                 <a asp-controller="Home" asp-action="Featured">Featured</a><br>
-                <a href="#">New Arrivals</a><br>
                 <a asp-controller="Home" asp-action="Sales">Sale</a>
             </div>
 
             <div class="footer-col">
                 <h3>Customer Service</h3>
                 <a asp-controller="Contact" asp-action="Index">Contact Us</a><br>
-                <a href="#">FAQs</a><br>
-                <a href="#">Shipping Policy</a><br>
-                <a href="#">Return & Exchange</a><br>
-                <a href="#">Size Guide</a>
+                <a asp-controller="Home" asp-action="Faq">FAQs</a><br>
+                <a asp-controller="Home" asp-action="ShippingPolicy">Shipping Policy</a><br>
+                <a asp-controller="Home" asp-action="ReturnExchange">Return & Exchange</a><br>
             </div>
 
             <div class="footer-col">
