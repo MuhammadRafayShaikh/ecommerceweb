@@ -1,30 +1,6 @@
 ﻿// Sales Page Functionality
 document.addEventListener('DOMContentLoaded', function () {
-    // Sale Countdown Timer
-    function updateSaleTimer() {
-        const now = new Date();
-        const endDate = new Date();
-        endDate.setDate(now.getDate() + 7); // Sale ends in 7 days
-
-        const timeRemaining = endDate - now;
-
-        if (timeRemaining > 0) {
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown').textContent =
-                `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        } else {
-            document.getElementById('countdown').textContent = 'Sale Ended!';
-            document.getElementById('saleTimer').style.color = '#ff4757';
-        }
-    }
-
-    // Update timer every second
-    setInterval(updateSaleTimer, 1000);
-    updateSaleTimer();
+    
 
     // Discount Filter Tabs
     const tabButtons = document.querySelectorAll('.tab-btn');

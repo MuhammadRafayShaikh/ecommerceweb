@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Contact Us";
     Layout = "_Layout";
+    Settings settings = await SettingsService.GetSettingsAsync();
 }
 <link rel="stylesheet" href="~/user/contact/contact.css" />
 
@@ -24,7 +25,7 @@
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <h3>Visit Our Store</h3>
-                <p>123 Fashion Street, Bandra West<br>Mumbai, Maharashtra 400050</p>
+                <p>@settings.StoreAddress</p>
                 <a href="https://maps.google.com" target="_blank" class="info-link">View on Map <i class="fas fa-arrow-right"></i></a>
             </div>
 
@@ -33,7 +34,7 @@
                     <i class="fas fa-phone"></i>
                 </div>
                 <h3>Call Us</h3>
-                <p>+91 22 1234 5678<br>+91 98765 43210</p>
+                <p>@settings.ContactPhone</p>
                 <p class="timing">Mon-Sat: 10 AM - 8 PM<br>Sunday: 11 AM - 6 PM</p>
             </div>
 
@@ -42,7 +43,7 @@
                     <i class="fas fa-envelope"></i>
                 </div>
                 <h3>Email Us</h3>
-                <p>info@elegantstitch.com<br>support@elegantstitch.com</p>
+                <p>@settings.ContactEmail</p>
                 <p class="response-time">Response within 24 hours</p>
             </div>
 
@@ -132,7 +133,7 @@
 
 <!-- FAQ Section -->
 <section class="faq-section">
-    <div class="section-title">
+    <div class="section-title" style="text-align:center;">
         <h2>Frequently Asked Questions</h2>
         <p>Quick answers to common questions</p>
     </div>
@@ -182,7 +183,7 @@
 
 <!-- Map Section -->
 <section class="map-section">
-    <div class="section-title">
+    <div class="section-title" style="text-align:center;">
         <h2>Find Our Store</h2>
         <p>Visit us at our flagship store in Mumbai</p>
     </div>
@@ -191,9 +192,9 @@
         <div class="map-placeholder">
             <div class="map-info">
                 <h3><i class="fas fa-map-pin"></i> Elegant Stitch Flagship Store</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Bandra West, Mumbai</p>
+                <p><i class="fas fa-map-marker-alt"></i> @settings.StoreAddress</p>
                 <p><i class="fas fa-clock"></i> Open: 10 AM - 8 PM (Mon-Sat), 11 AM - 6 PM (Sun)</p>
-                <p><i class="fas fa-phone"></i> +91 22 1234 5678</p>
+                <p><i class="fas fa-phone"></i> @settings.ContactPhone</p>
                 <a href="https://maps.google.com" target="_blank" class="directions-button">
                     <i class="fas fa-directions"></i> Get Directions
                 </a>

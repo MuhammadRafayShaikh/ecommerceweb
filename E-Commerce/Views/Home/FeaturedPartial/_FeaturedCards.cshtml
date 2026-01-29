@@ -44,18 +44,18 @@
     <!-- Best Sale -->
     <div class="spotlight-card" data-product-type="bestseller">
         <div class="spotlight-badge">Best Sale</div>
-        <div class="spotlight-image" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="spotlight-image" style="background-image: url('/ProductImages/@Model.BestSelling.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');"></div>
         <div class="spotlight-content">
-            <h3>Classic Navy Suit</h3>
-            <p>Timeless navy suit with modern tailoring for business and formal occasions.</p>
+            <h3>@Model.BestSelling.Name</h3>
+            <p>@Model.BestSelling.ShortDescription</p>
             <div class="spotlight-meta">
-                <div class="spotlight-price">₹8,999</div>
+                <div class="spotlight-price">₹@Model.BestSelling.Price</div>
                 <div class="spotlight-rating">
-                    <i class="fas fa-star"></i> 4.8
+                    <i class="fas fa-star"></i> @Model.BestSelling.AverageRating
                 </div>
             </div>
             <div class="spotlight-actions">
-                <a asp-controller="Detail" asp-action="Index" asp-route-id="" class="spotlight-btn view">View Details</a>
+                <a asp-controller="Detail" asp-action="Index" asp-route-id="@Model.BestSelling.Id" class="spotlight-btn view">View Details</a>
                 <a href="#" class="spotlight-btn cart">Add to Cart</a>
             </div>
         </div>

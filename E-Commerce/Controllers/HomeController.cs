@@ -26,13 +26,7 @@ namespace E_Commerce.Controllers
             //return Json(links.Last().Key);
             Random random = new Random();
             int shopNowLinkIndex = random.Next(0, links.Count());
-            //while
-            //for(int i = 0; i <= links.Count(); i++)
-            //{
-
-            //}
             string shopNowLink = links[shopNowLinkIndex];
-            //return Json(value);
             ViewData["shopNowLink"] = shopNowLink;
 
             List<Category> categories = await _myDbContext.Categories.Where(x => x.IsActive).Include(x => x.Products).Take(4).ToListAsync();
@@ -455,6 +449,8 @@ namespace E_Commerce.Controllers
         public async Task<IActionResult> Featured(string highlightedProduct = "")
         {
             ViewData["currentAction"] = "featured";
+            BestSellingDTO bestSellingProductId = await GetHighestSellingProductId();
+            Product bestSelling = await BestSelling(bestSellingProductId);
             Product newProduct = await NewProduct();
             AttractiveDiscountDto attractiveDiscount = await AttractiveDiscount();
             List<Product> getNewProducts = await GetNewProducts();
@@ -463,6 +459,7 @@ namespace E_Commerce.Controllers
 
             HomeViewModel homeViewModel = new HomeViewModel
             {
+                BestSelling = bestSelling,
                 NewProduct = newProduct,
                 AttractiveDiscount = attractiveDiscount,
                 LatestProducts = getNewProducts,
