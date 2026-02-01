@@ -1,4 +1,4 @@
-﻿@model List<E_Commerce.Models.Order>
+﻿@model List<Order>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "My Orders";
@@ -152,7 +152,7 @@
             </div>
             <h3>No Orders Yet</h3>
             <p>You haven't placed any orders. Start shopping to see your orders here!</p>
-            <a href="/Collections" class="btn-shop-now">
+            <a asp-controller="Home" asp-action="Collections" class="btn-shop-now">
                 <i class="fas fa-shopping-cart"></i> Start Shopping
             </a>
         </div>

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="~/auth/register.css" />
+    <link rel="stylesheet" href="~/user/notification/notification.css" />
+    
 </head>
 <body>
     <div class="container">
@@ -94,10 +96,10 @@
 
                 <button type="submit" class="submit-btn">Create Account</button>
 
-                <div class="divider">Or sign up with</div>
+                @* <div class="divider">Or sign up with</div> *@
 
                 <!-- Google Signup Button with Individual Letter Icons -->
-                <a href="#" class="google-signup" id="googleSignup">
+                @* <a href="#" class="google-signup" id="googleSignup">
                     <div class="google-icon">
                         <span class="letter-g">G</span>
                         <span class="letter-o1">o</span>
@@ -106,7 +108,7 @@
                         <span class="letter-l">l</span>
                         <span class="letter-e">e</span>
                     </div>
-                </a>
+                </a> *@
 
                 <div class="login-link">
                     Already have an account? <a asp-controller="Account" asp-action="Login">Log in here</a>
@@ -116,5 +118,13 @@
     </div>
 
     <script src="~/auth/register.js"></script>
+    <script src="~/user/notification/notification.js"></script>
+    @await Html.PartialAsync("_Toast")
+    @if (TempData["error"] != null)
+    {
+        <script>
+            showToast("@TempData["error"]", "error");
+        </script>
+    }
 </body>
 </html>

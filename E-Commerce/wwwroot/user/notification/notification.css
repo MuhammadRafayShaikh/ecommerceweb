@@ -1,0 +1,118 @@
+﻿.custom-toast {
+    position: fixed !important;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+    transform: translateX(150%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+    .custom-toast.show {
+        transform: translateX(0);
+    }
+
+.toast-content {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid;
+}
+
+    .toast-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #4CAF50, #45a049);
+        animation: progress 3s linear;
+    }
+
+@keyframes progress {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+.toast-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.toast-success .toast-icon {
+    color: #4CAF50;
+}
+
+.toast-error .toast-icon {
+    color: #ff5252;
+}
+
+.toast-info .toast-icon {
+    color: #2196F3;
+}
+
+.toast-warning .toast-icon {
+    color: #ff9800;
+}
+
+.toast-message {
+    flex: 1;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    flex-shrink: 0;
+}
+
+    .toast-close:hover {
+        color: #333;
+    }
+
+/* Toast Types */
+.toast-success {
+    border-left-color: #4CAF50;
+    background: linear-gradient(to right, rgba(76, 175, 80, 0.05), white);
+}
+
+.toast-error {
+    border-left-color: #ff5252;
+    background: linear-gradient(to right, rgba(255, 82, 82, 0.05), white);
+}
+
+.toast-info {
+    border-left-color: #2196F3;
+    background: linear-gradient(to right, rgba(33, 150, 243, 0.05), white);
+}
+
+.toast-warning {
+    border-left-color: #ff9800;
+    background: linear-gradient(to right, rgba(255, 152, 0, 0.05), white);
+}

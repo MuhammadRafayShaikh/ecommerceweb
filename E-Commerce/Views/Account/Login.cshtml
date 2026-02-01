@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="~/auth/login.css" />
+    <link rel="stylesheet" href="~/user/notification/notification.css" />
+   
 </head>
+
 <body>
     <div class="container">
         <!-- Left Panel with Branding -->
@@ -62,24 +65,24 @@
                 </div>
 
                 <div class="forgot-password">
-                    <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+                    <a asp-controller="Account" asp-action="ForgotPassword" id="forgotPasswordLink">Forgot your password?</a>
                 </div>
 
                 <div class="remember-me">
-                    <input type="checkbox" id="remember">
+                    <input asp-for="RememberMe" type="checkbox" id="remember">
                     <label for="remember">Remember me on this device</label>
                 </div>
 
                 <button type="submit" class="login-btn">Login to Account</button>
 
-                <div class="divider">Or login with</div>
+                @* <div class="divider">Or login with</div> *@
                 <div class="signup-link">
                     Don't have an account? <a asp-controller="Account" asp-action="Register" id="signupLink">Create one now</a>
                 </div>
 
             </form>
             <!-- Google Login Button with Individual Letter Icons -->
-            <form asp-action="GoogleLogin" asp-controller="Account" method="post">
+            @* <form asp-action="GoogleLogin" asp-controller="Account" method="post">
                 <button type="submit" class="google-login">
                     <div class="google-icon">
                         <span class="letter-g">G</span>
@@ -90,19 +93,20 @@
                         <span class="letter-e">e</span>
                     </div>
                 </button>
-            </form>
+            </form> *@
 
 
 
         </div>
     </div>
-
+    @await Html.PartialAsync("_Toast")
     <script src="~/auth/login.js"></script>
-    <script src="~/notification.js"></script>
+    <script src="~/user/notification/notification.js"></script>
+
     @if (TempData["error"] != null)
     {
         <script>
-            showNotification("@TempData["error"]", "warning");
+            showToast("@TempData["error"]", "error");
         </script>
     }
 </body>

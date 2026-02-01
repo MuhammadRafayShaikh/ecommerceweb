@@ -5,6 +5,14 @@ using System.Security.Claims;
 using E_Commerce.Services;
 using E_Commerce.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text.Encodings.Web;
+using System.Text;
+using E_Commerce.Models.ViewModels;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using E_Commerce.Migrations;
 namespace E_Commerce.Controllers
 {
     public class AccountController : Controller
@@ -54,6 +62,7 @@ namespace E_Commerce.Controllers
             var existingUser = await _userManager.FindByEmailAsync(model.Email);
             if (existingUser != null)
             {
+                TempData["error"] = "Email already registered";
                 ModelState.AddModelError("", "Email already registered.");
                 return View(model);
             }
@@ -96,16 +105,16 @@ namespace E_Commerce.Controllers
                         );
                         if (emailSent)
                         {
-                            TempData["success"] = $"Email sent successfully to {user.Email}";
+                            //TempData["success"] = $"Email sent successfully to {user.Email}";
                         }
                         else
                         {
-                            TempData["error"] = $"Email to {user.Email} failed to send.";
+                            //TempData["error"] = $"Email to {user.Email} failed to send.";
                         }
                     }
                     catch (Exception ex)
                     {
-                        TempData["error"] = $"Unexpected error while sending email to {user.Email}: {ex.Message}";
+                        //TempData["error"] = $"Unexpected error while sending email to {user.Email}: {ex.Message}";
                     }
                 });
 
@@ -142,6 +151,7 @@ namespace E_Commerce.Controllers
 
             if (user == null)
             {
+                TempData["error"] = "Invalid email or password";
                 ModelState.AddModelError("", "Invalid email or password");
                 return View(model);
             }
@@ -149,7 +159,7 @@ namespace E_Commerce.Controllers
             var result = await _signInManager.PasswordSignInAsync(
                 user,
                 model.Password,
-                model.RememberMe,
+                isPersistent: model.RememberMe,
                 lockoutOnFailure: false
             );
             if (result.Succeeded)
@@ -189,6 +199,7 @@ namespace E_Commerce.Controllers
 
                     await _context.SaveChangesAsync();
                 }
+                TempData["error"] = "Invalid email or password";
                 ModelState.AddModelError("", "Invalid email or password");
             }
 
@@ -266,6 +277,335 @@ namespace E_Commerce.Controllers
             return View("Error");
         }
 
+        // GET: /Account/ForgotPassword
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        // POST: /Account/ForgotPassword
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState
+                    .Where(x => x.Value.Errors.Count > 0)
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                return Json(new
+                {
+                    success = false,
+                    message = errors.FirstOrDefault()
+                });
+            }
+
+
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+
+                // Don't reveal that the user does not exist or is not confirmed
+                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+                {
+                    // Still return success to prevent email enumeration
+                    //TempData["SuccessMessage"] = "If your email is registered, you will receive a password reset link shortly.";
+                    //return RedirectToAction("ForgotPasswordConfirmation");
+                    return Json(new
+                    {
+                        success = false,
+                        message = "If your email is registered, you will receive a password reset link shortly.",
+                        url = "/Account/ForgotPasswordConfirmation"
+                    });
+                }
+
+                // Generate password reset token
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                // Encode the token for URL safety
+                var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+
+                // Create reset link
+                var callbackUrl = Url.Action(
+                    action: "ResetPassword",
+                    controller: "Account",
+                    values: new
+                    {
+                        email = model.Email,
+                        token = encodedToken
+                    },
+                    protocol: Request.Scheme);
+
+                // Send email
+                await SendPasswordResetEmail(user.Email, callbackUrl);
+
+                //TempData["SuccessMessage"] = "Password reset link has been sent to your email.";
+                return Json(new { success = true, message = "Password reset link has been sent to your email." });
+                //return RedirectToAction("ForgotPasswordConfirmation");
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex, "Error in ForgotPassword");
+                //TempData["ErrorMessage"] = "An error occurred while processing your request. Please try again.";
+                //return View(model);
+                return Json(new { success = false, message = $"Error occurred: {ex.Message}" });
+
+            }
+        }
+
+        // GET: /Account/ForgotPasswordConfirmation
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+
+        // POST: /Account/ResendResetLink
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResendResetLink(string email)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(email);
+
+                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+                {
+                    // Don't reveal user existence
+                    return Json(new { success = true });
+                }
+
+                // Generate new token
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+
+                var callbackUrl = Url.Action(
+                    action: "ResetPassword",
+                    controller: "Account",
+                    values: new
+                    {
+                        email = user.Email,
+                        token = encodedToken
+                    },
+                    protocol: Request.Scheme);
+
+                await SendPasswordResetEmail(user.Email, callbackUrl);
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex, "Error in ResendResetLink");
+                return Json(new { success = false, message = "Failed to resend reset link" });
+            }
+        }
+
+        // GET: /Account/ResetPassword
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ResetPassword(string email, string token)
+        {
+            if (email == null || token == null)
+            {
+                TempData["ErrorMessage"] = "Invalid password reset link.";
+                return RedirectToAction("Login");
+            }
+
+            try
+            {
+                // Decode the token
+                var decodedToken = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+
+                var user = await _userManager.FindByEmailAsync(email);
+                if (user == null)
+                {
+                    TempData["ErrorMessage"] = "Invalid password reset link.";
+                    return RedirectToAction("Login");
+                }
+
+                // Verify token is valid
+                var isValid = await _userManager.VerifyUserTokenAsync(
+                    user,
+                    _userManager.Options.Tokens.PasswordResetTokenProvider,
+                    "ResetPassword",
+                    decodedToken);
+
+                if (!isValid)
+                {
+                    TempData["ErrorMessage"] = "This password reset link has expired or is invalid.";
+                    return RedirectToAction("Login");
+                }
+
+                var model = new ResetPasswordViewModel
+                {
+                    Email = email,
+                    Token = decodedToken
+                };
+
+                return View("ForgotPassword", model);
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex, "Error in ResetPassword GET");
+                TempData["ErrorMessage"] = "Invalid password reset link.";
+                return RedirectToAction("Login");
+            }
+        }
+
+        // POST: /Account/ResetPassword
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var error = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .FirstOrDefault()?.ErrorMessage;
+
+                return Json(new { success = false, message = error });
+            }
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return Json(new { success = true });
+            }
+
+            var decodedToken = Encoding.UTF8.GetString(
+                WebEncoders.Base64UrlDecode(model.Token)
+            );
+
+            var result = await _userManager.ResetPasswordAsync(
+                user,
+                decodedToken,
+                model.NewPassword
+            );
+
+            if (result.Succeeded)
+            {
+                return Json(new { success = true });
+            }
+
+            return Json(new
+            {
+                success = false,
+                message = result.Errors.FirstOrDefault()?.Description
+            });
+        }
+
+
+        // GET: /Account/ResetPasswordConfirmation
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
+        }
+
+        private async Task SendPasswordResetEmail(string email, string resetLink)
+        {
+            var subject = "Reset Your Password - Elegant Suits";
+
+            var body = $@"
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                    .header {{ background: linear-gradient(135deg, #5d4037, #b76e79); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }}
+                    .content {{ background: #f9f5f2; padding: 30px; border-radius: 0 0 10px 10px; }}
+                    .button {{ display: inline-block; background: #b76e79; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 20px 0; }}
+                    .note {{ background: #fff3e0; padding: 15px; border-left: 4px solid #FF9800; margin: 20px 0; font-size: 14px; }}
+                </style>
+            </head>
+            <body>
+                <div class='container'>
+                    <div class='header'>
+                        <h1>Password Reset Request</h1>
+                    </div>
+                    <div class='content'>
+                        <h2>Hello,</h2>
+                        <p>We received a request to reset your password for your Elegant Suits account.</p>
+                        <p>Click the button below to reset your password:</p>
+                        
+                        <p style='text-align: center;'>
+                            <a href='{HtmlEncoder.Default.Encode(resetLink)}' class='button'>
+                                Reset Password
+                            </a>
+                        </p>
+                        
+                        <p>If the button doesn't work, copy and paste this link into your browser:</p>
+                        <p style='word-break: break-all; color: #b76e79;'>{resetLink}</p>
+                        
+                        <div class='note'>
+                            <strong>Important:</strong> This password reset link will expire in 24 hours and can only be used once.
+                            If you didn't request this reset, you can safely ignore this email.
+                        </div>
+                        
+                        <p>Best regards,<br>The Elegant Suits Team</p>
+                    </div>
+                </div>
+            </body>
+            </html>";
+            _emailQueue.QueueEmail(async token =>
+            {
+                await _emailService.SendEmailAsync(email, subject, body);
+            });
+
+        }
+
+        private async Task SendPasswordResetConfirmationEmail(string email)
+        {
+            var subject = "Password Reset Successful - Elegant Suits";
+
+            var body = $@"
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                    .header {{ background: linear-gradient(135deg, #4CAF50, #8BC34A); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }}
+                    .content {{ background: #f9f5f2; padding: 30px; border-radius: 0 0 10px 10px; }}
+                    .success-icon {{ font-size: 48px; color: #4CAF50; text-align: center; margin: 20px 0; }}
+                </style>
+            </head>
+            <body>
+                <div class='container'>
+                    <div class='header'>
+                        <h1>Password Reset Successful</h1>
+                    </div>
+                    <div class='content'>
+                        <div class='success-icon'>✓</div>
+                        <h2>Password Updated Successfully!</h2>
+                        <p>Your Elegant Suits account password has been successfully reset.</p>
+                        
+                        <p><strong>If you made this change:</strong> You can now login with your new password.</p>
+                        <p><strong>If you didn't make this change:</strong> Please contact our support team immediately at support@elegantsuits.com.</p>
+                        
+                        <div style='background: #e8f5e9; padding: 15px; border-left: 4px solid #4CAF50; margin: 20px 0;'>
+                            <strong>Security Tip:</strong> For better security, avoid reusing passwords across different websites and consider enabling two-factor authentication.
+                        </div>
+                        
+                        <p>Best regards,<br>The Elegant Suits Team</p>
+                    </div>
+                </div>
+            </body>
+            </html>";
+
+            await _emailService.SendEmailAsync(email, subject, body);
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

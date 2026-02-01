@@ -1,0 +1,330 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmed | Elegant Suits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .email-confirmed-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 500px;
+            padding: 50px;
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-animation {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+        }
+
+        .success-circle {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.2);
+        }
+
+        .success-ripple {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #28a745;
+            border-radius: 50%;
+            animation: ripple 1.5s infinite;
+        }
+
+        @@keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #212529;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .confirmation-details {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #495057;
+        }
+
+        .detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-item i {
+            color: #28a745;
+            font-size: 18px;
+            width: 24px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #495057, #6c757d);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 180px;
+            box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+            background: linear-gradient(135deg, #6c757d, #495057);
+        }
+
+        .btn-secondary {
+            padding: 14px 32px;
+            background: white;
+            color: #495057;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 180px;
+        }
+
+        .btn-secondary:hover {
+            border-color: #495057;
+            color: #495057;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .security-tip {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e9ecef;
+            text-align: left;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .security-tip i {
+            color: #20c997;
+            font-size: 20px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .security-tip p {
+            margin: 0;
+            color: #495057;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .security-tip strong {
+            color: #212529;
+        }
+
+        .email-display {
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 16px;
+            color: #212529;
+            border: 1px solid #ced4da;
+        }
+
+        @@media (max-width: 576px) {
+            .email-confirmed-container {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .success-animation {
+                width: 100px;
+                height: 100px;
+            }
+
+            .success-circle {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-confirmed-container">
+        <div class="success-animation">
+            <div class="success-circle">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="success-ripple"></div>
+        </div>
+
+        <h1>Email Confirmed!</h1>
+        <p class="subtitle">Your email address has been successfully verified.</p>
+
+        <div class="confirmation-details">
+            <div class="detail-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Email verification completed successfully</span>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Your account security has been enhanced</span>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-user-check"></i>
+                <span>You now have full access to your account</span>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="@Url.Action("Index", "Home")" class="btn-secondary">
+                <i class="fas fa-home"></i>
+                Return to Home
+            </a>
+        </div>
+
+        <div class="security-tip">
+            <i class="fas fa-lightbulb"></i>
+            <p>
+                <strong>What's Next?</strong><br>
+                You can now log in to your account and access all features.
+                For enhanced security, we recommend setting up two-factor authentication
+                in your account settings.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add a slight delay to show the ripple effect
+        setTimeout(() => {
+            document.querySelector('.success-ripple').style.display = 'block';
+        }, 300);
+
+        // Add click animation to buttons
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+            button.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

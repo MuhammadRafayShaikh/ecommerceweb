@@ -1,4 +1,6 @@
-﻿namespace E_Commerce.Models
+﻿using E_Commerce.Models.DbTables;
+
+namespace E_Commerce.Models
 {
     public class Order
     {
@@ -20,6 +22,7 @@
         public ICollection<OrderItem> Items { get; set; }
         public ICollection<Payment> Payments { get; set; }
         public OrderAddress OrderAddress { get; set; }
+        public OrderCancellation Cancellation { get; set; }
         public enum OrderStatus
         {
             Pending,        // Order created, payment pending

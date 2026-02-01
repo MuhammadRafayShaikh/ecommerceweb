@@ -516,16 +516,16 @@ namespace E_Commerce.Controllers
                         );
                         if (emailSent)
                         {
-                            TempData["success"] = $"Email sent successfully to {user.Email}";
+                            //TempData["success"] = $"Email sent successfully to {user.Email}";
                         }
                         else
                         {
-                            TempData["error"] = $"Email to {user.Email} failed to send.";
+                            //TempData["error"] = $"Email to {user.Email} failed to send.";
                         }
                     }
                     catch (Exception ex)
                     {
-                        TempData["error"] = $"Unexpected error while sending email to {user.Email}: {ex.Message}";
+                        //TempData["error"] = $"Unexpected error while sending email to {user.Email}: {ex.Message}";
                     }
                 });
 

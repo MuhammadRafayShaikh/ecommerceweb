@@ -1,4 +1,4 @@
-﻿@model E_Commerce.Models.Order
+﻿@model Order
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Track Order";
@@ -540,19 +540,6 @@
             });
         });
 
-        // Toast function
-        function showToast(message, type = 'info') {
-            const toast = document.getElementById('toast');
-            const toastMessage = document.getElementById('toastMessage');
-
-            if (toast && toastMessage) {
-                toastMessage.textContent = message;
-                toast.className = `toast show ${type}`;
-
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 3000);
-            }
-        }
+       
     </script>
 }

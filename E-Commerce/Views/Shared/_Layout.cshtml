@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="~/user/style.css" asp-append-version="true">
     <link rel="stylesheet" href="~/user/cart.css" asp-append-version="true">
     <link rel="stylesheet" href="~/user/modal.css" asp-append-version="true">
-    <script src="~/user/notification/notification.js"></script>
     <script src="~/user/notification/confirmation.js" defer></script>
+    <link rel="stylesheet" href="~/user/notification/notification.css" />
 
     @* <script src="~/notification.js" asp-append-version="true"></script> *@
     @await RenderSectionAsync("Styles", required: false)
@@ -233,8 +233,9 @@
             <p>&copy; @DateTime.Now.Year Elegant Stitch. All rights reserved.</p>
         </div>
     </footer>
-
+    @await Html.PartialAsync("_Toast")
     <script src="~/user/script.js" asp-append-version="true"></script>
+    <script src="~/user/notification/notification.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

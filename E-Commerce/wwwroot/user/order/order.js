@@ -326,43 +326,6 @@ function hideLoading() {
     }
 }
 
-// Toast function (reuse from cart.js)
-function showToast(message, type = 'info') {
-    const toast = document.getElementById('toast');
-    const toastMessage = document.getElementById('toastMessage');
-
-    if (!toast || !toastMessage) {
-        // Create toast if not exists
-        const toastDiv = document.createElement('div');
-        toastDiv.id = 'toast';
-        toastDiv.className = 'toast';
-        toastDiv.innerHTML = `
-            <div class="toast-content">
-                <span id="toastMessage">${message}</span>
-                <button class="toast-close">&times;</button>
-            </div>
-        `;
-        document.body.appendChild(toastDiv);
-
-        toastDiv.querySelector('.toast-close').addEventListener('click', () => {
-            toastDiv.classList.remove('show');
-        });
-
-        toastDiv.classList.add('show', type);
-
-        setTimeout(() => {
-            toastDiv.classList.remove('show');
-        }, 3000);
-    } else {
-        toastMessage.textContent = message;
-        toast.className = `toast show ${type}`;
-
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3000);
-    }
-}
-
 // Confirmation modal (reuse from cart.js)
 async function showConfirm(title, message) {
     return new Promise((resolve) => {

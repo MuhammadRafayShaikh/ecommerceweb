@@ -225,6 +225,14 @@
       "PackagePath": "staticwebassets\\admin\\style.css"
     },
     {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\forgot-password.css",
+      "PackagePath": "staticwebassets\\auth\\forgot-password.css"
+    },
+    {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\forgot-password.js",
+      "PackagePath": "staticwebassets\\auth\\forgot-password.js"
+    },
+    {
       "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\login.css",
       "PackagePath": "staticwebassets\\auth\\login.css"
     },
@@ -619,6 +627,10 @@
     {
       "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\notification\\confirmation.js",
       "PackagePath": "staticwebassets\\user\\notification\\confirmation.js"
+    },
+    {
+      "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\notification\\notification.css",
+      "PackagePath": "staticwebassets\\user\\notification\\notification.css"
     },
     {
       "Id": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\notification\\notification.js",

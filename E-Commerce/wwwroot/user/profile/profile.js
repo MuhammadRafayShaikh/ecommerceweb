@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize profile functionality
     initializeProfilePage();
     loadUserStats();
-    loadActivity();
+    //loadActivity();
 
     // Navigation between sections
     const navItems = document.querySelectorAll('.nav-item');
@@ -71,9 +71,9 @@ function initializeProfilePage() {
     const success = urlParams.get('success');
     const error = urlParams.get('error');
 
-    if (success) {
-        showToast(decodeURIComponent(success), 'success');
-    }
+    //if (success) {
+    //    showToast(decodeURIComponent(success), 'success');
+    //}
 
     if (error) {
         showToast(decodeURIComponent(error), 'error');
