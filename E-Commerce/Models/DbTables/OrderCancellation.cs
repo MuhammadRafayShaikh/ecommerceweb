@@ -12,7 +12,7 @@
         public CancellationBy CancelledBy { get; set; }
 
         // Optional reason
-        public string Reason { get; set; }
+        public string? Reason { get; set; }
 
         // Retry payment allowed?
         public bool AllowRetryPayment { get; set; }

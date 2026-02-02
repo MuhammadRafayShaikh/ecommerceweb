@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "My Orders";
 }
-<link rel="stylesheet" href="~/user/order/orders.css"/>
+<link rel="stylesheet" href="~/user/order/orders.css" />
 <!-- My Orders Page -->
 <div class="orders-container" style="margin-top: 80px;">
     <!-- Page Header -->
@@ -116,9 +116,12 @@
 
                         @if (order.Status == Order.OrderStatus.Pending || order.Status == Order.OrderStatus.Cancelled)
                         {
-                            <button class="btn-retry-payment" data-order-id="@order.Id">
-                                <i class="fas fa-redo"></i> Retry Payment
-                            </button>
+                            if (order.Cancellation != null && order.Cancellation.AllowRetryPayment)
+                            {
+                                <button class="btn-retry-payment" data-order-id="@order.Id">
+                                    <i class="fas fa-redo"></i> Retry Payment
+                                </button>
+                            }
                         }
 
                         @if (order.Status == Order.OrderStatus.Pending)

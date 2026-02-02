@@ -1,4 +1,5 @@
 ﻿using E_Commerce.Models;
+using E_Commerce.Models.DbTables;
 using E_Commerce.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -246,6 +247,7 @@ namespace E_Commerce.Controllers
                             .ThenInclude(x => x.Images)
                     .Include(o => o.OrderAddress)
                     .Include(o => o.Payments)
+                    .Include(x => x.Cancellation)
                     .OrderByDescending(o => o.CreatedAt)
                     .ToListAsync();
 
@@ -384,6 +386,14 @@ namespace E_Commerce.Controllers
 
                 // Update order status
                 order.Status = Order.OrderStatus.Cancelled;
+
+                OrderCancellation cancelledOrder = await _myDbContext.OrderCancellations.FirstOrDefaultAsync(x => x.OrderId == orderId);
+                if (cancelledOrder != null)
+                {
+                    _myDbContext.OrderCancellations.Remove(cancelledOrder);
+                }
+                OrderCancellation orderCancellation = new OrderCancellation { OrderId = orderId, CancelledBy = CancellationBy.User, AllowRetryPayment = true };
+                await _myDbContext.OrderCancellations.AddAsync(orderCancellation);
                 await _myDbContext.SaveChangesAsync();
 
                 return Json(new { success = true, message = "Order cancelled successfully" });
