@@ -976,3 +976,294 @@
         max-height: 90vh;
     }
 }
+
+/* Cancellation Reason Styles */
+.cancellation-reason-section {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+    border: 2px solid #ffcccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+    .cancellation-reason-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(to bottom, #dc3545, #c82333);
+    }
+
+.cancellation-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #dc3545;
+}
+
+    .cancellation-header i {
+        font-size: 24px;
+    }
+
+    .cancellation-header h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+.cancellation-details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    font-size: 14px;
+}
+
+.cancellation-label {
+    color: #666;
+    font-weight: 500;
+    min-width: 120px;
+}
+
+.cancellation-value {
+    color: #333;
+    font-weight: 500;
+}
+
+.cancellation-reason-text {
+    grid-column: 1 / -1;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ffd6d6;
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+}
+
+    .cancellation-reason-text::before {
+        content: '"';
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-size: 32px;
+        color: #ffcccc;
+        font-family: Georgia, serif;
+    }
+
+    .cancellation-reason-text::after {
+        content: '"';
+        position: absolute;
+        bottom: -15px;
+        right: 10px;
+        font-size: 32px;
+        color: #ffcccc;
+        font-family: Georgia, serif;
+    }
+
+.retry-available {
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+    border-color: #c3e6cb;
+}
+
+    .retry-available::before {
+        background: linear-gradient(to bottom, #28a745, #20c997);
+    }
+
+    .retry-available .cancellation-header {
+        color: #28a745;
+    }
+
+.retry-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Action buttons for cancelled orders */
+.cancellation-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-retry-payment {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+    .btn-retry-payment:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    }
+
+.btn-contact-support {
+    background: white;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+    .btn-contact-support:hover {
+        background: #dc3545;
+        color: white;
+    }
+
+/* Timeline for order status */
+.order-timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+    .timeline-icon.pending {
+        background: #ffc107;
+        color: #333;
+    }
+
+    .timeline-icon.confirmed {
+        background: #17a2b8;
+        color: white;
+    }
+
+    .timeline-icon.shipped {
+        background: #007bff;
+        color: white;
+    }
+
+    .timeline-icon.delivered {
+        background: #28a745;
+        color: white;
+    }
+
+    .timeline-icon.cancelled {
+        background: #dc3545;
+        color: white;
+    }
+
+.timeline-content {
+    flex: 1;
+    padding-top: 8px;
+}
+
+    .timeline-content h5 {
+        margin: 0 0 5px 0;
+        font-weight: 600;
+    }
+
+    .timeline-content p {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+    }
+
+.timeline-connector {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    bottom: -20px;
+    width: 2px;
+    background: #dee2e6;
+    z-index: 1;
+}
+
+.timeline-item:last-child .timeline-connector {
+    display: none;
+}
+
+/* Order card adjustments for cancelled status */
+.order-card[data-status="2"] {
+    border-left: 4px solid #dc3545;
+}
+
+    .order-card[data-status="2"] .order-header {
+        background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cancellation-details {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .cancellation-label {
+        min-width: auto;
+        font-weight: 600;
+    }
+
+    .cancellation-reason-text {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .cancellation-actions {
+        flex-direction: column;
+    }
+}

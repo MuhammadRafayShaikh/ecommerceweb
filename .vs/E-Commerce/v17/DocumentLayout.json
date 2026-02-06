@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\admin\\order\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\admin\\order\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\order\\orders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\order\\orders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\admin\\order\\order.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\admin\\order\\order.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\apicontrollers\\adminordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +27,12 @@
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\models\\dbtables\\ordercancellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\admin\\order\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\admin\\order\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\auth\\forgot-password.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\auth\\forgot-password.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Migrations\\20260202174907_cancelorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-Commerce\\Migrations\\20260202174907_cancelorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\account\\emailconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -413,6 +413,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\admin\\product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\admin\\product.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\migrations\\20260202174907_cancelorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\migrations\\20260202174907_cancelorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -422,11 +426,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "forgot-password.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\forgot-password.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\auth\\forgot-password.js",
@@ -435,8 +439,7 @@
               "ViewState": "AgIAABcAAAAAAAAAAAAowCYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-02-01T13:54:26.762Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -452,33 +455,85 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "orders.css",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\orders.css",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\order\\orders.css",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\orders.css",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\order\\orders.css",
+              "ViewState": "AgIAAMsEAAAAAAAAAADwv/QEAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-06T19:31:58.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "order.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\order\\order.css",
               "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.css",
               "RelativeToolTip": "E-Commerce\\wwwroot\\admin\\order\\order.css",
-              "ViewState": "AgIAANoCAAAAAAAAAAAAANoCAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAN0DAAAAAAAAAAAAAO0DAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-02-02T19:15:55.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "order.js",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.js",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\order\\order.js",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.js",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\admin\\order\\order.js",
-              "ViewState": "AgIAAKwBAAAAAAAAAAAQwMIBAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-02T18:40:34.569Z",
+              "DocumentIndex": 3,
+              "Title": "Orders.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Orders.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Admin\\Orders.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Orders.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Admin\\Orders.cshtml",
+              "ViewState": "AgIAAGoBAAAAAAAAAAAuwHIBAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-02T18:21:31.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminOrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
+              "RelativeToolTip": "E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
+              "ViewState": "AgIAABMBAAAAAAAAAAAqwB8BAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T18:21:02.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "OrderCancellation.cs",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
+              "RelativeToolTip": "E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T20:03:52.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Order\\MyOrders.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Order\\MyOrders.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Order\\MyOrders.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Order\\MyOrders.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-31T14:28:23.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\Order.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\Order.cs",
@@ -486,51 +541,24 @@
               "RelativeToolTip": "E-Commerce\\Models\\Order.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T17:52:01.304Z",
+              "WhenOpened": "2026-02-02T17:52:01.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "order.js",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.js",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\order\\order.js",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.js",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\admin\\order\\order.js",
+              "ViewState": "AgIAAIwBAAAAAAAAAAAwwKABAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T18:40:34.569Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Orders.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Orders.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Admin\\Orders.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Orders.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Admin\\Orders.cshtml",
-              "ViewState": "AgIAABIBAAAAAAAAAAAAACIBAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-02T18:21:31.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminOrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
-              "RelativeToolTip": "E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAAAMgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:21:02.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderCancellation.cs",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
-              "RelativeToolTip": "E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T20:03:52.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\OrderController.cs",
@@ -538,21 +566,7 @@
               "RelativeToolTip": "E-Commerce\\Controllers\\OrderController.cs",
               "ViewState": "AgIAAOYAAAAAAAAAAAAAAOYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T13:01:22.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MyOrders.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Order\\MyOrders.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Order\\MyOrders.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Order\\MyOrders.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Order\\MyOrders.cshtml",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-31T14:28:23.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T13:01:22.61Z"
             },
             {
               "$type": "Document",
@@ -580,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\AdminController.cs",
@@ -588,12 +602,11 @@
               "RelativeToolTip": "E-Commerce\\Controllers\\AdminController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T13:55:18.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T13:55:18.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 103,
               "Title": "20260202174907_cancelorder.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Migrations\\20260202174907_cancelorder.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Migrations\\20260202174907_cancelorder.cs",
@@ -601,12 +614,11 @@
               "RelativeToolTip": "E-Commerce\\Migrations\\20260202174907_cancelorder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T17:49:08.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T17:49:08.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "order.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\order.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\order\\order.js",
@@ -614,8 +626,7 @@
               "RelativeToolTip": "E-Commerce\\wwwroot\\user\\order\\order.js",
               "ViewState": "AgIAAJQAAAAAAAAAAAAAAKgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-31T14:19:43.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-31T14:19:43.835Z"
             },
             {
               "$type": "Document",

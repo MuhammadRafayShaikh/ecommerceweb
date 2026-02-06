@@ -3,6 +3,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "My Orders";
 }
+@functions {
+    string GetStatusIcon(Order.OrderStatus status)
+    {
+        return status switch
+        {
+            Order.OrderStatus.Pending => "fa-clock",
+            Order.OrderStatus.Confirmed => "fa-check-circle",
+            Order.OrderStatus.Shipped => "fa-shipping-fast",
+            Order.OrderStatus.Delivered => "fa-box-open",
+            Order.OrderStatus.Cancelled => "fa-ban",
+            _ => "fa-question-circle"
+        };
+    }
+}
 <link rel="stylesheet" href="~/user/order/orders.css" />
 <!-- My Orders Page -->
 <div class="orders-container" style="margin-top: 80px;">
@@ -25,10 +39,11 @@
         </div>
 
         <!-- Orders List -->
+        <!-- Orders List -->
         <div class="orders-list" id="ordersList">
             @foreach (var order in Model)
             {
-                <div class="order-card" data-status="@order.Status">
+                <div class="order-card" data-status="@((int)order.Status)">
                     <!-- Order Header -->
                     <div class="order-header">
                         <div class="order-info">
@@ -39,12 +54,67 @@
                             </div>
                         </div>
                         <div class="order-status">
-                            <span class="status-badge @order.Status">
-                                <i class="@order.Status"></i>
+                            <span class="status-badge @order.Status.ToString().ToLower()">
+                                <i class="fas @GetStatusIcon(order.Status)"></i>
                                 @order.Status.ToString()
                             </span>
                         </div>
                     </div>
+
+                    <!-- Show cancellation reason if order is cancelled -->
+                    @if (order.Status == Order.OrderStatus.Cancelled && order.Cancellation != null)
+                    {
+                        <div class="cancellation-reason-section @(order.Cancellation.AllowRetryPayment ? "retry-available" : "")">
+                            <div class="cancellation-header">
+                                <i class="fas fa-ban"></i>
+                                <h4>Order Cancelled</h4>
+                            </div>
+
+                            <div class="cancellation-details">
+                                <div class="cancellation-label">Cancelled By:</div>
+                                <div class="cancellation-value">
+                                    <i class="fas fa-user-shield"></i>
+                                    @order.Cancellation.CancelledBy.ToString()
+                                </div>
+
+                                <div class="cancellation-label">Cancelled On:</div>
+                                <div class="cancellation-value">
+                                    <i class="far fa-clock"></i>
+                                    @order.Cancellation.CancelledAt.ToString("MMM dd, yyyy hh:mm tt")
+                                </div>
+
+                                @if (!string.IsNullOrEmpty(order.Cancellation.Reason))
+                                {
+                                    <div class="cancellation-label">Reason:</div>
+                                    <div class="cancellation-reason-text">
+                                        @order.Cancellation.Reason
+                                    </div>
+                                }
+
+                                @if (order.Cancellation.AllowRetryPayment)
+                                {
+                                    <div class="retry-badge">
+                                        <i class="fas fa-redo-alt"></i>
+                                        You can retry payment for this order
+                                    </div>
+                                }
+                            </div>
+
+                            <div class="cancellation-actions">
+                                @if (order.Cancellation.AllowRetryPayment)
+                                {
+                                    <button class="btn-retry-payment" data-order-id="@order.Id">
+                                        <i class="fas fa-credit-card"></i>
+                                        Retry Payment
+                                    </button>
+                                }
+                                <button class="btn-contact-support">
+                                    <i class="fas fa-headset"></i>
+                                    Contact Support
+                                </button>
+                            </div>
+                        </div>
+                    }
 
                     <!-- Order Items Preview -->
                     <div class="order-items-preview">
@@ -110,18 +180,11 @@
                             <i class="fas fa-eye"></i> View Details
                         </a>
 
-                        <a href="/Order/Track/@order.Id" class="btn-track">
-                            <i class="fas fa-map-marker-alt"></i> Track Order
-                        </a>
-
-                        @if (order.Status == Order.OrderStatus.Pending || order.Status == Order.OrderStatus.Cancelled)
+                        @if (order.Status == Order.OrderStatus.Shipped || order.Status == Order.OrderStatus.Confirmed)
                         {
-                            if (order.Cancellation != null && order.Cancellation.AllowRetryPayment)
-                            {
-                                <button class="btn-retry-payment" data-order-id="@order.Id">
-                                    <i class="fas fa-redo"></i> Retry Payment
-                                </button>
-                            }
+                            <a href="/Order/Track/@order.Id" class="btn-track">
+                                <i class="fas fa-map-marker-alt"></i> Track Order
+                            </a>
                         }
 
                         @if (order.Status == Order.OrderStatus.Pending)
@@ -133,11 +196,11 @@
 
                         @if (order.Status == Order.OrderStatus.Delivered)
                         {
-                            <button class="btn-review">
+                            <button class="btn-review" data-order-id="@order.Id">
                                 <i class="fas fa-star"></i> Write Review
                             </button>
 
-                            <button class="btn-reorder">
+                            <button class="btn-reorder" data-order-id="@order.Id">
                                 <i class="fas fa-sync"></i> Reorder
                             </button>
                         }

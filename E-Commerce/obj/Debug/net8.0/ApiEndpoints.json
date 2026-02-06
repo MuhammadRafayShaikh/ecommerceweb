@@ -93,6 +93,11 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "E_Commerce.Controllers.APIControllers.CancelOrderRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

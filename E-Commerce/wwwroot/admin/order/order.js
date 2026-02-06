@@ -186,10 +186,10 @@ function updateOrdersTable() {
                     <button class="btn-icon btn-print" onclick="printOrder(${order.id})" title="Print Invoice">
                         <i class="fas fa-print"></i>
                     </button>
-                    ${order.status !== 2 && order.status !== 4 ?
+                    ${order.status !== 2 && order.status !== 4 && order.status !== 3 ?
                 `<button class="btn-icon btn-cancel" onclick="cancelOrder(${order.id})" title="Cancel Order">
-                        <i class="fas fa-times"></i>
-                    </button>` : ''}
+        <i class="fas fa-ban"></i>
+    </button>` : ''}
                 </div>
             </td>
         `;
@@ -387,11 +387,225 @@ function closeOrderModal() {
     currentOrder = null;
 }
 
+let cancelModal = document.getElementById('cancelModal');
+let cancellingOrderId = null;
+let cancellationSource = null; // 'direct' or 'modal'
+
+// Open cancel modal
+function openCancelModal(orderId, source = 'direct') {
+    const order = currentOrders.find(o => o.id === orderId);
+    if (!order) return;
+
+    // Check if order can be cancelled (only Pending or Confirmed)
+    if (order.status !== 0 && order.status !== 1) {
+        const statusNames = {
+            0: 'Pending',
+            1: 'Confirmed',
+            2: 'Cancelled',
+            3: 'Shipped',
+            4: 'Delivered'
+        };
+        showNotification(`Cannot cancel order with status: ${statusNames[order.status]}`, 'danger');
+        return;
+    }
+
+    // Store order info
+    cancellingOrderId = orderId;
+    cancellationSource = source;
+
+    // Update modal content
+    document.getElementById('cancelOrderId').textContent = order.orderNumber || 'N/A';
+    document.getElementById('cancelOrderStatus').textContent = orderStatusMap[order.status]?.text || 'Unknown';
+    document.getElementById('cancelOrderStatus').className = 'status-badge ' + (order.status === 0 ? 'pending' : 'confirmed');
+
+    document.getElementById('cancelCustomerName').textContent = order.user?.name || 'N/A';
+    document.getElementById('cancelOrderAmount').textContent = '₹' + (order.grandTotal || 0).toLocaleString('en-IN');
+
+    // Format date
+    if (order.createdAt) {
+        const orderDate = new Date(order.createdAt);
+        document.getElementById('cancelOrderDate').textContent = orderDate.toLocaleDateString('en-IN', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+        });
+    } else {
+        document.getElementById('cancelOrderDate').textContent = 'N/A';
+    }
+
+    // Count items
+    const itemCount = order.items ? order.items.reduce((sum, item) => sum + (item.quantity || 0), 0) : 0;
+    document.getElementById('cancelOrderItems').textContent = itemCount;
+
+    // Reset form
+    document.getElementById('cancelReason').value = '';
+    document.getElementById('allowRetryPayment').checked = false;
+    document.getElementById('charCounter').textContent = '0/500 characters';
+    document.getElementById('charCounter').className = 'char-counter';
+
+    // Show modal
+    cancelModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+// Close cancel modal
+function closeCancelModal() {
+    cancelModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    cancellingOrderId = null;
+    cancellationSource = null;
+}
+
+// Update character counter
+function updateCharCounter(textarea) {
+    const counter = document.getElementById('charCounter');
+    const length = textarea.value.length;
+    counter.textContent = `${length}/500 characters`;
+
+    if (length > 450) {
+        counter.className = 'char-counter warning';
+    } else {
+        counter.className = 'char-counter';
+    }
+}
+
+// Toggle retry payment checkbox
+function toggleRetryPayment() {
+    const checkbox = document.getElementById('allowRetryPayment');
+    checkbox.checked = !checkbox.checked;
+}
+
+// Confirm cancellation
+async function confirmCancellation() {
+    if (!cancellingOrderId) return;
+
+    const reason = document.getElementById('cancelReason').value;
+    const allowRetryPayment = document.getElementById('allowRetryPayment').checked;
+
+    try {
+        showLoading();
+
+        const response = await fetch(`${API_BASE_URL}/orders/${cancellingOrderId}/cancel`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                reason: reason || null,
+                allowRetryPayment: allowRetryPayment,
+                cancelledBy: 'Admin'
+            })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to cancel order');
+        }
+
+        const result = await response.json();
+
+        // Show success message
+        const allowMsg = allowRetryPayment ? 'Customer can retry payment.' : 'Order is permanently cancelled.';
+        const reasonMsg = reason ? `Reason: ${reason}` : 'No reason provided.';
+
+        showNotification(`Order cancelled successfully. ${allowMsg}`, 'success');
+
+        // Refresh data
+        loadOrders();
+        loadStatistics();
+
+        // Close modals
+        closeCancelModal();
+        if (cancellationSource === 'modal') {
+            closeOrderModal();
+        }
+
+    } catch (error) {
+        console.error('Error cancelling order:', error);
+        showNotification(error.message || 'Failed to cancel order. Please try again.', 'danger');
+    } finally {
+        hideLoading();
+    }
+}
+
+
 // Update order status
 async function updateOrderStatus() {
     if (!currentOrder) return;
 
     const newStatus = parseInt(document.getElementById('updateStatus').value);
+
+    // If trying to cancel from status dropdown
+    if (newStatus === 2) {
+        openCancelModal(currentOrder.id, 'modal');
+        return;
+    }
+
+    // Rest of the validation logic from earlier...
+    const currentStatus = currentOrder.status;
+
+    // Validation rules based on current status
+    let allowedTransitions = [];
+    let errorMessage = "";
+
+    switch (currentStatus) {
+        case 0: // Pending
+            allowedTransitions = [1, 2]; // Confirmed or Cancelled
+            errorMessage = "Pending orders can only be updated to Confirmed or Cancelled";
+            break;
+        case 1: // Confirmed
+            allowedTransitions = [2, 3]; // Cancelled or Shipped
+            errorMessage = "Confirmed orders can only be updated to Shipped or Cancelled";
+            break;
+        case 3: // Shipped
+            allowedTransitions = [4]; // Delivered only
+            errorMessage = "Shipped orders can only be updated to Delivered";
+            break;
+        case 4: // Delivered
+            errorMessage = "Delivered orders cannot be updated further";
+            break;
+        case 2: // Cancelled
+            errorMessage = "Cancelled orders cannot be updated";
+            break;
+        default:
+            errorMessage = "Invalid order status";
+    }
+
+    // Check if transition is allowed
+    if (!allowedTransitions.includes(newStatus) && currentStatus !== 4 && currentStatus !== 2) {
+        showNotification(errorMessage, 'danger');
+        return;
+    }
+
+    // Additional specific validations
+    if (currentStatus === 4) {
+        showNotification("Cannot update a delivered order", 'danger');
+        return;
+    }
+
+    if (currentStatus === 2) {
+        showNotification("Cannot update a cancelled order", 'danger');
+        return;
+    }
+
+    // If trying to set same status
+    if (currentStatus === newStatus) {
+        showNotification("Order is already in this status", 'info');
+        return;
+    }
+
+    // Confirm before updating (except for cancellation which is handled separately)
+    const statusNames = {
+        0: 'Pending',
+        1: 'Confirmed',
+        2: 'Cancelled',
+        3: 'Shipped',
+        4: 'Delivered'
+    };
+
+    if (!confirm(`Are you sure you want to change order status from ${statusNames[currentStatus]} to ${statusNames[newStatus]}?`)) {
+        return;
+    }
 
     try {
         showLoading();
@@ -408,7 +622,7 @@ async function updateOrderStatus() {
             throw new Error('Failed to update order status');
         }
 
-        showNotification(`Order ${currentOrder.orderNumber} status updated successfully`, 'success');
+        showNotification(`Order ${currentOrder.orderNumber} status updated successfully from ${statusNames[currentStatus]} to ${statusNames[newStatus]}`, 'success');
 
         // Refresh data
         loadOrders();
@@ -441,36 +655,18 @@ function printOrder(orderId) {
     }
 }
 
+
+
 // Cancel order
 async function cancelOrder(orderId) {
-    if (!confirm('Are you sure you want to cancel this order? This action cannot be undone.')) {
-        return;
-    }
-
-    try {
-        showLoading();
-
-        const response = await fetch(`${API_BASE_URL}/orders/${orderId}/cancel`, {
-            method: 'PUT'
-        });
-
-        if (!response.ok) {
-            throw new Error('Failed to cancel order');
-        }
-
-        showNotification('Order cancelled successfully', 'warning');
-
-        // Refresh data
-        loadOrders();
-        loadStatistics();
-
-    } catch (error) {
-        console.error('Error cancelling order:', error);
-        showNotification('Failed to cancel order. Please try again.', 'danger');
-    } finally {
-        hideLoading();
-    }
+    openCancelModal(orderId, 'direct');
 }
+
+cancelModal.addEventListener('click', function (e) {
+    if (e.target === cancelModal) {
+        closeCancelModal();
+    }
+});
 
 // Search orders
 function searchOrders() {

@@ -1,4 +1,5 @@
 ﻿using E_Commerce.Models;
+using E_Commerce.Models.DbTables;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -241,7 +242,7 @@ namespace E_Commerce.Controllers.APIControllers
                         Status = (int)p.Status,
                         CreatedAt = p.CreatedAt
                     }).ToList(),
-                    OrderAddress = new OrderAddressDto
+                    OrderAddress = order.OrderAddress == null ? null : new OrderAddressDto
                     {
                         FullName = order.OrderAddress.FullName,
                         Phone = order.OrderAddress.Phone,
@@ -288,27 +289,71 @@ namespace E_Commerce.Controllers.APIControllers
         }
 
         // PUT: api/orders/{id}/cancel
+        // PUT: api/orders/{id}/cancel
         [HttpPut("{id}/cancel")]
-        public async Task<IActionResult> CancelOrder(int id)
+        public async Task<IActionResult> CancelOrder(int id, [FromBody] CancelOrderRequest request)
         {
             try
             {
-                var order = await _context.Orders.FindAsync(id);
+                var order = await _context.Orders
+                    .Include(o => o.User)
+                    .FirstOrDefaultAsync(o => o.Id == id);
+
                 if (order == null)
                 {
                     return NotFound(new { message = "Order not found" });
                 }
 
                 // Check if order can be cancelled
-                if (order.Status == Order.OrderStatus.Delivered || order.Status == Order.OrderStatus.Cancelled)
+                if (order.Status == Order.OrderStatus.Delivered || order.Status == Order.OrderStatus.Cancelled || order.Status == Order.OrderStatus.Shipped)
                 {
-                    return BadRequest(new { message = "Order cannot be cancelled" });
+                    return BadRequest(new { message = $"Order with status {order.Status} cannot be cancelled" });
                 }
 
+
+                // Update order status
                 order.Status = Order.OrderStatus.Cancelled;
+
+
+
+                // Check if cancellation already exists
+                var existingCancellation = await _context.OrderCancellations
+                    .FirstOrDefaultAsync(c => c.OrderId == id);
+                int cancellationId = default;
+                if (existingCancellation != null)
+                {
+                    cancellationId = existingCancellation.Id;
+                    // UPDATE existing record
+                    existingCancellation.CancelledBy =
+                        Enum.Parse<CancellationBy>(request.CancelledBy);
+
+                    existingCancellation.Reason = request.Reason;
+                    existingCancellation.AllowRetryPayment = request.AllowRetryPayment;
+                    existingCancellation.CancelledAt = DateTime.UtcNow;
+                }
+                else
+                {
+                    // INSERT new record
+                    var cancellation = new OrderCancellation
+                    {
+                        OrderId = id,
+                        CancelledBy = Enum.Parse<CancellationBy>(request.CancelledBy),
+                        Reason = request.Reason,
+                        AllowRetryPayment = request.AllowRetryPayment,
+                        CancelledAt = DateTime.UtcNow
+                    };
+
+                    cancellationId = cancellation.Id;
+                    _context.OrderCancellations.Add(cancellation);
+                }
+
                 await _context.SaveChangesAsync();
 
-                return Ok(new { message = "Order cancelled successfully" });
+                return Ok(new
+                {
+                    message = "Order cancelled successfully",
+                    cancellationId = cancellationId
+                });
             }
             catch (Exception ex)
             {
@@ -466,5 +511,12 @@ namespace E_Commerce.Controllers.APIControllers
     public class UpdateStatusRequest
     {
         public int Status { get; set; }
+    }
+
+    public class CancelOrderRequest
+    {
+        public string? Reason { get; set; }
+        public bool AllowRetryPayment { get; set; }
+        public string CancelledBy { get; set; } = "Admin";
     }
 }
