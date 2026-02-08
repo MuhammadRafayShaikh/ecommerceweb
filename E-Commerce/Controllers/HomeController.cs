@@ -349,6 +349,10 @@ namespace E_Commerce.Controllers
             {
                 TempData["error"] = "OOPS! No Product Found. Accordin to your filter";
             }
+            if (userId != null)
+            {
+                await GetCartProducts();
+            }
             //return Json(products);
             E_Commerce.Models.Collections collections = new Collections { Products = products };
             return PartialView("~/Views/Home/CollectionsPartial/_CollectionsCard.cshtml", collections);
@@ -449,30 +453,76 @@ namespace E_Commerce.Controllers
         public async Task<IActionResult> Featured(string highlightedProduct = "")
         {
             ViewData["currentAction"] = "featured";
-            BestSellingDTO bestSellingProductId = await GetHighestSellingProductId();
-            Product bestSelling = await BestSelling(bestSellingProductId);
-            Product newProduct = await NewProduct();
-            AttractiveDiscountDto attractiveDiscount = await AttractiveDiscount();
-            List<Product> getNewProducts = await GetNewProducts();
-            List<AttractiveDiscountDto> attractiveDiscountList = await AttractiveDiscountList();
-            //LimitedProductDto limitedProduct = await GetLimitedProductAsync();
 
-            HomeViewModel homeViewModel = new HomeViewModel
+            try
             {
-                BestSelling = bestSelling,
-                NewProduct = newProduct,
-                AttractiveDiscount = attractiveDiscount,
-                LatestProducts = getNewProducts,
-                AttractiveDiscountList = attractiveDiscountList
-                //LimitedProduct = limitedProduct
-            };
+                BestSellingDTO bestSellingProductId = await GetHighestSellingProductId();
+                Product bestSelling = bestSellingProductId != null ? await BestSelling(bestSellingProductId) : null;
+                Product newProduct = await NewProduct();
+                AttractiveDiscountDto attractiveDiscount = await AttractiveDiscount();
+                List<Product> getNewProducts = await GetNewProducts() ?? new List<Product>();
+                List<AttractiveDiscountDto> attractiveDiscountList = await AttractiveDiscountList() ?? new List<AttractiveDiscountDto>();
 
-            if (userId != null)
-            {
-                await GetCartProducts();
+                HomeViewModel homeViewModel = new HomeViewModel
+                {
+                    BestSelling = bestSelling ?? GetDefaultProduct("Best Selling Product"),
+                    NewProduct = newProduct ?? GetDefaultProduct("New Arrival"),
+                    AttractiveDiscount = attractiveDiscount ?? GetDefaultDiscount(),
+                    LatestProducts = getNewProducts,
+                    AttractiveDiscountList = attractiveDiscountList
+                };
+
+                if (userId != null)
+                {
+                    await GetCartProducts();
+                }
+
+                ViewBag.HighlightedProduct = highlightedProduct;
+                return View(homeViewModel);
             }
-            ViewBag.HighlightedProduct = highlightedProduct;
-            return View(homeViewModel);
+            catch (Exception ex)
+            {
+                // Log the exception if you have logging configured
+                // _logger.LogError(ex, "Error loading featured products");
+
+                // Return a view with empty/default data
+                return View(new HomeViewModel
+                {
+                    BestSelling = GetDefaultProduct("Best Selling Product"),
+                    NewProduct = GetDefaultProduct("New Arrival"),
+                    AttractiveDiscount = GetDefaultDiscount(),
+                    LatestProducts = new List<Product>(),
+                    AttractiveDiscountList = new List<AttractiveDiscountDto>()
+                });
+            }
+        }
+
+        private Product GetDefaultProduct(string name)
+        {
+            return new Product
+            {
+                Id = 0,
+                Name = name,
+                ShortDescription = "No products available yet",
+                FullDescription = "No products available yet",
+                Price = 0,
+                ProductColors = new List<ProductColor>(),
+                Reviews = new List<ProductReview>()
+            };
+        }
+
+        private AttractiveDiscountDto GetDefaultDiscount()
+        {
+            return new AttractiveDiscountDto
+            {
+                ProductId = 0,
+                DiscountText = "No Discount Available",
+                Savings = "0%",
+                OriginalPrice = 0,
+                DiscountedPrice = 0,
+                AvgRating = 0,
+                Product = GetDefaultProduct("Featured Product")
+            };
         }
 
         // In your HomeController or SalesController

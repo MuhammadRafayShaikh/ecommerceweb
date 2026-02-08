@@ -220,11 +220,6 @@
                 });
             });
 
-            // Delete product
-            $(document).on('click', '.delete-product', function () {
-                let productId = $(this).data('id');
-                deleteProduct(productId);
-            });
         });
 
         // Load products with filters
@@ -270,28 +265,6 @@
                 $('#activeProductsCount').text(stats.activeProducts);
                 $('#inStockCount').text(stats.inStockProducts);
                 $('#totalInventoryValue').text('₹' + stats.totalInventoryValue.toLocaleString('en-IN'));
-            }
-        }
-
-        // Delete product function
-        function deleteProduct(productId) {
-            if (confirm('Are you sure you want to delete this product? This action cannot be undone.')) {
-                $.ajax({
-                    url: '/Product/Delete',
-                    type: 'POST',
-                    data: { id: productId },
-                    success: function (response) {
-                        if (response.success) {
-                            showNotification('Product deleted successfully', 'success');
-                            loadProducts(); // Reload the products list
-                        } else {
-                            showNotification(response.message || 'Failed to delete product', 'error');
-                        }
-                    },
-                    error: function () {
-                        showNotification('An error occurred while deleting the product', 'error');
-                    }
-                });
             }
         }
 

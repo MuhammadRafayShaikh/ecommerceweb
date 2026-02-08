@@ -731,8 +731,6 @@ function applyDiscountToProduct(productId) {
         type: "POST",
         data: { productId: productId, discountType: discountType, discountValue: discountValue },
         success: function (html) {
-            alert("hello");
-            console.log(html)
             $('#discountTableContainer').html(html);
             //if (@TempData["error"] == null) {
 

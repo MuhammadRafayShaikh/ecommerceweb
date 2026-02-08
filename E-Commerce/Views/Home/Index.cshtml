@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Premium gents Suits";
+    ViewData["Title"] = "Premium ladies Suits";
     Layout = "_Layout";
 }
 @model E_Commerce.Models.HomeViewModel
@@ -12,7 +12,7 @@
     <div class="hero-content">
         <div class="hero-text">
             <h1>Elegance Stitched in Every <span>Suit</span></h1>
-            <p>Discover our exclusive collection of handcrafted gents suits, blending traditional craftsmanship with contemporary designs for the modern woman.</p>
+            <p>Discover our exclusive collection of handcrafted ladies suits, blending traditional craftsmanship with contemporary designs for the modern woman.</p>
             <a asp-controller="Home" asp-action="@ViewData["shopNowLink"]" class="cta-button">Shop Now</a>
         </div>
         <div class="hero-image">
@@ -69,28 +69,31 @@
                         <div class="product-content">
                             <h3>@Model.BestSelling.Name</h3>
                             <div class="product-rating">
-                            @{
-                                var avgRating1 = Model.BestSelling.AverageRating as double? ?? 4.5;
-                                var fullStars1 = (int)Math.Floor(avgRating1);
-                                var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
-                            }
-                            @for (int i = 1; i <= 5; i++)
-                            {
-                                if (i <= fullStars1)
-                                {
-                                    <i class="fas fa-star"></i>
+                                @{
+                                    var avgRating1 = Model.BestSelling.AverageRating as double? ?? 4.5;
+                                    var fullStars1 = (int)Math.Floor(avgRating1);
+                                    var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
                                 }
-                                else if (i == fullStars1 + 1 && hasHalfStar1)
+                                @for (int i = 1; i <= 5; i++)
                                 {
-                                    <i class="fas fa-star-half-alt"></i>
+                                    if (i <= fullStars1)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    else if (i == fullStars1 + 1 && hasHalfStar1)
+                                    {
+                                        <i class="fas fa-star-half-alt"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="far fa-star"></i>
+                                    }
                                 }
-                                else
-                                {
-                                    <i class="far fa-star"></i>
-                                }
-                            }
                             </div>
-                            <div class="product-price">₹@Model.BestSelling.Price</div>
+                            @{
+                                decimal bestSellingPrice = Math.Truncate(Model.BestSelling.Price);
+                            }
+                            <div class="product-price">₹@bestSellingPrice</div>
                         </div>
                     </div>
                 </a>
@@ -113,28 +116,31 @@
                         <div class="product-content">
                             <h3>@Model.NewProduct.Name</h3>
                             <div class="product-rating">
-                            @{
-                                var avgRating1 = Model.NewProduct.AverageRating as double? ?? 4.5;
-                                var fullStars1 = (int)Math.Floor(avgRating1);
-                                var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
-                            }
-                            @for (int i = 1; i <= 5; i++)
-                            {
-                                if (i <= fullStars1)
-                                {
-                                    <i class="fas fa-star"></i>
+                                @{
+                                    var avgRating1 = Model.NewProduct.AverageRating as double? ?? 4.5;
+                                    var fullStars1 = (int)Math.Floor(avgRating1);
+                                    var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
                                 }
-                                else if (i == fullStars1 + 1 && hasHalfStar1)
+                                @for (int i = 1; i <= 5; i++)
                                 {
-                                    <i class="fas fa-star-half-alt"></i>
+                                    if (i <= fullStars1)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    else if (i == fullStars1 + 1 && hasHalfStar1)
+                                    {
+                                        <i class="fas fa-star-half-alt"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="far fa-star"></i>
+                                    }
                                 }
-                                else
-                                {
-                                    <i class="far fa-star"></i>
-                                }
-                            }
                             </div>
-                            <div class="product-price">₹@Model.NewProduct.Price</div>
+                            @{
+                                decimal newProductPrice = Math.Truncate(Model.NewProduct.Price);
+                            }
+                            <div class="product-price">₹@newProductPrice</div>
                         </div>
                     </div>
                 </a>
@@ -155,55 +161,76 @@
                         <div class="product-content">
                             <h3>@Model.AttractiveDiscount.Product?.Name</h3>
                             <div class="product-rating">
-                            @{
-                                var avgRating1 = Model.AttractiveDiscount.AvgRating as double? ?? 4.5;
-                                var fullStars1 = (int)Math.Floor(avgRating1);
-                                var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
-                            }
-                            @for (int i = 1; i <= 5; i++)
-                            {
-                                if (i <= fullStars1)
-                                {
-                                    <i class="fas fa-star"></i>
+                                @{
+                                    var avgRating1 = Model.AttractiveDiscount.AvgRating as double? ?? 4.5;
+                                    var fullStars1 = (int)Math.Floor(avgRating1);
+                                    var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
                                 }
-                                else if (i == fullStars1 + 1 && hasHalfStar1)
+                                @for (int i = 1; i <= 5; i++)
                                 {
-                                    <i class="fas fa-star-half-alt"></i>
+                                    if (i <= fullStars1)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    else if (i == fullStars1 + 1 && hasHalfStar1)
+                                    {
+                                        <i class="fas fa-star-half-alt"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="far fa-star"></i>
+                                    }
                                 }
-                                else
-                                {
-                                    <i class="far fa-star"></i>
-                                }
-                            }
                             </div>
                             <div class="product-price">
-                                ₹@Model.AttractiveDiscount.DiscountedPrice
-                                <del>₹@Model.AttractiveDiscount.OriginalPrice</del>
+                                @{
+                                    decimal discountedPrice = Math.Truncate(Model.AttractiveDiscount.DiscountedPrice);
+                                    decimal originalPrice = Math.Truncate(Model.AttractiveDiscount.OriginalPrice);
+                                }
+                                ₹@discountedPrice                                
+                                <del>₹@originalPrice</del>
                             </div>
                         </div>
                     </div>
                 </a>
             }
 
-
-            <a style="text-decoration: none;" asp-controller="Home" asp-action="Featured" asp-route-highlightedProduct="limited">
-                <div class="product-card">
-                    <div class="product-img" style="background-image: url('');">
-                        <div class="product-badge">Limited</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Maroon Embroidered Suit</h3>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+            @if (Model?.LimitedProduct != null)
+            {
+                <a style="text-decoration: none;" asp-controller="Home" asp-action="Featured" asp-route-highlightedProduct="limited">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image: url('/ProductImages/@Model.LimitedProduct.Product.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');">
+                            <div class="product-badge">Limited</div>
                         </div>
-                        <div class="product-price">₹5,999 <del>₹8,999</del></div>
+                        <div class="product-content">
+                            <h3>@Model.LimitedProduct.Product.Name</h3>
+                            <div class="product-rating">
+                                @{
+                                    var avgRating1 = Model.LimitedProduct.Product.AverageRating as double? ?? 4.5;
+                                    var fullStars1 = (int)Math.Floor(avgRating1);
+                                    var hasHalfStar1 = avgRating1 - fullStars1 >= 0.5;
+                                }
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= fullStars1)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    else if (i == fullStars1 + 1 && hasHalfStar1)
+                                    {
+                                        <i class="fas fa-star-half-alt"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="far fa-star"></i>
+                                    }
+                                }
+                            </div>
+                            <div class="product-price">₹@Model.LimitedProduct.Product.Price</div>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            }
         </div>
     </div>
 </section>

@@ -3,15 +3,30 @@
 }
 @model List<E_Commerce.Models.Category>
 <style>
-    .btn-success {
-        background: #28a745;
-        color: #fff;
+    .btn-active {
+        background-color: rgba(76, 175, 80, 0.1);
+        color: #28a745;
     }
 
-    .btn-danger {
-        background: #dc3545;
-        color: #fff;
+    .btn-inactive {
+        background-color: rgba(255, 193, 7, 0.1);
+        color: #ffc107;
     }
+
+    .btn-active:hover {
+        background-color: #28a745;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    }
+
+    .btn-inactive:hover {
+        background-color: #ffc107;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+    }
+
 
     .btn-view-products {
         background: linear-gradient(45deg, #9c27b0, #7b1fa2);
@@ -351,11 +366,26 @@
                                             <i class="fas fa-box-open"></i> View Products
                                         </button>
                                     </td>
-                                    <td>
+                                    @* <td>
                                         <a asp-controller="Category" asp-action="Edit" asp-route-id="@categories.Id" class="btn btn-warning btn-sm">Edit</a>
                                         <button class="isActive btn" data-id="@categories.Id">
                                             @(categories.IsActive ? "Active" : "Inactive")
                                         </button>
+                                    </td> *@
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon isActive @(categories.IsActive ? "btn-active" : "btn-inactive")"
+                                                    data-id="@categories.Id"
+                                                    title="@(categories.IsActive ? "Deactivate" : "Activate")">
+
+                                                <i class="fas @(categories.IsActive ? "fa-toggle-on" : "fa-toggle-off")"></i>
+
+                                            </button>
+
+                                            <button class="btn-icon btn-edit" asp-controller="Category" asp-action="Edit" asp-route-id="@categories.Id">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                             }
@@ -406,22 +436,36 @@
                 url: "/Category/CheckActive",
                 type: "POST",
                 data: { categoryId: categoryId },
-                success: function (response) {
-                    if (response.success) {
-                        showNotification(response.message, "success");
-                        if (response.isActive) {
-                            btn.text("Active");
-                            btn.removeClass("btn-danger")
-                              .addClass("btn-success");
-                        } else {
-                            btn.text("Inactive");
-                            btn.removeClass("btn-success")
-                              .addClass("btn-danger");
+                    success: function (response) {
+                        if (response.success) {
+
+                            if (response.isActive) {
+                                showNotification("Category activated successfully", "success");
+
+                                btn.removeClass("btn-inactive")
+                                    .addClass("btn-active");
+
+                                btn.find("i")
+                                    .removeClass("fa-toggle-off")
+                                    .addClass("fa-toggle-on");
+
+                                btn.attr("title", "Deactivate");
+
+                            } else {
+                                showNotification("Category deactivated successfully", "warning");
+
+                                btn.removeClass("btn-active")
+                                    .addClass("btn-inactive");
+
+                                btn.find("i")
+                                    .removeClass("fa-toggle-on")
+                                    .addClass("fa-toggle-off");
+
+                                btn.attr("title", "Activate");
+                            }
                         }
-                    } else {
-                        showNotification(response.message, "warning");
                     }
-                }
+
             });
         });
     });

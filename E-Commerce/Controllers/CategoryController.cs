@@ -42,6 +42,28 @@ namespace E_Commerce.Controllers
             return View();
         }
 
+        public async Task<JsonResult> GetRecentCategories()
+        {
+            var categories = await _myDbContext.Categories
+                .Include(c => c.Products)
+                .OrderByDescending(c => c.Id)
+                .Take(4)
+                .Select(c => new
+                {
+                    id = c.Id,
+                    name = c.Name,
+                    slug = c.Slug,
+                    image = c.Image,
+                    isActive = c.IsActive,
+                    createdAt = c.CreatedAt,
+                    products = c.Products.Count()
+                })
+                .ToListAsync();
+
+            return Json(categories);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Add(Category category, IFormFile Image)
         {

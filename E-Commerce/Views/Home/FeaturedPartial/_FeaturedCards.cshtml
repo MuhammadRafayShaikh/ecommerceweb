@@ -1,14 +1,14 @@
 ﻿@model E_Commerce.Models.HomeViewModel
 @{
-    List<int> productIds = TempData["cartProducts"] as List<int>;
+    List<int> productIds = TempData["cartProducts"] as List<int> ?? new List<int>();
 }
 
 <!-- Featured Hero Section -->
 <div class="featured-hero">
     <div class="hero-content">
         <span class="hero-badge">Featured of the Month</span>
-        <h2>Executive Collection: @Model.AttractiveDiscount.Product.Name</h2>
-        <p>@Model.AttractiveDiscount.Product.FullDescription</p>
+        <h2>Executive Collection: @(Model.AttractiveDiscount?.Product?.Name ?? "Premium Collection")</h2>
+        <p>@(Model.AttractiveDiscount?.Product?.FullDescription ?? "Discover our premium collection of exclusive designs")</p>
 
         <div class="hero-stats">
             <div class="stat-item">
@@ -26,14 +26,28 @@
         </div>
     </div>
 
-    <div class="hero-image">
-        <img src="~/ProductImages/@Model.AttractiveDiscount.Product.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()" alt="Premium Suit">
-        <div class="hero-discount">
-            <span>@Model.AttractiveDiscount.Savings</span>
-            <span>OFF</span>
+    @if (Model.AttractiveDiscount?.Product?.ProductColors?.Any() == true)
+    {
+        <div class="hero-image">
+            <img src="~/ProductImages/@Model.AttractiveDiscount.Product.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()" alt="Premium Suit">
+            <div class="hero-discount">
+                <span>@(Model.AttractiveDiscount.Savings ?? "0%")</span>
+                <span>OFF</span>
+            </div>
         </div>
-    </div>
+    }
+    else
+    {
+        <div class="hero-image">
+            <img src="~/images/default-product.jpg" alt="Premium Suit">
+            <div class="hero-discount">
+                <span>0%</span>
+                <span>OFF</span>
+            </div>
+        </div>
+    }
 </div>
+
 <!-- Spotlight Section -->
 <div class="section-header">
     <h2>Spotlight Picks</h2>
@@ -44,19 +58,33 @@
     <!-- Best Sale -->
     <div class="spotlight-card" data-product-type="bestseller">
         <div class="spotlight-badge">Best Sale</div>
-        <div class="spotlight-image" style="background-image: url('/ProductImages/@Model.BestSelling.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');"></div>
+        @if (Model.BestSelling?.ProductColors?.Any() == true)
+        {
+            <div class="spotlight-image" style="background-image: url('/ProductImages/@Model.BestSelling.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');"></div>
+        }
+        else
+        {
+            <div class="spotlight-image" style="background-image: url('/images/default-product.jpg');"></div>
+        }
         <div class="spotlight-content">
-            <h3>@Model.BestSelling.Name</h3>
-            <p>@Model.BestSelling.ShortDescription</p>
+            <h3>@(Model.BestSelling?.Name ?? "Coming Soon")</h3>
+            <p>@(Model.BestSelling?.ShortDescription ?? "Check back soon for our best selling products")</p>
             <div class="spotlight-meta">
-                <div class="spotlight-price">₹@Model.BestSelling.Price</div>
+                <div class="spotlight-price">₹@(Model.BestSelling?.Price ?? 0)</div>
                 <div class="spotlight-rating">
-                    <i class="fas fa-star"></i> @Model.BestSelling.AverageRating
+                    <i class="fas fa-star"></i> @(Model.BestSelling?.AverageRating ?? 0)
                 </div>
             </div>
             <div class="spotlight-actions">
-                <a asp-controller="Detail" asp-action="Index" asp-route-id="@Model.BestSelling.Id" class="spotlight-btn view">View Details</a>
-                <a href="#" class="spotlight-btn cart">Add to Cart</a>
+                @if (Model.BestSelling?.Id > 0)
+                {
+                    <a asp-controller="Detail" asp-action="Index" asp-route-id="@Model.BestSelling.Id" class="spotlight-btn view">View Details</a>
+                }
+                else
+                {
+                    <span class="spotlight-btn view disabled">View Details</span>
+                }
+                <span class="spotlight-btn cart disabled">Add to Cart</span>
             </div>
         </div>
     </div>
@@ -64,39 +92,73 @@
     <!-- New Arrival -->
     <div class="spotlight-card" data-product-type="new">
         <div class="spotlight-badge">New Arrival</div>
-        <div class="spotlight-image" style="background-image: url('/ProductImages/@Model.NewProduct.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');"></div>
+        @if (Model.NewProduct?.ProductColors?.Any() == true)
+        {
+            <div class="spotlight-image" style="background-image: url('/ProductImages/@Model.NewProduct.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');"></div>
+        }
+        else
+        {
+            <div class="spotlight-image" style="background-image: url('/images/default-product.jpg');"></div>
+        }
         <div class="spotlight-content">
-            <h3>@Model.NewProduct.Name</h3>
-            <p>@Model.NewProduct.ShortDescription</p>
+            <h3>@(Model.NewProduct?.Name ?? "Coming Soon")</h3>
+            <p>@(Model.NewProduct?.ShortDescription ?? "Check back soon for new arrivals")</p>
             <div class="spotlight-meta">
-                <div class="spotlight-price">₹@Model.NewProduct.Price</div>
+                <div class="spotlight-price">₹@(Model.NewProduct?.Price ?? 0)</div>
                 <div class="spotlight-rating">
-                    <i class="fas fa-star"></i> @Model.NewProduct.AverageRating
+                    <i class="fas fa-star"></i> @(Model.NewProduct?.AverageRating ?? 0)
                 </div>
             </div>
             <div class="spotlight-actions">
-                <a asp-controller="Detail" asp-action="Index" asp-route-id="@Model.NewProduct.Id" class="spotlight-btn view">View Details</a>
-                <a href="#" class="spotlight-btn cart">Add to Cart</a>
+                @if (Model.NewProduct?.Id > 0)
+                {
+                    <a asp-controller="Detail" asp-action="Index" asp-route-id="@Model.NewProduct.Id" class="spotlight-btn view">View Details</a>
+                }
+                else
+                {
+                    <span class="spotlight-btn view disabled">View Details</span>
+                }
+                <span class="spotlight-btn cart disabled">Add to Cart</span>
             </div>
         </div>
     </div>
 
     <!-- Attractive Discount -->
     <div class="spotlight-card" data-product-type="discount">
-        <div class="spotlight-badge">@Model.AttractiveDiscount.DiscountText</div>
-        <div class="spotlight-image" style="background-image: url('/ProductImages/@Model.AttractiveDiscount.Product.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');"></div>
+        <div class="spotlight-badge">@(Model.AttractiveDiscount?.DiscountText ?? "No Discount")</div>
+        @if (Model.AttractiveDiscount?.Product?.ProductColors?.Any() == true)
+        {
+            <div class="spotlight-image" style="background-image: url('/ProductImages/@Model.AttractiveDiscount.Product.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');"></div>
+        }
+        else
+        {
+            <div class="spotlight-image" style="background-image: url('/images/default-product.jpg');"></div>
+        }
         <div class="spotlight-content">
-            <h3>@Model.AttractiveDiscount.Product.Name</h3>
-            <p>@Model.AttractiveDiscount.Product.ShortDescription</p>
+            <h3>@(Model.AttractiveDiscount?.Product?.Name ?? "Featured Product")</h3>
+            <p>@(Model.AttractiveDiscount?.Product?.ShortDescription ?? "Check out our featured products")</p>
             <div class="spotlight-meta">
-                <div class="spotlight-price">₹@Model.AttractiveDiscount.DiscountedPrice <del style="font-size: 1rem; color: #aaa; margin-left: 5px;">₹@Model.AttractiveDiscount.OriginalPrice</del></div>
+                <div class="spotlight-price">
+                    ₹@(Model.AttractiveDiscount?.DiscountedPrice ?? 0)
+                    @if (Model.AttractiveDiscount?.OriginalPrice > 0)
+                    {
+                        <del style="font-size: 1rem; color: #aaa; margin-left: 5px;">₹@Model.AttractiveDiscount.OriginalPrice</del>
+                    }
+                </div>
                 <div class="spotlight-rating">
-                    <i class="fas fa-star"></i> @Model.AttractiveDiscount.AvgRating
+                    <i class="fas fa-star"></i> @(Model.AttractiveDiscount?.AvgRating ?? 0)
                 </div>
             </div>
             <div class="spotlight-actions">
-                <a asp-controller="Detail" asp-action="Index" asp-route-id="@Model.AttractiveDiscount.ProductId" class="spotlight-btn view">View Details</a>
-                <a href="#" class="spotlight-btn cart">Add to Cart</a>
+                @if (Model.AttractiveDiscount?.ProductId > 0)
+                {
+                    <a asp-controller="Detail" asp-action="Index" asp-route-id="@Model.AttractiveDiscount.ProductId" class="spotlight-btn view">View Details</a>
+                }
+                else
+                {
+                    <span class="spotlight-btn view disabled">View Details</span>
+                }
+                <span class="spotlight-btn cart disabled">Add to Cart</span>
             </div>
         </div>
     </div>
@@ -109,14 +171,12 @@
 </div>
 
 <div class="featured-grid" id="latestProducts">
-    <!-- Product cards will be dynamically loaded here -->
-    <!-- Example product card structure -->
-    @if (Model.LatestProducts.Any())
+    @if (Model.LatestProducts?.Any() == true)
     {
         @foreach (var products in Model.LatestProducts)
         {
             <div class="featured-card">
-                <div class="featured-image" style="background-image: url('/ProductImages/@products.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');">
+                <div class="featured-image" style="background-image: url('/ProductImages/@products.ProductColors?.SelectMany(x => x.Images)?.Select(x => x.ImagePath)?.FirstOrDefault()');">
                     <div class="featured-badge">New</div>
                 </div>
                 <div class="featured-content">
@@ -129,11 +189,18 @@
                         </div>
                     </div>
 
-                    @foreach (var color in products.ProductColors)
+                    @if (products.ProductColors?.Any() == true)
                     {
                         <div class="featured-colors">
-                            <span class="color-dot"
-                                  style="background-color:@color.ColorCode" title="@color.ColorName" data-color-sizes="@color.Sizes" data-color-price="@color.ExtraPrice" data-color-id="@color.Id"></span>
+                            @foreach (var color in products.ProductColors)
+                            {
+                                <span class="color-dot"
+                                      style="background-color:@color.ColorCode"
+                                      title="@color.ColorName"
+                                      data-color-sizes="@color.Sizes"
+                                      data-color-price="@color.ExtraPrice"
+                                      data-color-id="@color.Id"></span>
+                            }
                         </div>
                     }
                     <div class="featured-actions">
@@ -144,7 +211,14 @@
             </div>
         }
     }
+    else
+    {
+        <div class="no-products-message">
+            <p>No latest products available yet. Check back soon!</p>
+        </div>
+    }
 </div>
+
 <!-- Best Price Section -->
 <div class="section-header">
     <h2>Best Value Deals</h2>
@@ -152,7 +226,7 @@
 </div>
 
 <div class="featured-grid" id="bestPriceProducts">
-    @if (Model.AttractiveDiscountList.Any())
+    @if (Model.AttractiveDiscountList?.Any() == true)
     {
         @foreach (var products in Model.AttractiveDiscountList)
         {
@@ -161,29 +235,49 @@
                     <div class="featured-badge">New</div>
                 </div>
                 <div class="featured-content">
-                    <h3>@products.Product.Name</h3>
-                    <p>@products.Product.ShortDescription</p>
+                    <h3>@(products.Product?.Name ?? "Product")</h3>
+                    <p>@(products.Product?.ShortDescription ?? "Description not available")</p>
                     <div class="featured-meta">
-                        <div class="featured-price">₹@products.Product.Price</div>
+                        <div class="featured-price">₹@(products.Product?.Price ?? 0)</div>
                         <div class="featured-rating">
-                            <i class="fas fa-star"></i> @products.Product.AverageRating
+                            <i class="fas fa-star"></i> @(products.Product?.AverageRating ?? 0)
                         </div>
                     </div>
 
-                    @foreach (var color in products.Product.ProductColors)
+                    @if (products.Product?.ProductColors?.Any() == true)
                     {
                         <div class="featured-colors">
-                            <span class="color-dot"
-                                  style="background-color:@color.ColorCode" title="@color.ColorName" data-color-sizes="@color.Sizes" data-color-price="@color.ExtraPrice" data-color-id="@color.Id"></span>
+                            @foreach (var color in products.Product.ProductColors)
+                            {
+                                <span class="color-dot"
+                                      style="background-color:@color.ColorCode"
+                                      title="@color.ColorName"
+                                      data-color-sizes="@color.Sizes"
+                                      data-color-price="@color.ExtraPrice"
+                                      data-color-id="@color.Id"></span>
+                            }
                         </div>
                     }
                     <div class="featured-actions">
-                        <a asp-controller="Detail" asp-action="Index" asp-route-id="@products.ProductId" class="featured-btn view">View Details</a>
-                        <div class="featured-btn cart">Add to Cart</div>
+                        @if (products.ProductId > 0)
+                        {
+                            <a asp-controller="Detail" asp-action="Index" asp-route-id="@products.ProductId" class="featured-btn view">View Details</a>
+                        }
+                        else
+                        {
+                            <span class="featured-btn view disabled">View Details</span>
+                        }
+                        <span class="featured-btn cart disabled">Add to Cart</span>
                     </div>
                 </div>
             </div>
         }
+    }
+    else
+    {
+        <div class="no-products-message">
+            <p>No discount offers available at the moment. Check back soon for great deals!</p>
+        </div>
     }
 </div>
 

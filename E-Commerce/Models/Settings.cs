@@ -19,7 +19,7 @@ namespace E_Commerce.Models
 
         [Display(Name = "Store Description")]
         [StringLength(500)]
-        public string StoreDescription { get; set; } = "Premium Gents Fashion Store";
+        public string StoreDescription { get; set; } = "Premium Ladies Fashion Store";
 
         [Display(Name = "Contact Email")]
         [EmailAddress(ErrorMessage = "Please enter a valid email address")]
@@ -120,7 +120,7 @@ namespace E_Commerce.Models
         // SEO
         [Display(Name = "Meta Title")]
         [StringLength(60)]
-        public string MetaTitle { get; set; } = "Luxe Suits - Premium Gents Fashion";
+        public string MetaTitle { get; set; } = "Luxe Suits - Premium Ladies Fashion";
 
         [Display(Name = "Meta Description")]
         [StringLength(160)]

@@ -88,37 +88,6 @@ const pagination = document.getElementById('pagination');
 const totalCategoriesElement = document.getElementById('totalCategories');
 const pageTitle = document.getElementById('pageTitle');
 
-// Page management
-function showPage(pageName) {
-    // Hide all pages
-    document.querySelectorAll('.page-container').forEach(page => {
-        page.classList.remove('active');
-    });
-
-    // Show selected page
-    document.getElementById(pageName + 'Page').classList.add('active');
-
-    // Update page title
-    if (pageName === 'addCategory') {
-        pageTitle.textContent = 'Add New Category';
-        updateRecentCategoriesTable();
-    } else if (pageName === 'viewCategories') {
-        pageTitle.textContent = 'View All Categories';
-        updateAllCategoriesTable();
-    }
-
-    // Update active nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-    });
-
-    if (pageName === 'addCategory') {
-        document.querySelectorAll('.nav-link')[2].classList.add('active');
-    } else if (pageName === 'viewCategories') {
-        document.querySelectorAll('.nav-link')[3].classList.add('active');
-    }
-}
-
 // Initialize
 document.addEventListener('DOMContentLoaded', function () {
     // Toggle sidebar for mobile
@@ -146,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize tables
     updateRecentCategoriesTable();
-    updateAllCategoriesTable();
     totalCategoriesElement.textContent = categories.length;
 });
 
@@ -160,90 +128,56 @@ function resetForm() {
 
 // Update recent categories table
 function updateRecentCategoriesTable() {
+    if (!recentCategoriesTable) return;
     // Clear current table
     recentCategoriesTable.innerHTML = '';
 
+    $.ajax({
+        url: '/Category/GetRecentCategories',
+        type: 'GET',
+        success: function (result) {
+            const recentCategories = result;
+
+            if (recentCategories.length === 0) {
+                recentEmptyState.style.display = 'block';
+                return;
+            }
+
+            recentEmptyState.style.display = 'none';
+
+            // Populate table
+            recentCategories.forEach(category => {
+                const row = document.createElement('tr');
+                const formattedDate = formatDate(category.createdAt);
+                row.innerHTML = `
+                    <td><img src="/CategoryImages/${category.image}" class="category-image" alt="${category.name}"></td>
+                    <td>
+                        <div class="category-name">${category.name}</div>
+                        <div class="category-slug">${category.slug}</div>
+                    </td>
+                    <td>${category.products}</td>
+                    <td><span class="category-status status-${category.isActive}">${category.isActive === true ? 'Active' : 'Inactive'}</span></td>
+                    <td>${formattedDate}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon btn-view" onclick="viewCategory(${category.id})">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon btn-edit" onclick="editCategory(${category.id})">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                recentCategoriesTable.appendChild(row);
+            });
+        }
+    })
     // Get recent categories (first 4)
-    const recentCategories = categories.slice(0, 4);
-
-    if (recentCategories.length === 0) {
-        recentEmptyState.style.display = 'block';
-        return;
-    }
-
-    recentEmptyState.style.display = 'none';
-
-    // Populate table
-    recentCategories.forEach(category => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-                    <td><img src="${category.image}" class="category-image" alt="${category.name}"></td>
-                    <td>
-                        <div class="category-name">${category.name}</div>
-                        <div class="category-slug">${category.slug}</div>
-                    </td>
-                    <td>${category.products}</td>
-                    <td><span class="category-status status-${category.status}">${category.status === 'active' ? 'Active' : 'Inactive'}</span></td>
-                    <td>${category.addedOn}</td>
-                    <td>
-                        <div class="action-buttons">
-                            <button class="btn-icon btn-view" onclick="viewCategory(${category.id})">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="btn-icon btn-edit" onclick="editCategory(${category.id})">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                        </div>
-                    </td>
-                `;
-        recentCategoriesTable.appendChild(row);
-    });
+    //const recentCategories = categories.slice(0, 4);
+   
 }
 
-// Update all categories table
-function updateAllCategoriesTable() {
-    // Clear current table
-    allCategoriesTable.innerHTML = '';
-
-    if (categories.length === 0) {
-        allEmptyState.style.display = 'block';
-        pagination.style.display = 'none';
-        return;
-    }
-
-    allEmptyState.style.display = 'none';
-    pagination.style.display = 'flex';
-
-    // Populate table
-    categories.forEach(category => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-                    <td>#${category.id}</td>
-                    <td><img src="${category.image}" class="category-image" alt="${category.name}"></td>
-                    <td>
-                        <div class="category-name">${category.name}</div>
-                        <div class="category-slug">${category.slug}</div>
-                    </td>
-                    <td>${category.description.length > 50 ? category.description.substring(0, 50) + '...' : category.description}</td>
-                    <td>${category.products}</td>
-                    <td><span class="category-status status-${category.status}">${category.status === 'active' ? 'Active' : 'Inactive'}</span></td>
-                    <td>
-                        <div class="action-buttons">
-                            <button class="btn-icon btn-view" onclick="viewCategory(${category.id})">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="btn-icon btn-edit" onclick="editCategory(${category.id})">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="btn-icon btn-delete" onclick="deleteCategory(${category.id})">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    </td>
-                `;
-        allCategoriesTable.appendChild(row);
-    });
-}
 
 // Search categories
 function searchCategories() {
@@ -365,4 +299,18 @@ function showNotification(message, type) {
                 `;
         document.head.appendChild(style);
     }
+}
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+
+    return date.toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+    }) + ', ' + date.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+    });
 }

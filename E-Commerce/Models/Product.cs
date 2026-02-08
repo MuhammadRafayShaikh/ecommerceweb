@@ -60,7 +60,7 @@ namespace E_Commerce.Models
         public Discount? Discount { get; set; }
         public ICollection<ProductColor>? ProductColors { get; set; }
         public ICollection<ProductVideo>? Videos { get; set; }
-        public virtual ICollection<ProductReview> Reviews { get; set; }
+        public virtual ICollection<ProductReview>? Reviews { get; set; }
 
         // Add these computed properties for convenience
         [NotMapped]

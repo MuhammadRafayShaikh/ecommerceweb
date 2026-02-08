@@ -1,173 +1,316 @@
-﻿// Toggle sidebar for mobile
-document.getElementById('menuToggle').addEventListener('click', function () {
-    document.getElementById('sidebar').classList.toggle('active');
+﻿// Global variables
+let revenueChartInstance = null;
+let categoryChartInstance = null;
+
+// Initialize dashboard
+document.addEventListener('DOMContentLoaded', function () {
+    loadDashboardStats();
+    loadRevenueChart();
+    loadCategoryChart();
+    loadRecentOrders();
 });
 
-// Initialize charts
-document.addEventListener('DOMContentLoaded', function () {
-    // Revenue Chart
-    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
-    const revenueChart = new Chart(revenueCtx, {
-        type: 'line',
-        data: {
-            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-            datasets: [{
-                label: 'Revenue (₹)',
-                data: [52000, 62000, 58000, 72000, 68000, 92000, 88000],
-                borderColor: 'rgb(156, 39, 176)',
-                backgroundColor: 'rgba(156, 39, 176, 0.1)',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.4,
-                pointBackgroundColor: 'rgb(156, 39, 176)',
-                pointRadius: 5,
-                pointHoverRadius: 8
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: false,
-                    grid: {
-                        color: 'rgba(0,0,0,0.05)'
+// Load dashboard statistics
+async function loadDashboardStats() {
+    try {
+        const response = await fetch('/Admin/GetDashboardStats');
+        if (!response.ok) throw new Error('Failed to fetch stats');
+
+        const data = await response.json();
+
+        // Animate counters
+        animateCounter('revenue', data.totalRevenue);
+        animateCounter('orders', data.totalOrders);
+        animateCounter('customers', data.totalCustomers);
+        document.getElementById('conversion').textContent = data.conversionRate + '%';
+
+        // Update changes
+        updateChangeIndicator('revenueChange', data.revenueChange);
+        updateChangeIndicator('ordersChange', data.ordersChange);
+        updateChangeIndicator('customersChange', data.customersChange);
+        updateChangeIndicator('conversionChange', data.conversionChange);
+
+    } catch (error) {
+        console.error('Error loading dashboard stats:', error);
+        showNotification('Failed to load dashboard statistics', 'danger');
+    }
+}
+
+// Load revenue chart
+function loadRevenueChart() {
+    const days = document.getElementById('revenueTimeFilter').value;
+
+    $.ajax({
+        url: `/Admin/GetRevenueData?days=${days}`,
+        type: 'GET',
+        success: function (data) {
+
+            const ctx = document.getElementById('revenueChart').getContext('2d');
+
+            // Destroy previous chart
+            if (revenueChartInstance) {
+                revenueChartInstance.destroy();
+            }
+
+            revenueChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Revenue (₹)',
+                        data: data.values,
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
                     },
-                    ticks: {
-                        callback: function (value) {
-                            return '₹' + (value / 1000) + 'k';
+                    scales: {
+                        y: {
+                            ticks: {
+                                callback: value => '₹' + (value / 1000).toFixed(0) + 'k'
+                            }
+                        }
+                    }
+                }
+            });
+        },
+        error: function () {
+            console.error('Error loading revenue chart');
+            showNotification('Failed to load revenue chart', 'danger');
+        }
+    });
+}
+
+
+// Load category chart
+async function loadCategoryChart() {
+    const period = document.getElementById('categoryTimeFilter').value;
+
+    try {
+        const response = await fetch(`/Admin/GetCategorySales?period=${period}`);
+        if (!response.ok) throw new Error('Failed to fetch category data');
+
+        const data = await response.json();
+
+        const ctx = document.getElementById('categoryChart').getContext('2d');
+
+        // Destroy previous chart if exists
+        if (categoryChartInstance) {
+            categoryChartInstance.destroy();
+        }
+
+        categoryChartInstance = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: data.labels,
+                datasets: [{
+                    data: data.values,
+                    backgroundColor: [
+                        'rgba(156, 39, 176, 0.8)',
+                        'rgba(255, 64, 129, 0.8)',
+                        'rgba(255, 152, 0, 0.8)',
+                        'rgba(76, 175, 80, 0.8)',
+                        'rgba(33, 150, 243, 0.8)',
+                        'rgba(103, 58, 183, 0.8)',
+                        'rgba(0, 150, 136, 0.8)',
+                        'rgba(205, 220, 57, 0.8)'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyle: 'circle',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = Math.round((value / total) * 100);
+                                return `${label}: ₹${value.toLocaleString('en-IN')} (${percentage}%)`;
+                            }
                         }
                     }
                 },
-                x: {
-                    grid: {
-                        color: 'rgba(0,0,0,0.05)'
-                    }
-                }
+                cutout: '65%'
             }
-        }
-    });
+        });
 
-    // Category Chart
-    const categoryCtx = document.getElementById('categoryChart').getContext('2d');
-    const categoryChart = new Chart(categoryCtx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Anarkali', 'Lehenga', 'Sharara', 'Palazzo', 'Saree', 'Gown'],
-            datasets: [{
-                data: [25, 20, 15, 12, 18, 10],
-                backgroundColor: [
-                    'rgba(156, 39, 176, 0.8)',
-                    'rgba(255, 64, 129, 0.8)',
-                    'rgba(255, 152, 0, 0.8)',
-                    'rgba(76, 175, 80, 0.8)',
-                    'rgba(33, 150, 243, 0.8)',
-                    'rgba(103, 58, 183, 0.8)'
-                ],
-                borderWidth: 2,
-                borderColor: '#fff'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'right',
-                    labels: {
-                        padding: 20,
-                        usePointStyle: true,
-                        pointStyle: 'circle'
-                    }
-                }
-            },
-            cutout: '65%'
-        }
-    });
+    } catch (error) {
+        console.error('Error loading category chart:', error);
+        showNotification('Failed to load category chart', 'danger');
+    }
+}
 
-    // Populate recent orders table
-    const ordersData = [
-        { id: 'ORD-7821', customer: 'Priya Sharma', date: '12 Nov 2023', amount: '₹4,599', status: 'delivered' },
-        { id: 'ORD-7820', customer: 'Anjali Patel', date: '11 Nov 2023', amount: '₹6,299', status: 'processing' },
-        { id: 'ORD-7819', customer: 'Ritu Singh', date: '10 Nov 2023', amount: '₹3,899', status: 'delivered' },
-        { id: 'ORD-7818', customer: 'Meera Kapoor', date: '9 Nov 2023', amount: '₹5,499', status: 'pending' },
-        { id: 'ORD-7817', customer: 'Sneha Reddy', date: '8 Nov 2023', amount: '₹7,999', status: 'delivered' },
-        { id: 'ORD-7816', customer: 'Pooja Verma', date: '7 Nov 2023', amount: '₹2,999', status: 'cancelled' },
-        { id: 'ORD-7815', customer: 'Divya Nair', date: '6 Nov 2023', amount: '₹8,499', status: 'processing' }
-    ];
+// Load recent orders
+async function loadRecentOrders() {
+    try {
+        const response = await fetch('/Admin/GetRecentOrders');
+        if (!response.ok) throw new Error('Failed to fetch recent orders');
 
-    const ordersTableBody = document.getElementById('ordersTableBody');
+        const orders = await response.json();
+        const ordersTableBody = document.getElementById('ordersTableBody');
+        ordersTableBody.innerHTML = '';
 
-    ordersData.forEach(order => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-                            <td><strong>${order.id}</strong></td>
-                            <td>
-                                <div class="customer-cell">
-                                    <div class="customer-avatar">${order.customer.charAt(0)}</div>
-                                    <div>${order.customer}</div>
-                                </div>
+        if (orders.length === 0) {
+            ordersTableBody.innerHTML = `
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 40px; color: #666;">
+                                <i class="fas fa-shopping-cart fa-2x" style="margin-bottom: 10px; color: #ddd;"></i>
+                                <p>No recent orders found</p>
                             </td>
-                            <td>${order.date}</td>
-                            <td><strong>${order.amount}</strong></td>
-                            <td><span class="status ${order.status}">${order.status.charAt(0).toUpperCase() + order.status.slice(1)}</span></td>
-                            <td><button class="view-btn"><i class="fas fa-eye"></i></button></td>
-                        `;
-        ordersTableBody.appendChild(row);
-    });
-
-    // Animate stats counter
-    function animateCounter(elementId, targetValue, duration = 1500) {
-        const element = document.getElementById(elementId);
-        const startValue = 0;
-        const increment = targetValue / (duration / 16); // 60fps
-        let currentValue = startValue;
-
-        const timer = setInterval(() => {
-            currentValue += increment;
-            if (currentValue >= targetValue) {
-                clearInterval(timer);
-                element.textContent = formatNumber(targetValue);
-            } else {
-                element.textContent = formatNumber(Math.floor(currentValue));
-            }
-        }, 16);
-    }
-
-    function formatNumber(num) {
-        if (num >= 1000) {
-            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        </tr>
+                    `;
+            return;
         }
-        return num.toString();
+
+        orders.forEach(order => {
+            const row = document.createElement('tr');
+            const orderDate = new Date(order.createdAt);
+            const formattedDate = orderDate.toLocaleDateString('en-IN', {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric'
+            });
+
+            // Get status class
+            let statusClass = '';
+            switch (order.status) {
+                case 4: // Delivered
+                    statusClass = 'delivered';
+                    break;
+                case 1: // Confirmed
+                case 3: // Shipped
+                    statusClass = 'processing';
+                    break;
+                case 2: // Cancelled
+                    statusClass = 'cancelled';
+                    break;
+                default: // Pending
+                    statusClass = 'pending';
+            }
+
+            // Get status text
+            let statusText = '';
+            switch (order.status) {
+                case 0: statusText = 'Pending'; break;
+                case 1: statusText = 'Confirmed'; break;
+                case 2: statusText = 'Cancelled'; break;
+                case 3: statusText = 'Shipped'; break;
+                case 4: statusText = 'Delivered'; break;
+                default: statusText = 'Pending';
+            }
+
+            row.innerHTML = `
+                        <td><strong>${order.orderNumber || `ORD-${order.id}`}</strong></td>
+                        <td>
+                            <div class="customer-cell">
+                                <div class="customer-avatar">${order.user?.name?.charAt(0) || 'U'}</div>
+                                <div>${order.user?.name || 'Customer'}</div>
+                            </div>
+                        </td>
+                        <td>${formattedDate}</td>
+                        <td><strong>₹${(order.grandTotal || 0).toLocaleString('en-IN')}</strong></td>
+                        <td><span class="status ${statusClass}">${statusText}</span></td>
+                        <td>
+                            <button class="view-btn" onclick="viewOrder(${order.id})" title="View Order">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </td>
+                    `;
+            ordersTableBody.appendChild(row);
+        });
+
+    } catch (error) {
+        console.error('Error loading recent orders:', error);
+        const ordersTableBody = document.getElementById('ordersTableBody');
+        ordersTableBody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align: center; padding: 40px; color: #dc3545;">
+                            <i class="fas fa-exclamation-circle fa-2x" style="margin-bottom: 10px;"></i>
+                            <p>Failed to load recent orders</p>
+                        </td>
+                    </tr>
+                `;
+    }
+}
+
+// View order details
+function viewOrder(orderId) {
+    window.open(`/Order/Details/${orderId}`, '_blank');
+}
+
+// Helper functions
+function animateCounter(elementId, targetValue, duration = 1500) {
+    const element = document.getElementById(elementId);
+    const currentText = element.textContent.replace(/[^0-9.]/g, '');
+    const currentValue = parseFloat(currentText) || 0;
+    const increment = (targetValue - currentValue) / (duration / 16);
+    let currentAnimationValue = currentValue;
+
+    const timer = setInterval(() => {
+        currentAnimationValue += increment;
+        if (Math.abs(currentAnimationValue - targetValue) < Math.abs(increment)) {
+            clearInterval(timer);
+            element.textContent = formatNumber(targetValue, elementId === 'conversion');
+        } else {
+            element.textContent = formatNumber(Math.floor(currentAnimationValue), elementId === 'conversion');
+        }
+    }, 16);
+}
+
+function formatNumber(num, isPercentage = false) {
+    if (isPercentage) {
+        return num.toFixed(1) + '%';
     }
 
-    // Start counter animations after page loads
-    setTimeout(() => {
-        animateCounter('revenue', 482560);
-        animateCounter('orders', 1248);
-        animateCounter('customers', 8420);
-    }, 800);
+    if (num >= 10000000) { // 1 crore
+        return '₹' + (num / 10000000).toFixed(1) + 'Cr';
+    } else if (num >= 100000) { // 1 lakh
+        return '₹' + (num / 100000).toFixed(1) + 'L';
+    } else if (num >= 1000) {
+        return '₹' + (num / 1000).toFixed(0) + 'k';
+    }
+    return '₹' + Math.round(num).toString();
+}
 
-    // Add hover animation to stat cards
-    const statCards = document.querySelectorAll('.stat-card');
-    statCards.forEach(card => {
-        card.addEventListener('mouseenter', function () {
-            this.style.animation = 'pulse 0.5s ease';
-        });
+function updateChangeIndicator(elementId, changePercentage) {
+    const element = document.getElementById(elementId);
+    const change = parseFloat(changePercentage);
 
-        card.addEventListener('animationend', function () {
-            this.style.animation = '';
-        });
-    });
-});
-
-
-
+    if (change > 0) {
+        element.className = 'stat-change positive';
+        element.innerHTML = `<i class="fas fa-arrow-up"></i> ${Math.abs(change).toFixed(1)}%`;
+    } else if (change < 0) {
+        element.className = 'stat-change negative';
+        element.innerHTML = `<i class="fas fa-arrow-down"></i> ${Math.abs(change).toFixed(1)}%`;
+    } else {
+        element.className = 'stat-change neutral';
+        element.innerHTML = `<i class="fas fa-minus"></i> 0%`;
+    }
+}
 // Notification function
 function showNotification(message, type) {
     // Create notification element
@@ -231,29 +374,29 @@ function showNotification(message, type) {
     }
 }
 
-// Remove after 3 seconds (with hover pause)
-let removeTimeout;
+//// Remove after 3 seconds (with hover pause)
+//let removeTimeout;
 
-function startRemoveTimer() {
-    removeTimeout = setTimeout(() => {
-        notification.style.animation = 'fadeOut 0.3s ease';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                document.body.removeChild(notification);
-            }
-        }, 300);
-    }, 3000);
-}
+//function startRemoveTimer() {
+//    removeTimeout = setTimeout(() => {
+//        notification.style.animation = 'fadeOut 0.3s ease';
+//        setTimeout(() => {
+//            if (notification.parentNode) {
+//                document.body.removeChild(notification);
+//            }
+//        }, 300);
+//    }, 3000);
+//}
 
-// start timer initially
-startRemoveTimer();
+//// start timer initially
+//startRemoveTimer();
 
-// pause on hover
-notification.addEventListener('mouseenter', () => {
-    clearTimeout(removeTimeout);
-});
+//// pause on hover
+//notification.addEventListener('mouseenter', () => {
+//    clearTimeout(removeTimeout);
+//});
 
-// resume on mouse leave
-notification.addEventListener('mouseleave', () => {
-    startRemoveTimer();
-});
+//// resume on mouse leave
+//notification.addEventListener('mouseleave', () => {
+//    startRemoveTimer();
+//});
