@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\detail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\detail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\detailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\detailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\detail\\detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\detail\\detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\detail\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\detail\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\home\\collectionspartial\\_collectionscard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\home\\collectionspartial\\_collectionscard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\admin\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\admin\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -25,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\home\\collectionspartial\\_filterssection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\home\\collectionspartial\\_filterssection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\home\\collectionspartial\\_collectionscard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\home\\collectionspartial\\_collectionscard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -127,10 +163,6 @@
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\order\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\order\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -203,20 +235,12 @@
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\cart.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\home\\sales.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\home\\sales.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\detail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\detail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\sales\\sales.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -347,10 +371,6 @@
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\collections.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\home\\collections.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\home\\collections.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -375,20 +395,12 @@
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\admincontrollers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\detailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\detailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\models\\productreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\models\\productreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\detail\\review.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\detail\\review.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\views\\reviews\\_reviewdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -401,14 +413,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\detail\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\detail\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\wwwroot\\user\\detail\\detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|solutionrelative:e-commerce\\wwwroot\\user\\detail\\detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B450CD5-45AD-4102-8F45-499D8C161187}|E-Commerce\\E-Commerce.csproj|c:\\users\\rohaan\\downloads\\ecommerceweb (1)\\ecommerceweb\\e-commerce\\models\\orderaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -462,8 +466,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "forgot-password.js",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\forgot-password.js",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\auth\\forgot-password.js",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\forgot-password.js",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\auth\\forgot-password.js",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowCYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-01T13:54:26.762Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\script.js",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\script.js",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\script.js",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\admin\\script.js",
+              "ViewState": "AgIAAFEBAAAAAAAAAAAAAGcBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-08T19:12:39.379Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "E-Commerce\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAqwP4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T13:55:18.638Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Detail\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Detail\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Detail\\Index.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Detail\\Index.cshtml",
+              "ViewState": "AgIAABsCAAAAAAAAAAAkwDMCAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-29T17:34:05.055Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -478,140 +536,124 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "forgot-password.js",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\forgot-password.js",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\auth\\forgot-password.js",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\auth\\forgot-password.js",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\auth\\forgot-password.js",
-              "ViewState": "AgIAABcAAAAAAAAAAAAowCYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-01T13:54:26.762Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "script.js",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\script.js",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\script.js",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\script.js",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\admin\\script.js",
-              "ViewState": "AgIAAG4BAAAAAAAAAAAAAH0BAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-08T19:12:39.379Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "E-Commerce\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAOQAAAAAAAAAAAAqwP4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T13:55:18.638Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Featured.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Featured.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\Featured.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Featured.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Home\\Featured.cshtml",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-24T14:39:28.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "discount.js",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\discount.js",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\discount.js",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\discount.js",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\admin\\discount.js",
-              "ViewState": "AgIAAMoCAAAAAAAAAAAowN0CAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-08T18:33:01.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "_FiltersSection.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-08T19:07:59.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAAAH0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-08T19:12:22.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout1.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Shared\\_Layout1.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Shared\\_Layout1.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Shared\\_Layout1.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Shared\\_Layout1.cshtml",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T18:11:40.967Z",
+              "Title": "DetailController.cs",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\DetailController.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\DetailController.cs",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\DetailController.cs",
+              "RelativeToolTip": "E-Commerce\\Controllers\\DetailController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-24T14:28:50.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "E-Commerce\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAWwPgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T17:21:03.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "detail.js",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.js",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\detail\\detail.js",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.js",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\detail\\detail.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-09T17:36:48.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "E-Commerce\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAM8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T13:01:22.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cart.js",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cart.js",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\cart.js",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cart.js",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\cart.js",
+              "ViewState": "AgIAAJwEAAAAAAAAAAAAALEEAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-31T14:29:43.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Settings\\Index.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Settings\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Settings\\Index.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Settings\\Index.cshtml",
-              "ViewState": "AgIAAGACAAAAAAAAAAAAAHMCAABeAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAAABAAAAAAAAAAArwBIBAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-08T13:55:05.753Z",
+              "WhenOpened": "2026-02-09T17:08:33.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\CheckoutController.cs",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "E-Commerce\\Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAArwHMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T18:23:29.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "_FeaturedCards.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAACAAAAAnAAAAAAAAAA==",
+              "Title": "_CollectionsCard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-29T17:00:45.001Z",
+              "WhenOpened": "2026-01-26T19:56:35.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
+              "Title": "detail.css",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.css",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\detail\\detail.css",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.css",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\detail\\detail.css",
+              "ViewState": "AgIAAHABAAAAAAAAAAD4v4MBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-23T19:39:53.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Category\\Edit.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Category\\Edit.cshtml",
@@ -619,12 +661,95 @@
               "RelativeToolTip": "E-Commerce\\Views\\Category\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-08T17:53:23.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-08T17:53:23.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
+              "Title": "_FeaturedCards.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Home\\FeaturedPartial\\_FeaturedCards.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-29T17:00:45.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Settings\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Settings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Settings\\Index.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Settings\\Index.cshtml",
+              "ViewState": "AgIAAGACAAAAAAAAAAAAAHMCAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-08T13:55:05.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout1.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Shared\\_Layout1.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Shared\\_Layout1.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Shared\\_Layout1.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Shared\\_Layout1.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T18:11:40.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAH0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-08T19:12:22.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_FiltersSection.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Home\\CollectionsPartial\\_FiltersSection.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-08T19:07:59.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "discount.js",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\discount.js",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\discount.js",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\discount.js",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\admin\\discount.js",
+              "ViewState": "AgIAAMoCAAAAAAAAAAAowN0CAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-08T18:33:01.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Featured.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Featured.cshtml",
+              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\Featured.cshtml",
+              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Featured.cshtml",
+              "RelativeToolTip": "E-Commerce\\Views\\Home\\Featured.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-24T14:39:28.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\Index.cshtml",
@@ -632,25 +757,11 @@
               "RelativeToolTip": "E-Commerce\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAADcAAAAAAAAAAAAAAF0AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T12:24:38.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T12:24:38.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_CollectionsCard.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Home\\CollectionsPartial\\_CollectionsCard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-26T19:56:35.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\Product.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\Product.cs",
@@ -658,12 +769,11 @@
               "RelativeToolTip": "E-Commerce\\Models\\Product.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAkwEoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T18:24:27.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T18:24:27.562Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\ProductController.cs",
@@ -671,12 +781,11 @@
               "RelativeToolTip": "E-Commerce\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAEcBAAAAAAAAAAArwFcBAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T11:32:16.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-23T11:32:16.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 28,
               "Title": "_AdminCategoryHeader.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Shared\\_AdminCategoryHeader.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Shared\\_AdminCategoryHeader.cshtml",
@@ -688,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\ProfileViewModel.cs",
@@ -700,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Category\\Add.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Category\\Add.cshtml",
@@ -712,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\CategoryController.cs",
@@ -724,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "category.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\category.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\category.js",
@@ -736,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "ProductColor.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\ProductColor.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\ProductColor.cs",
@@ -748,7 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Customers\\Index.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Customers\\Index.cshtml",
@@ -760,7 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "OrderCancellation.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\DbTables\\OrderCancellation.cs",
@@ -772,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "MyOrders.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Order\\MyOrders.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Order\\MyOrders.cshtml",
@@ -784,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 39,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\Order.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\Order.cs",
@@ -796,7 +905,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 38,
               "Title": "order.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\order\\order.js",
@@ -809,18 +918,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "E-Commerce\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAAAOYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T13:01:22.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\HomeViewModel.cs",
@@ -832,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\appsettings.json",
               "RelativeDocumentMoniker": "E-Commerce\\appsettings.json",
@@ -844,7 +941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 36,
               "Title": "AdminOrderController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\APIControllers\\AdminOrderController.cs",
@@ -856,7 +953,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 35,
               "Title": "order.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\order\\order.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\order\\order.css",
@@ -868,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "orders.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\orders.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\order\\orders.css",
@@ -880,7 +977,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 46,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Account\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Account\\ForgotPassword.cshtml",
@@ -892,7 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 44,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Services\\EmailService.cs",
@@ -904,7 +1001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 113,
               "Title": "20260202174907_cancelorder.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Migrations\\20260202174907_cancelorder.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Migrations\\20260202174907_cancelorder.cs",
@@ -916,7 +1013,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 40,
               "Title": "order.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\order\\order.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\order\\order.js",
@@ -928,7 +1025,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 42,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\ProfileController.cs",
@@ -940,7 +1037,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 45,
               "Title": "ResetPasswordConfirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Account\\ResetPasswordConfirmation.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Account\\ResetPasswordConfirmation.cshtml",
@@ -952,7 +1049,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 50,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Shared\\_Layout.cshtml",
@@ -964,7 +1061,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 41,
               "Title": "EmailConfirmed.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Account\\EmailConfirmed.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Account\\EmailConfirmed.cshtml",
@@ -976,7 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "ForgotPasswordConfirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
@@ -988,7 +1085,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 43,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\AccountController.cs",
@@ -1000,7 +1097,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 48,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Account\\Login.cshtml",
@@ -1012,7 +1109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 49,
               "Title": "ForgotPasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\ViewModels\\ForgotPasswordViewModel.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\ViewModels\\ForgotPasswordViewModel.cs",
@@ -1024,7 +1121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 51,
               "Title": "Discount.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\Discount.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\Discount.cs",
@@ -1036,7 +1133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 53,
               "Title": "profile.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\profile\\profile.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\profile\\profile.js",
@@ -1048,7 +1145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 52,
               "Title": "_Toast.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Shared\\_Toast.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Shared\\_Toast.cshtml",
@@ -1060,7 +1157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 54,
               "Title": "notification.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\notification\\notification.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\notification\\notification.js",
@@ -1072,7 +1169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 55,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Account\\Register.cshtml",
@@ -1084,7 +1181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 57,
               "Title": "cart.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cart.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\cart.css",
@@ -1096,7 +1193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 56,
               "Title": "notification.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\notification\\notification.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\notification\\notification.css",
@@ -1108,7 +1205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 65,
               "Title": "shipping-policy.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\shipping\\shipping-policy.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\shipping\\shipping-policy.css",
@@ -1120,19 +1217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "cart.js",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cart.js",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\cart.js",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\cart.js",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\cart.js",
-              "ViewState": "AgIAAK8EAAAAAAAAAAAwwMMEAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-31T14:29:43.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 67,
               "Title": "shipping-policy.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\shipping\\shipping-policy.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\shipping\\shipping-policy.js",
@@ -1144,7 +1229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 58,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Program.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Program.cs",
@@ -1156,19 +1241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Detail\\Index.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Detail\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Detail\\Index.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Detail\\Index.cshtml",
-              "ViewState": "AgIAAP0AAAAAAAAAAAAwwBUBAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-29T17:34:05.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 59,
               "Title": "Sales.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Sales.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\Sales.cshtml",
@@ -1180,7 +1253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 60,
               "Title": "sales.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\sales\\sales.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\sales\\sales.js",
@@ -1192,7 +1265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 62,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\About.cshtml",
@@ -1204,7 +1277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 64,
               "Title": "ReturnExchange.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\ReturnExchange.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\ReturnExchange.cshtml",
@@ -1216,7 +1289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 66,
               "Title": "return-exchange.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\return-exchange\\return-exchange.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\return-exchange\\return-exchange.css",
@@ -1228,7 +1301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 61,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Contact\\Index.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Contact\\Index.cshtml",
@@ -1240,7 +1313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 63,
               "Title": "return-exchange.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\return-exchange\\return-exchange.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\return-exchange\\return-exchange.js",
@@ -1252,7 +1325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 72,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\AdminContact\\Index.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\AdminContact\\Index.cshtml",
@@ -1264,7 +1337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 76,
               "Title": "_ContactDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\AdminContact\\_ContactDetails.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\AdminContact\\_ContactDetails.cshtml",
@@ -1276,7 +1349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 68,
               "Title": "ShippingPolicy.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\ShippingPolicy.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\ShippingPolicy.cshtml",
@@ -1288,7 +1361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 69,
               "Title": "Faq.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Faq.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\Faq.cshtml",
@@ -1300,7 +1373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 70,
               "Title": "faq.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\faq\\faq.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\faq\\faq.css",
@@ -1312,7 +1385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 71,
               "Title": "faq.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\faq\\faq.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\faq\\faq.js",
@@ -1324,7 +1397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 82,
               "Title": "registration.html",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\registration.html",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\EmailTemplates\\registration.html",
@@ -1336,7 +1409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 80,
               "Title": "contact.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\contact\\contact.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\contact\\contact.js",
@@ -1348,7 +1421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 73,
               "Title": "index.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\index.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\index.css",
@@ -1360,7 +1433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 75,
               "Title": "AdminContactController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AdminControllers\\AdminContactController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\AdminControllers\\AdminContactController.cs",
@@ -1372,7 +1445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 74,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\css\\site.css",
@@ -1384,7 +1457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 77,
               "Title": "Contact.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\DbTables\\Contact.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\DbTables\\Contact.cs",
@@ -1396,7 +1469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 79,
               "Title": "SettingsService.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Services\\SettingsService.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Services\\SettingsService.cs",
@@ -1408,7 +1481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 78,
               "Title": "ContactUserAutoReply.html",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\ContactUserAutoReply.html",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\EmailTemplates\\ContactUserAutoReply.html",
@@ -1420,7 +1493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 81,
               "Title": "ContactViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\ViewModels\\ContactViewModel.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\ViewModels\\ContactViewModel.cs",
@@ -1432,7 +1505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 83,
               "Title": "ContactAdmin.html",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\ContactAdmin.html",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\EmailTemplates\\ContactAdmin.html",
@@ -1444,7 +1517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 85,
               "Title": "contact.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\contact\\contact.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\contact\\contact.css",
@@ -1456,7 +1529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 84,
               "Title": "BestSellingDTO.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\BestSellingDTO.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\BestSellingDTO.cs",
@@ -1468,7 +1541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 87,
               "Title": "about.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\about\\about.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\about\\about.css",
@@ -1480,7 +1553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 86,
               "Title": "about.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\about\\about.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\about\\about.js",
@@ -1492,7 +1565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 89,
               "Title": "GetCategories.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Services\\GetCategories.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Services\\GetCategories.cs",
@@ -1504,7 +1577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 92,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Profile\\Index.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Profile\\Index.cshtml",
@@ -1516,7 +1589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 88,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\_ViewImports.cshtml",
@@ -1528,7 +1601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 93,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Profile\\Edit.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Profile\\Edit.cshtml",
@@ -1540,19 +1613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
-              "Title": "Collections.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Collections.cshtml",
-              "RelativeDocumentMoniker": "E-Commerce\\Views\\Home\\Collections.cshtml",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Home\\Collections.cshtml",
-              "RelativeToolTip": "E-Commerce\\Views\\Home\\Collections.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-25T13:35:34.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 91,
               "Title": "collections.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\collections.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\collections.css",
@@ -1564,7 +1625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 90,
               "Title": "collections.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\collections.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\collections.js",
@@ -1576,7 +1637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 95,
               "Title": "LoginHistory.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\LoginHistory.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\LoginHistory.cs",
@@ -1588,7 +1649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 94,
               "Title": "profile.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\profile\\profile.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\profile\\profile.css",
@@ -1600,7 +1661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 96,
               "Title": "verification.html",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\EmailTemplates\\verification.html",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\EmailTemplates\\verification.html",
@@ -1612,7 +1673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 99,
               "Title": "ReviewController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\ReviewController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\ReviewController.cs",
@@ -1624,31 +1685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
-              "Title": "DetailController.cs",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\DetailController.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\DetailController.cs",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\DetailController.cs",
-              "RelativeToolTip": "E-Commerce\\Controllers\\DetailController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAABQwBIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T14:28:50.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 100,
-              "Title": "detail.js",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.js",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\detail\\detail.js",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.js",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\detail\\detail.js",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAAAPIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-23T19:40:26.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 97,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Controllers\\AdminControllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Controllers\\AdminControllers\\ReviewsController.cs",
@@ -1660,7 +1697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 98,
               "Title": "ProductReview.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\ProductReview.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\ProductReview.cs",
@@ -1672,7 +1709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 101,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Reviews\\Index.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Reviews\\Index.cshtml",
@@ -1684,7 +1721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 100,
               "Title": "_ReviewDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Reviews\\_ReviewDetails.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Reviews\\_ReviewDetails.cshtml",
@@ -1696,19 +1733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
-              "Title": "review.js",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\review.js",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\detail\\review.js",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\review.js",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\detail\\review.js",
-              "ViewState": "AgIAADUBAAAAAAAAAAAwwEABAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-24T18:36:55.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 102,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\OrderItem.cs",
@@ -1720,19 +1745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
-              "Title": "detail.css",
-              "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.css",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\detail\\detail.css",
-              "ToolTip": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\detail\\detail.css",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\user\\detail\\detail.css",
-              "ViewState": "AgIAAGsIAAAAAAAAAADwv5QIAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-23T19:39:53.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 103,
               "Title": "OrderAddress.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\OrderAddress.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\OrderAddress.cs",
@@ -1744,7 +1757,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 104,
               "Title": "featured.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\user\\featured\\featured.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\user\\featured\\featured.js",
@@ -1756,7 +1769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 105,
               "Title": "ProductVideo.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\ProductVideo.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\ProductVideo.cs",
@@ -1768,7 +1781,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 106,
               "Title": "_DiscountProductsTable.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Product\\_DiscountProductsTable.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Product\\_DiscountProductsTable.cshtml",
@@ -1780,7 +1793,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 107,
               "Title": "Discounts.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Product\\Discounts.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Product\\Discounts.cshtml",
@@ -1792,7 +1805,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 108,
               "Title": "_ProductsModalPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Views\\Category\\ProductsPartial\\_ProductsModalPartial.cshtml",
               "RelativeDocumentMoniker": "E-Commerce\\Views\\Category\\ProductsPartial\\_ProductsModalPartial.cshtml",
@@ -1804,7 +1817,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 111,
               "Title": "product.js",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\product.js",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\product.js",
@@ -1816,7 +1829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 112,
               "Title": "product.css",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\wwwroot\\admin\\product.css",
               "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\admin\\product.css",
@@ -1828,7 +1841,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 110,
               "Title": "ProductStats.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Models\\ProductStats.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Models\\ProductStats.cs",
@@ -1840,7 +1853,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 109,
               "Title": "ControllerExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Rohaan\\Downloads\\ecommerceweb (1)\\ecommerceweb\\E-Commerce\\Extensions\\ControllerExtensions.cs",
               "RelativeDocumentMoniker": "E-Commerce\\Extensions\\ControllerExtensions.cs",

@@ -39,10 +39,10 @@
 
                         <div class="collection-price">
                             <span class="original-price" style="text-decoration: line-through; color: #999; margin-right: 8px;">
-                                ₹@products.Price
+                                ₹@Math.Truncate(products.Price)
                             </span>
                             <span class="discounted-price" style="color: #e53935; font-weight: bold;">
-                                ₹@discountedPrice
+                                ₹@Math.Truncate(discountedPrice)
                             </span>
                         </div>
                     }

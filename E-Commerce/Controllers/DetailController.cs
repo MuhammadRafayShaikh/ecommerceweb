@@ -49,6 +49,10 @@ namespace E_Commerce.Controllers
 
             ViewData["waitForAdmin"] = await _myDbContext.ProductReviews.AnyAsync(x => x.UserId == userId && x.ProductId == id && x.Status == ProductReview.ReviewStatus.Pending);
 
+            bool isProductInCart = await _myDbContext.CartItems.AnyAsync(x => x.Cart.UserId == userId && x.ProductId == id);
+
+            ViewData["isProductInCart"] = isProductInCart;
+
             return View(product);
         }
 

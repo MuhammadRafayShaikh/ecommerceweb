@@ -423,7 +423,7 @@ function populateEditModal() {
     document.getElementById('editProductPrice').innerHTML = priceDisplay;
 
     if (currentEditProduct.image) {
-        document.getElementById('editProductImage').style.backgroundImage = `url('${currentEditProduct.image}')`;
+        document.getElementById('editProductImage').style.backgroundImage = `url('ProductImages/${currentEditProduct.image}')`;
     }
 
     populateEditColorOptions();

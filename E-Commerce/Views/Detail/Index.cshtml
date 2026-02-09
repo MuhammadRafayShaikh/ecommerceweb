@@ -4,6 +4,7 @@
 
 @model E_Commerce.Models.Product
 @{
+    List<Product> relatedProducts = ViewData["relatedProducts"] as List<Product>;
     var maxStock = Model.ProductColors?.Sum(c => c.Stock) ?? 0;
 }
 <link rel="stylesheet" href="~/user/detail/detail.css" asp-append-version="true">
@@ -259,14 +260,27 @@
 
             <!-- Action Buttons -->
             <div class="action-buttons">
-                <button class="btn-add-to-cart cart-btn" data-product-id="@Model.Id" id="addToCartBtn">
-                    <i class="fas fa-shopping-cart"></i> Add to Cart
-                </button>
-                <a href="/Cart/Index" class="view-cart" data-product-id="@Model.Id" style="text-decoration:none; display:none;">
-                    <div class="btn-add-to-cart">
-                        <i class="fas fa-shopping-cart"></i> View Cart
-                    </div>
-                </a>
+                @if (User.Identity.IsAuthenticated && (bool)ViewData["isProductInCart"])
+                {
+                    <a href="/Cart/Index" class="view-cart" data-product-id="@Model.Id" style="text-decoration:none;">
+                        <div class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> View Cart
+                        </div>
+                    </a>
+                }
+                else
+                {
+                    <a class="cart-btn" data-product-id="@Model.Id" id="addToCartBtn">
+                        <div class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </div>
+                    </a>
+                    <a href="/Cart/Index" class="view-cart" data-product-id="@Model.Id" style="text-decoration:none; display:none;">
+                        <div class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> View Cart
+                        </div>
+                    </a>
+                }
 
             </div>
 
@@ -528,29 +542,32 @@
     </div>
 
     <!-- Related Products -->
-    <div class="related-products">
-        <div class="section-title">
-            <h2>You May Also Like</h2>
-            <p>Discover more beautiful suits from our collection</p>
-        </div>
+    @if (relatedProducts.Any())
+    {
+        <div class="related-products">
+            <div class="section-title">
+                <h2>You May Also Like</h2>
+                <p>Discover more beautiful suits from our collection</p>
+            </div>
 
-        <div class="products-grid">
-            <!-- Related products would be populated dynamically -->
-            @foreach (Product relatedProducts in ViewData["relatedProducts"] as List<Product>)
-            {
-                <div class="product-card">
-                    <div class="product-img" style="background-image: url('/ProductImages/@relatedProducts.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');">
-                        @* <div class="product-badge">Bestseller</div> *@
+            <div class="products-grid">
+                <!-- Related products would be populated dynamically -->
+                @foreach (Product relatedProduct in relatedProducts)
+                {
+                    <div class="product-card">
+                        <div class="product-img" style="background-image: url('/ProductImages/@relatedProduct.ProductColors.SelectMany(x => x.Images).Select(x => x.ImagePath).FirstOrDefault()');">
+                            @* <div class="product-badge">Bestseller</div> *@
+                        </div>
+                        <div class="product-content">
+                            <h3>@relatedProduct.Name</h3>
+                            <div class="product-price">₹@relatedProduct.Price</div>
+                        </div>
                     </div>
-                    <div class="product-content">
-                        <h3>@relatedProducts.Name</h3>
-                        <div class="product-price">₹@relatedProducts.Price</div>
-                    </div>
-                </div>
-            }
+                }
 
+            </div>
         </div>
-    </div>
+    }
 </div>
 
 <!-- Add To Cart Modal -->
@@ -826,12 +843,14 @@
                         <div class="req-check">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                    }else{
+                    }
+                    else
+                    {
                         <div class="req-check">
                             <i class="fas fa-times-circle"></i>
                         </div>
                     }
-                    
+
                     <div class="req-text">
                         <span class="req-title">Not Already Reviewed</span>
                         <span class="req-desc">You haven't reviewed this product before</span>
